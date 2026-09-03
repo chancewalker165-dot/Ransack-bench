@@ -1,0 +1,294 @@
+{
+  "protocol": "ransack benchmark seed v1 (2026-08-28). Fixed 30-question set, hand-curated, every question has a deterministically-gradeable expected answer. Tracks mirror the landscape doc: A=simple-fact (SimpleQA-style), B=spec/technical (vendor-demo style), C=multi-hop (FRAMES-style), D=recency (FreshQA-style), E=hard-to-find (BrowseComp-style). Grading: CORRECT if ransack output contains the expected fact (verbatim or unambiguous equivalent); PARTIAL if related but not the exact answer; WRONG otherwise. Latency/tokens come from the ransack footer (verbose=true). Rate limit: 60/min - run in batches, never >4 concurrent. v2 (2026-08-28): tracks G-J added. G=niche-domain (LegalBench-RAG/FinanceBench/academic), H=time-sensitive/staleness (StreamingQA/TimeQA-style), I=citation-grounding (LongCite/ALCE-style, via execute_research), J=comparison/enumeration (CRAG-style). Grading: CORRECT/PARTIAL/WRONG as v1; I-track additionally records quote-in-source membership.",
+  "queries": [
+    {
+      "id": "A1",
+      "track": "A",
+      "question": "What is the capital of Australia?",
+      "expected": "Canberra"
+    },
+    {
+      "id": "A2",
+      "track": "A",
+      "question": "What is the tallest mountain on Earth?",
+      "expected": "Mount Everest"
+    },
+    {
+      "id": "A3",
+      "track": "A",
+      "question": "Who wrote the novel 1984?",
+      "expected": "George Orwell"
+    },
+    {
+      "id": "A4",
+      "track": "A",
+      "question": "What is the chemical symbol for gold?",
+      "expected": "Au"
+    },
+    {
+      "id": "A5",
+      "track": "A",
+      "question": "What is the largest ocean on Earth?",
+      "expected": "Pacific Ocean"
+    },
+    {
+      "id": "A6",
+      "track": "A",
+      "question": "How many planets are there in Earth's solar system?",
+      "expected": "8"
+    },
+    {
+      "id": "A7",
+      "track": "A",
+      "question": "In what year did World War II end?",
+      "expected": "1945"
+    },
+    {
+      "id": "A8",
+      "track": "A",
+      "question": "Who was the first person to walk on the moon?",
+      "expected": "Neil Armstrong"
+    },
+    {
+      "id": "A9",
+      "track": "A",
+      "question": "What is the boiling point of water at sea level in Celsius?",
+      "expected": "100 degrees Celsius"
+    },
+    {
+      "id": "A10",
+      "track": "A",
+      "question": "What currency is used in Japan?",
+      "expected": "Japanese yen"
+    },
+    {
+      "id": "B1",
+      "track": "B",
+      "question": "What is the TDP of the NVIDIA DGX Spark?",
+      "expected": "140 W"
+    },
+    {
+      "id": "B2",
+      "track": "B",
+      "question": "What is the context window size of Gemini 2.5 Pro?",
+      "expected": "1 million tokens (1M)"
+    },
+    {
+      "id": "B3",
+      "track": "B",
+      "question": "How much VRAM does the NVIDIA RTX 5090 have?",
+      "expected": "32 GB GDDR7"
+    },
+    {
+      "id": "B4",
+      "track": "B",
+      "question": "In what year was Rust 1.0 released?",
+      "expected": "2015"
+    },
+    {
+      "id": "B5",
+      "track": "B",
+      "question": "What is the maximum unified memory of the Apple M4 Max?",
+      "expected": "128 GB"
+    },
+    {
+      "id": "B6",
+      "track": "B",
+      "question": "What is the default TCP port for HTTPS?",
+      "expected": "443"
+    },
+    {
+      "id": "C1",
+      "track": "C",
+      "question": "What is the name of the strait between mainland Australia and Tasmania?",
+      "expected": "Bass Strait"
+    },
+    {
+      "id": "C2",
+      "track": "C",
+      "question": "The river that flows through Warsaw empties into which sea?",
+      "expected": "Baltic Sea"
+    },
+    {
+      "id": "C3",
+      "track": "C",
+      "question": "What is the official language of the country whose flag is a red circle on a white background?",
+      "expected": "Japanese"
+    },
+    {
+      "id": "C4",
+      "track": "C",
+      "question": "The 2016 Summer Olympics were held in which country?",
+      "expected": "Brazil"
+    },
+    {
+      "id": "C5",
+      "track": "C",
+      "question": "What is the name of the highest mountain in Portugal, the country bordering Spain to the west?",
+      "expected": "Mount Pico (Pico)"
+    },
+    {
+      "id": "D1",
+      "track": "D",
+      "question": "Who won the NFL Super Bowl in February 2025?",
+      "expected": "Philadelphia Eagles"
+    },
+    {
+      "id": "D2",
+      "track": "D",
+      "question": "What service did Microsoft retire in August 2025?",
+      "expected": "Bing Search APIs"
+    },
+    {
+      "id": "D3",
+      "track": "D",
+      "question": "Which company acquired Tavily in 2026?",
+      "expected": "Nebius"
+    },
+    {
+      "id": "D4",
+      "track": "D",
+      "question": "What year was Taylor Swift's album The Tortured Poets Department released?",
+      "expected": "2024"
+    },
+    {
+      "id": "E1",
+      "track": "E",
+      "question": "What is the oldest continuously operating restaurant in the world?",
+      "expected": "Sobrino de Botin"
+    },
+    {
+      "id": "E2",
+      "track": "E",
+      "question": "What is the country code top-level domain for the United Kingdom?",
+      "expected": ".uk"
+    },
+    {
+      "id": "E3",
+      "track": "E",
+      "question": "What is the smallest country in the world by area?",
+      "expected": "Vatican City"
+    },
+    {
+      "id": "E4",
+      "track": "E",
+      "question": "What is the name of the space telescope launched in December 2021 that succeeded Hubble?",
+      "expected": "James Webb Space Telescope"
+    },
+    {
+      "id": "E5",
+      "track": "E",
+      "question": "What does the S in HTTPS stand for?",
+      "expected": "Secure"
+    },
+    {
+      "id": "G1",
+      "track": "G",
+      "question": "Who were the 2024 Nobel Prize in Physics laureates for foundational work in machine learning?",
+      "expected": "John Hopfield and Geoffrey Hinton"
+    },
+    {
+      "id": "G2",
+      "track": "G",
+      "question": "Which US Supreme Court case established the right to appointed counsel for indigent defendants in state courts?",
+      "expected": "Gideon v. Wainwright"
+    },
+    {
+      "id": "G3",
+      "track": "G",
+      "question": "Which international organization publishes the ICD-10 International Classification of Diseases?",
+      "expected": "World Health Organization"
+    },
+    {
+      "id": "G4",
+      "track": "G",
+      "question": "What is the ticker symbol of the parent company of the New York Stock Exchange?",
+      "expected": "ICE"
+    },
+    {
+      "id": "G5",
+      "track": "G",
+      "question": "In what year did the SEC begin the phased rollout of its EDGAR electronic filing system?",
+      "expected": "1993"
+    },
+    {
+      "id": "H1",
+      "track": "H",
+      "question": "Who is the current President of the United States?",
+      "expected": "Donald Trump"
+    },
+    {
+      "id": "H2",
+      "track": "H",
+      "question": "In what year did the IAU reclassify Pluto as a dwarf planet?",
+      "expected": "2006"
+    },
+    {
+      "id": "H3",
+      "track": "H",
+      "question": "What is the U.S. Constitution's minimum age requirement to serve as President?",
+      "expected": "35"
+    },
+    {
+      "id": "H4",
+      "track": "H",
+      "question": "What was the population of the United States according to the 2020 census?",
+      "expected": "331 million"
+    },
+    {
+      "id": "H5",
+      "track": "H",
+      "question": "Who is the current Prime Minister of the United Kingdom?",
+      "expected": "Andy Burnham (PM since 20 July 2026)",
+      "note": "expected was stale (assumed Keir Starmer); live results correctly returned Andy Burnham"
+    },
+    {
+      "id": "I1",
+      "track": "I",
+      "question": "What is the capital city of Cape Verde?",
+      "expected": "Praia"
+    },
+    {
+      "id": "I2",
+      "track": "I",
+      "question": "Who is credited with discovering penicillin?",
+      "expected": "Alexander Fleming"
+    },
+    {
+      "id": "I3",
+      "track": "I",
+      "question": "Which country holds the world's largest gold reserves?",
+      "expected": "United States"
+    },
+    {
+      "id": "I4",
+      "track": "I",
+      "question": "Who is the author of the play Hamlet?",
+      "expected": "William Shakespeare"
+    },
+    {
+      "id": "J1",
+      "track": "J",
+      "question": "Which graphics card has more VRAM: the RTX 5090 or the Radeon RX 9070 XT?",
+      "expected": "RTX 5090 (32GB vs 16GB)"
+    },
+    {
+      "id": "J2",
+      "track": "J",
+      "question": "What are the five permanent members of the United Nations Security Council?",
+      "expected": "China, France, Russia, UK, US"
+    },
+    {
+      "id": "J3",
+      "track": "J",
+      "question": "Which NBA player holds the record for most points scored in a single game?",
+      "expected": "Wilt Chamberlain (100)"
+    },
+    {
+      "id": "J4",
+      "track": "J",
+      "question": "Rank the top 3 largest planets in our solar system by diameter.",
+      "expected": "Jupiter, Saturn, Uranus"
+    }
+  ]
+}
