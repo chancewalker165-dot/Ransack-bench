@@ -1,0 +1,15 @@
+{
+  "dataset": "frames",
+  "sample_id": "frames_n100_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "alias_exact",
+  "provider": "serper",
+  "repeat": 1,
+  "k": 5,
+  "limit": 100,
+  "tag": "suite",
+  "git_sha": "98bc1f0",
+  "started_utc": "20260920-030328",
+  "question_count": 100
+}

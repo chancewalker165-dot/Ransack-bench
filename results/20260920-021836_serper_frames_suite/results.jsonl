@@ -1,1 +1,0 @@
-{"id": "frames-0003", "repeat": 0, "latency_s": 0.212, "error": "ProviderError: HTTP 403 from https://google.serper.dev/search: b'{\"message\":\"Unauthorized.\",\"statusCode\":403}'", "hit": false, "answer_verdict": ""}

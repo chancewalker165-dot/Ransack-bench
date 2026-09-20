@@ -7,9 +7,9 @@
   "provider": "serper",
   "repeat": 1,
   "k": 5,
-  "limit": 1,
+  "limit": 100,
   "tag": "suite",
-  "git_sha": "1c148c3",
-  "started_utc": "20260920-021836",
-  "question_count": 1
+  "git_sha": "98bc1f0",
+  "started_utc": "20260920-030635",
+  "question_count": 100
 }

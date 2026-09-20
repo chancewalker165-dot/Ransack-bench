@@ -82,8 +82,10 @@ def cmd_suite(args) -> int:
     loaded = _load_dotenv(root)
     print(f".env: {loaded} var(s) loaded" if loaded else ".env: not found, using current env")
 
-    allowed = set(args.providers) if args.providers else None
-    plan = [(d, p) for d, p in PLAN if not allowed or p in allowed or d in allowed]
+    allowed_p = set(args.providers) if args.providers else None
+    allowed_d = set(args.datasets) if args.datasets else None
+    plan = [(d, p) for d, p in PLAN
+            if (not allowed_p or p in allowed_p) and (not allowed_d or d in allowed_d)]
     if not plan:
         print("nothing to run: no plan entries match", file=sys.stderr)
         return 2
@@ -210,6 +212,8 @@ def main() -> int:
     p_suite = sub.add_parser("suite", help="run the whole priority plan, skipping providers without keys")
     p_suite.add_argument("--providers", nargs="*", default=None,
                          help="restrict to these providers (default: full plan)")
+    p_suite.add_argument("--datasets", nargs="*", default=None,
+                         help="restrict to these datasets (default: full plan)")
     p_suite.add_argument("--repeat", type=int, default=1)
     p_suite.add_argument("--limit", type=int, default=None)
     p_suite.add_argument("--yes", action="store_true", help="skip the confirmation prompt")

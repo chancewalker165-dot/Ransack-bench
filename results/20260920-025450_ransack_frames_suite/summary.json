@@ -1,0 +1,1035 @@
+{
+  "provider": "ransack",
+  "dataset": "frames",
+  "sample_id": "frames_n100_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "alias_exact",
+  "n_questions": 100,
+  "n_calls": 100,
+  "repeat": 1,
+  "hits": 20,
+  "hit_rate_pct": 20.0,
+  "hit_ci95_pct": [
+    13.3,
+    28.9
+  ],
+  "errors": 0,
+  "answer_calls": 0,
+  "answer_correct": 0,
+  "answer_accuracy_pct": null,
+  "abstains": 0,
+  "judge": {
+    "graded": 0,
+    "CORRECT": 0,
+    "WRONG": 0,
+    "ABSTAIN": 0,
+    "JUDGE_ERROR": 0
+  },
+  "latency_mean_s": 3.028,
+  "latency_p50_s": 2.783,
+  "latency_p95_s": 5.654,
+  "latency_max_s": 10.581,
+  "per_question": [
+    {
+      "id": "frames-0003",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.657
+    },
+    {
+      "id": "frames-0004",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.573
+    },
+    {
+      "id": "frames-0011",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.027
+    },
+    {
+      "id": "frames-0013",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.538
+    },
+    {
+      "id": "frames-0023",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.484
+    },
+    {
+      "id": "frames-0024",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.512
+    },
+    {
+      "id": "frames-0034",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.491
+    },
+    {
+      "id": "frames-0037",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.524
+    },
+    {
+      "id": "frames-0046",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.472
+    },
+    {
+      "id": "frames-0050",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.474
+    },
+    {
+      "id": "frames-0056",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 10.581
+    },
+    {
+      "id": "frames-0064",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.344
+    },
+    {
+      "id": "frames-0069",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.307
+    },
+    {
+      "id": "frames-0082",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.076
+    },
+    {
+      "id": "frames-0083",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 5.207
+    },
+    {
+      "id": "frames-0084",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.22
+    },
+    {
+      "id": "frames-0085",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.32
+    },
+    {
+      "id": "frames-0095",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.209
+    },
+    {
+      "id": "frames-0100",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.455
+    },
+    {
+      "id": "frames-0101",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.913
+    },
+    {
+      "id": "frames-0103",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.783
+    },
+    {
+      "id": "frames-0104",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.883
+    },
+    {
+      "id": "frames-0122",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 5.081
+    },
+    {
+      "id": "frames-0128",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.108
+    },
+    {
+      "id": "frames-0142",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.076
+    },
+    {
+      "id": "frames-0158",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.822
+    },
+    {
+      "id": "frames-0169",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 9.525
+    },
+    {
+      "id": "frames-0185",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.159
+    },
+    {
+      "id": "frames-0186",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.002
+    },
+    {
+      "id": "frames-0188",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.25
+    },
+    {
+      "id": "frames-0189",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.753
+    },
+    {
+      "id": "frames-0201",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.951
+    },
+    {
+      "id": "frames-0213",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 7.103
+    },
+    {
+      "id": "frames-0224",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.718
+    },
+    {
+      "id": "frames-0226",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 7.967
+    },
+    {
+      "id": "frames-0229",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.757
+    },
+    {
+      "id": "frames-0236",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.724
+    },
+    {
+      "id": "frames-0260",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.774
+    },
+    {
+      "id": "frames-0264",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.972
+    },
+    {
+      "id": "frames-0273",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.101
+    },
+    {
+      "id": "frames-0286",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.669
+    },
+    {
+      "id": "frames-0319",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.402
+    },
+    {
+      "id": "frames-0325",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.898
+    },
+    {
+      "id": "frames-0332",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.065
+    },
+    {
+      "id": "frames-0346",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.351
+    },
+    {
+      "id": "frames-0359",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.898
+    },
+    {
+      "id": "frames-0374",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.119
+    },
+    {
+      "id": "frames-0392",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.557
+    },
+    {
+      "id": "frames-0411",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.384
+    },
+    {
+      "id": "frames-0426",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.223
+    },
+    {
+      "id": "frames-0432",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.24
+    },
+    {
+      "id": "frames-0434",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.513
+    },
+    {
+      "id": "frames-0438",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.512
+    },
+    {
+      "id": "frames-0449",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.52
+    },
+    {
+      "id": "frames-0452",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.38
+    },
+    {
+      "id": "frames-0482",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.434
+    },
+    {
+      "id": "frames-0487",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.954
+    },
+    {
+      "id": "frames-0505",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.221
+    },
+    {
+      "id": "frames-0511",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.125
+    },
+    {
+      "id": "frames-0521",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.718
+    },
+    {
+      "id": "frames-0544",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.178
+    },
+    {
+      "id": "frames-0547",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.113
+    },
+    {
+      "id": "frames-0549",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.852
+    },
+    {
+      "id": "frames-0550",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.194
+    },
+    {
+      "id": "frames-0551",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.176
+    },
+    {
+      "id": "frames-0563",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.783
+    },
+    {
+      "id": "frames-0570",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.347
+    },
+    {
+      "id": "frames-0573",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.868
+    },
+    {
+      "id": "frames-0581",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.941
+    },
+    {
+      "id": "frames-0583",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.04
+    },
+    {
+      "id": "frames-0585",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.141
+    },
+    {
+      "id": "frames-0589",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.599
+    },
+    {
+      "id": "frames-0603",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 7.421
+    },
+    {
+      "id": "frames-0612",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.723
+    },
+    {
+      "id": "frames-0619",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.711
+    },
+    {
+      "id": "frames-0630",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.047
+    },
+    {
+      "id": "frames-0632",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.69
+    },
+    {
+      "id": "frames-0641",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.587
+    },
+    {
+      "id": "frames-0648",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.196
+    },
+    {
+      "id": "frames-0670",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.868
+    },
+    {
+      "id": "frames-0674",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.819
+    },
+    {
+      "id": "frames-0690",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.31
+    },
+    {
+      "id": "frames-0698",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.967
+    },
+    {
+      "id": "frames-0700",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.476
+    },
+    {
+      "id": "frames-0702",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.767
+    },
+    {
+      "id": "frames-0715",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.554
+    },
+    {
+      "id": "frames-0719",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 4.339
+    },
+    {
+      "id": "frames-0737",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 5.654
+    },
+    {
+      "id": "frames-0741",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.808
+    },
+    {
+      "id": "frames-0746",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.069
+    },
+    {
+      "id": "frames-0749",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 5.494
+    },
+    {
+      "id": "frames-0765",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.851
+    },
+    {
+      "id": "frames-0766",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.705
+    },
+    {
+      "id": "frames-0771",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 3.465
+    },
+    {
+      "id": "frames-0784",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.982
+    },
+    {
+      "id": "frames-0789",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.866
+    },
+    {
+      "id": "frames-0796",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.672
+    },
+    {
+      "id": "frames-0801",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.79
+    },
+    {
+      "id": "frames-0806",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 2.884
+    },
+    {
+      "id": "frames-0807",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.784
+    }
+  ]
+}
