@@ -68,7 +68,7 @@ full sources are fetched by `scripts/fetch_datasets.py` into `data/`
 |---|---|---|
 | `mock` | none (offline fixture) | pipeline smoke only |
 | `ransack` (search lane, MCP surface) | `RANSACK_MCP_URL` (default https://ransack.tools), `RANSACK_MCP_TOKEN` | hit-rate |
-| `ransack-research` (agentic lane) | same | hit-rate + answer accuracy |
+| `ransack-research` (agentic lane, **beta**: synthesis gap documented in FINDINGS.md; do not market until fixed) | same | hit-rate + answer accuracy |
 | `nosearch` (no-search LLM control) | `OPENAI_API_KEY`, `NOSEARCH_MODEL`, `OPENAI_BASE_URL` | answer accuracy (the baseline that exposes weak seeds) |
 | `tavily` | `TAVILY_API_KEY` | hit-rate (+ `answer` when returned) |
 | `brave` | `BRAVE_API_KEY` | hit-rate |
