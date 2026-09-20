@@ -50,7 +50,8 @@ def main() -> int:
         calls = a.budget / (spec["price_per_1k_calls"] / 1000.0)
         hit_calls = calls * hit
         rows.append((name, spec["price_per_1k_calls"], calls, hit, hit_calls,
-                     spec["verification"].startswith("estimate")))
+                     spec["verification"].startswith("estimate"),
+                     spec["source"]))
     rows.sort(key=lambda r: -r[4])
 
     lines = [
@@ -64,9 +65,9 @@ def main() -> int:
         "| provider | $/1k calls | calls per " + f"${a.budget:.0f}" + " | hit-rate | fact-bearing calls | price figure |",
         "|---|---|---|---|---|---|",
     ]
-    for name, price, calls, hit, hit_calls, is_est in rows:
+    for name, price, calls, hit, hit_calls, is_est, src in rows:
         flag = " (estimate)" if is_est else ""
-        lines.append(f"| {name} | ${price:.2f}{flag} | {calls:,.0f} | {hit * 100:.1f}% | {hit_calls:,.0f} | [source]({spec_source(p, src_name)}) |")
+        lines.append(f"| {name} | ${price:.2f}{flag} | {calls:,.0f} | {hit * 100:.1f}% | {hit_calls:,.0f} | [source]({src}) |")
     lines += [
         "",
         "Reading: the answer engines win the accuracy column; the flat-priced",
@@ -86,9 +87,6 @@ def main() -> int:
         print(out)
     return 0
 
-
-def spec_source(p: dict, name: str) -> str:
-    return p["providers"].get(name, {}).get("source", "")
 
 
 if __name__ == "__main__":
