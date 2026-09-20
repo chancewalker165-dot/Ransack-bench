@@ -1,0 +1,1816 @@
+{
+  "dataset": "simpleqa",
+  "sample_id": "simpleqa_n200_seed20260919",
+  "seed": 20260919,
+  "frozen_on": "2026-09-19",
+  "source": {
+    "url": "https://openaipublic.blob.core.windows.net/simple-evals/simple_qa_test_set.csv",
+    "license": "MIT (openai/simple-evals)",
+    "fetched": "2026-09-19"
+  },
+  "full_dataset_sha256": "34c3f48c40a048bf89a40b7a655906954a25ddb857fad24a2d985f55d632cd04",
+  "grader": "simpleqa_judge",
+  "selection": "sorted ids + random.Random(seed).sample, committed so the freeze is reproducible",
+  "questions": [
+    {
+      "id": "simpleqa-0031",
+      "question": "In 1810, François Aimé Louis Dumoulin published a collection of how many engravings themed on the journey of \"Robinson Crusoe\"?",
+      "expected": "150",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Fran%C3%A7ois_Aim%C3%A9_Louis_Dumoulin', 'https://en.wikipedia.org/wiki/Fran%C3%A7ois_Aim%C3%A9_Louis_Dumoulin#:~:text=In%201810%2C%20Dumoulin%20published%20a,a%20precursor%20to%20modern%20comics.', 'https://www.theseus.fi/bitstream/handle/10024/510799/Payne_Sam.pdf;jsessionid=4E7D0553C98F587885B7F5A1C2BECF59?sequence=4']}"
+      }
+    },
+    {
+      "id": "simpleqa-0034",
+      "question": "On what day, month, and year was David Sweet, Canadian politician, born?",
+      "expected": "June 24, 1957",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/David_Sweet', 'https://en.wikipedia.org/wiki/David_Sweet', 'https://dbpedia.org/page/David_Sweet', 'https://xxi.pages.dev/0xLy9lbi53aWtpcGVkaWEub3JnLy9EYXZpZF9Td2VldA']}"
+      }
+    },
+    {
+      "id": "simpleqa-0039",
+      "question": "What is the name of the kibbutz that Simon Le Bon lived on in 1978?",
+      "expected": "Gvulot.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Place', 'urls': ['https://www.thejc.com/news/israel/duran-duran-to-perform-in-israel-de4dp28b', 'https://en.wikipedia.org/wiki/Kibbutz_volunteer', 'https://en.wikipedia.org/wiki/Gvulot', 'https://www.grunge.com/1088796/simon-le-bon-facts-about-the-duran-duran-frontman/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0072",
+      "question": "In Season 3 of the American version of \"The Circle,\" in which episode did Vince enter the game?",
+      "expected": "7",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/The_Circle_(American_TV_series)_season_3', 'https://en.wikipedia.org/wiki/The_Circle_(American_TV_series)_season_3', 'https://www.tvguide.com/tvshows/the-circle/episodes-season-3/1000625409/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0095",
+      "question": "What is the surname of the individual who won the Gordon E. Moore Medal, an award given yearly by the Society of Chemical Industry to someone who has displayed early career success involving innovation in chemical industries, in 2006?",
+      "expected": "Jonathan M. McConnachie",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Gordon_E._Moore_Medal_(SCI)#:~:text=2006%2C%20Jonathan%20M.%20McConnachie', 'https://www.sciencehistory.org/about/awards-program/sci-gordon-e-moore-medal/', 'https://en.wikipedia.org/wiki/Gordon_E._Moore_Medal_(SCI)', 'https://www.soci.org/awards/past-recipients/gordon-e-moore-medal']}"
+      }
+    },
+    {
+      "id": "simpleqa-0110",
+      "question": "In what city did Marina Abramović perform Rhythm 4 (1974)?",
+      "expected": "Milan",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87#Rhythm_4,_1974', 'https://blogs.uoregon.edu/marinaabramovic/category/rhythm-series/', 'https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87#:~:text=medication%20wore%20off.-,Rhythm%204%2C%201974,the%20limits%20of%20her%20lungs.', 'https://www.wikiart.org/en/marina-abramovic/rhythm-4']}"
+      }
+    },
+    {
+      "id": "simpleqa-0117",
+      "question": "In which year did Fazal Ilahi Chaudhry, former Speaker of the National Assembly of Pakistan, join the Muslim League?",
+      "expected": "1942",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Fazal_Ilahi_Chaudhry#Political_career', 'https://en.wikipedia.org/wiki/Fazal_Ilahi_Chaudhry', 'https://www.allamaiqbal.com/webcont/393/FazalIlahiChoudhary.html', 'https://gujjarpersonalities.blogspot.com/2015/04/fazal-elahi-chaudhry-former-president.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-0131",
+      "question": "What are the three cities where Arvind Kejriwal spent most of his childhood?",
+      "expected": "Sonipat, Ghaziabad, Hisar",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Arvind_Kejriwal#:~:text=Kejriwal%20spent%20most%20of%20his,Holy%20Child%20School%20at%20Sonipat.', 'https://en.wikipedia.org/wiki/Arvind_Kejriwal', 'https://www.jagranjosh.com/general-knowledge/arvind-kejriwal-1581082470-1', 'https://www.javatpoint.com/arvind-kejriwal']}"
+      }
+    },
+    {
+      "id": "simpleqa-0142",
+      "question": "What is the name of the individual in whose memory the Taj Mahal was built by Mughal Emperor Shah Jahan?",
+      "expected": "Mumtaz Mahal",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Taj_Mahal#Inspiration', 'https://en.wikipedia.org/wiki/Taj_Mahal', 'https://en.wikipedia.org/wiki/Mumtaz_Mahal', 'https://www.indiaculture.gov.in/taj-mahal']}"
+      }
+    },
+    {
+      "id": "simpleqa-0184",
+      "question": "Who was the first cardiologist in Kashmir?",
+      "expected": "Dr Upendra Kaul",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://www.greaterkashmir.com/srinagar/noted-cardiologist-dr-upendra-kauls-book-when-the-heart-speaks-released/', 'https://www.greaterkashmir.com/srinagar/noted-cardiologist-dr-upendra-kauls-book-when-the-heart-speaks-released/#:~:text=Dr%20Kaul%20is%20a%20gold,attention%20to%20patients%20from%20Kashmir.', 'https://kashmirlife.net/reading-cardiologists-heart-vol-14-issue-24-299606/', 'https://www.dailyexcelsior.com/when-a-cardiologist-heart-speaks/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0189",
+      "question": "Which companion can Josephine develop feelings for (other than the Inquisitor themselves) in Dragon Age: Inquisition (2014)?",
+      "expected": "Blackwall",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Person', 'urls': ['https://dragonage.fandom.com/wiki/Josephine_Montilyet', 'https://dragonage.fandom.com/wiki/Josephine_Montilyet', 'https://dragonage.fandom.com/wiki/Blackwall', 'https://www.gamegrin.com/articles/dragon-age-couples-you-might-have-missed/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0192",
+      "question": "Which year was the drug Metformin introduced as a medication in France?",
+      "expected": "1957",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Metformin', 'https://en.wikipedia.org/wiki/Metformin', 'https://pubmed.ncbi.nlm.nih.gov/28776081/#:~:text=Metformin%20was%20rediscovered%20in%20the,to%20treat%20diabetes%20in%201957.', 'https://link.springer.com/article/10.1007/s00125-017-4318-z']}"
+      }
+    },
+    {
+      "id": "simpleqa-0204",
+      "question": "In which specific issue did Black Condor II perish?",
+      "expected": "Infinite Crisis #1",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Black_Condor#Ryan_Kendall', 'https://dcuguide.com/w/Black_Condor_(Ryan_Kendall)', 'https://en.wikipedia.org/wiki/Black_Condor', 'https://crisisonearthprime.com/infinite-crisis/ic01/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0230",
+      "question": "In the 2022 research paper titled \"Analyzing EEG Data with Machine and Deep Learning: A Benchmark\" by Danilo Avola et al., what are the four machine learning models that were used?",
+      "expected": "MLP, CNN, LSTM, and GRU.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Other', 'urls': ['https://link.springer.com/chapter/10.1007/978-3-031-06427-2_28', 'https://www.researchgate.net/publication/359368242_Analyzing_EEG_Data_with_Machine_and_Deep_Learning_A_Benchmark', 'https://arxiv.org/abs/2203.10009']}"
+      }
+    },
+    {
+      "id": "simpleqa-0260",
+      "question": "What month, day, and year was House Resolution 7004, \"Addressing the Governor's unacceptable actions in matters related to the appraiser certification program,\" introduced against Governor Kristi Noem?",
+      "expected": "February 24, 2022",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Kristi_Noem#', 'https://en.wikipedia.org/wiki/Kristi_Noem#Conflict_of_interest_action_to_professionally_benefit_daughter', 'https://sdlegislature.gov/Session/Bill/23510', 'https://lionheadthemovies.fandom.com/wiki/Kristi_Noem?theme=false#Conflict_of_interest_action_to_professionally_benefit_daughter']}"
+      }
+    },
+    {
+      "id": "simpleqa-0272",
+      "question": "What university was awarded the \"Visitor's Award\" for \"Best University\" in 2017 by the President of India?",
+      "expected": "Jawaharlal Nehru University",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Jawaharlal_Nehru_University', 'https://rb.nic.in/visitorawards/pdf/booklet2017.pdf', 'https://www.presidentofindia.gov.in/pranab_mukherjee/press_releases/jawaharlal-nehru-university-wins-visitors-awards-best-university-2017#:~:text=Jawaharlal%20Nehru%20University%20has%20won,Banaras%20Hindu%20University%20and%20Prof.', 'https://www.ndtv.com/education/jawaharlal-nehru-university-wins-the-visitors-awards-for-the-best-university-2017-1665461']}"
+      }
+    },
+    {
+      "id": "simpleqa-0297",
+      "question": "Which one of the 1990 Fly Girls from the series In Living Color stayed for five seasons?",
+      "expected": "Deidre Lang",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Person', 'urls': ['Lang was the only Fly Girl to stay for the entire run.', 'https://en.wikipedia.org/wiki/List_of_In_Living_Color_cast_members', 'https://www.listal.com/deidre-lang']}"
+      }
+    },
+    {
+      "id": "simpleqa-0298",
+      "question": "What is the title of Series 1, Episode 17 of *Space: 1999*?",
+      "expected": "\"The Last Sunset\"",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Other', 'urls': ['https://www.imdb.com/title/tt0706348/', 'https://en.wikipedia.org/wiki/List_of_Space:_1999_episodes', 'https://www.imdb.com/title/tt0072564/episodes/?season=1', 'https://epguides.com/Space1999/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0340",
+      "question": "What day, month, and year was John Philip Bughaw born?",
+      "expected": "November 7, 2008.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/John_Philip_Bughaw', 'https://en.wikipedia.org/wiki/John_Philip_Bughaw', 'https://www.definitions.net/definition/balang', 'https://www.famousfix.com/list/celebrities-born-in-november-2008']}"
+      }
+    },
+    {
+      "id": "simpleqa-0368",
+      "question": "In which month and year was Firozabad district first established from Agra district in India?",
+      "expected": "February 1989",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Agra_division', \"'https://www.firozabadonline.in/guide/history-of-firozabad'\", 'https://firozabad.nic.in/history/', 'https://en.wikipedia.org/wiki/Firozabad_district']}"
+      }
+    },
+    {
+      "id": "simpleqa-0376",
+      "question": "What day, month, and year was Jackson Asiku, the Ugandan-Australian amateur flyweight and professional feather/super featherweight boxer, born?",
+      "expected": "21 October 1978",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Jackson_Asiku', 'https://en.wikipedia.org/wiki/Jackson_Asiku', 'https://dbpedia.org/page/Jackson_Asiku', 'https://www.olympedia.org/athletes/90033']}"
+      }
+    },
+    {
+      "id": "simpleqa-0379",
+      "question": "On what day, month, and year did the National Institute of Technology Srinagar (NIT Srinagar) become an Institute of National Importance under the NIT Bill passed by the Parliament of India?",
+      "expected": "15 August 2007",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Srinagar', 'https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Srinagar#:~:text=In%20the%20same%20year%2C%20the,by%20the%20parliament%20of%20India.', 'https://engineering4india.com/nit-srinagar.php', 'https://www.collegedekho.com/colleges/nit-srinagar']}"
+      }
+    },
+    {
+      "id": "simpleqa-0404",
+      "question": "As of the latest official population estimate in 2015 for the town of Szentes in southeastern Hungary, what is the population density in square kilometers?",
+      "expected": "79/km2",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Szentes', 'https://en.wikipedia.org/wiki/Szentes', 'https://www.wikiwand.com/en/Szentes']}"
+      }
+    },
+    {
+      "id": "simpleqa-0409",
+      "question": "Which amateur astronomer was 162 Laurentia named after?",
+      "expected": "Joseph Jean Pierre Laurent",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/162_Laurentia', 'https://en.wikipedia.org/wiki/162_Laurentia', 'https://academickids.com/encyclopedia/index.php/162_Laurentia', 'https://en.wikipedia.org/wiki/Joseph_Jean_Pierre_Laurent', 'https://dbpedia.org/page/162_Laurentia']}"
+      }
+    },
+    {
+      "id": "simpleqa-0454",
+      "question": "Who were Antonio Negri's two daughters?",
+      "expected": "Anna Negri, Nina Negri",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Antonio_Negri', 'https://en.wikipedia.org/wiki/Antonio_Negri#:~:text=Negri%20married%20Paola%20Meo%20in,Negri%2C%20from%20a%20separate%20relationship.', 'https://www.nytimes.com/2023/12/22/world/europe/antonio-negri-dead.html', 'https://www.irenebrination.com/irenebrination_notes_on_a/2023/12/toni-negri-obituary.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-0512",
+      "question": "What year was the municipality of San José de la Montaña, Antioquia, Colombia, founded?",
+      "expected": "1916",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/San_Jos%C3%A9_de_la_Monta%C3%B1a', 'https://www.familysearch.org/en/wiki/San_Jos%C3%A9_de_la_Monta%C3%B1a,_Norte,_Antioquia,_Colombia_Genealogy']}"
+      }
+    },
+    {
+      "id": "simpleqa-0516",
+      "question": "What was the age range of the drivers whose EEG data was collected in the 2021 research paper titled \"EEG-Based Driving Fatigue Detection Using a Two-Level Learning Hierarchy Radial Basis Function\" by Ziwu Ren et al.?",
+      "expected": "23-27",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2021.618408/full', 'https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2021.618408/full', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905350/', 'https://www.researchgate.net/publication/349291260_EEG-Based_Driving_Fatigue_Detection_Using_a_Two-Level_Learning_Hierarchy_Radial_Basis_Function']}"
+      }
+    },
+    {
+      "id": "simpleqa-0522",
+      "question": "What part of the body do the eggs of moon jellies lodge in?",
+      "expected": "The oral arms.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Other', 'urls': ['https://www.pugetsound.edu/puget-sound-museum-natural-history/exhibits/marine-panel/moon-jelly', 'https://www.pugetsound.edu/puget-sound-museum-natural-history/exhibits/marine-panel/moon-jelly', 'https://en.wikipedia.org/wiki/Jellyfish', 'https://www.montereybayaquarium.org/animals/animals-a-to-z/moon-jelly']}"
+      }
+    },
+    {
+      "id": "simpleqa-0553",
+      "question": "Which foreign merchant was issued the right to transact slaves on Spain's behalf and ordered regulations on trade with Cuba?",
+      "expected": "Asiento de Negros",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/History_of_Cuba', 'https://en.wikipedia.org/wiki/History_of_Cuba', 'https://www.britannica.com/topic/asiento-de-negros', 'https://curiosity.lib.harvard.edu/south-sea-bubble/feature/the-south-sea-company-and-the-slave-trade']}"
+      }
+    },
+    {
+      "id": "simpleqa-0556",
+      "question": "Jackie Ormes was the arts editor for the Monongahela High School yearbook during which academic year?",
+      "expected": "1929–1930",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Jackie_Ormes', 'https://en.wikipedia.org/wiki/Jackie_Ormes#Early_life_and_career', 'https://discover.hubpages.com/education/Jackie-Ormes-First-African-American-Female-Cartoonist', 'https://nerdist.com/article/jackie-ormes-first-black-woman-cartoonist-comics/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0572",
+      "question": "On what day, month, and year did the 2nd ASEM Environment Ministers' Meeting (ASEMEnvMM2) begin?",
+      "expected": "October 12, 2003",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Asia%E2%80%93Europe_Meeting', 'https://aseminfoboard.org/asem_events/2nd-asem-environment-ministers-meeting-asem-envmm2/', \"https://en.wikipedia.org/wiki/Asia%E2%80%93Europe_Meeting#ASEM_Environment_Ministers'_Meetings_(ASEMEnvMM)\", 'https://wikipedia.nucleos.com/viewer/wikipedia_en_all/A/Asia%E2%80%93Europe_Meeting']}"
+      }
+    },
+    {
+      "id": "simpleqa-0626",
+      "question": "What year was the municipality of Chiscas, Boyacá, Colombia, founded?",
+      "expected": "1777",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Chiscas', 'https://www.chiscas-boyaca.gov.co/municipio/nuestro-municipio', 'https://es.wikipedia.org/wiki/Chiscas', 'https://www.colombiaturismoweb.com/DEPARTAMENTOS/BOYACA/MUNICIPIOS/CHISCAS/CHISCAS.htm']}"
+      }
+    },
+    {
+      "id": "simpleqa-0651",
+      "question": "What is the title of the painting Sir William Beechey (British portraitist) painted for the 1798 exhibition of the Royal Academy?",
+      "expected": "George III and the Prince of Wales Reviewing Troops",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/William_Beechey', 'https://priory-fine-art.co.uk/products/sir-william-beechey-r-a-english-1753-1839#:', 'https://en.wikipedia.org/wiki/William_Beechey']}"
+      }
+    },
+    {
+      "id": "simpleqa-0653",
+      "question": "In what year was the District of Columbia Baptist Convention excommunicated due to its support of LGBTQ inclusion?",
+      "expected": "2018",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Southern_Baptist_Convention', 'https://en.wikipedia.org/wiki/Southern_Baptist_Convention', 'https://baptistnews.com/article/southern-baptists-officially-end-ties-with-district-of-columbia-baptist-convention/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0655",
+      "question": "In what year was John Lennon's psychedelic Rolls-Royce shown at the Pacific National Exhibition?",
+      "expected": "2014",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/John_Lennon%27s_psychedelic_Rolls-Royce#:~:text=It%20was%20then%20transferred%20to,of%20that%20institution%20ever%20since.', 'https://en.wikipedia.org/wiki/John_Lennon%27s_psychedelic_Rolls-Royce#Exhibitions', 'https://www.royalbcmuseum.bc.ca/about/our-work/publications-news/latest-news/john-lennons-1965-rolls-royce-phantom-v-touring']}"
+      }
+    },
+    {
+      "id": "simpleqa-0662",
+      "question": "In which town in New Zealand was actress Amanda Billing born and raised?",
+      "expected": "Masterton",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Amanda_Billing\\n\\nhttps://www.imdb.com/name/nm1751245/', 'https://en.wikipedia.org/wiki/Amanda_Billing', 'https://www.nzonscreen.com/profile/amanda-billing', 'https://www.nowtolove.co.nz/celebrity/celeb-news/amanda-billing-photography/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0663",
+      "question": "What is the surname of the individual who won the Beilby Medal and Prize in 2009?",
+      "expected": "Bao",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Beilby_Medal_and_Prize#:~:text=%5D%5B13%5D-,2009%20%E2%80%93%20Zhenan%20Bao,-2008%20%E2%80%93%20Neil', 'https://en.wikipedia.org/wiki/Beilby_Medal_and_Prize', 'https://en.wikipedia.org/wiki/Zhenan_Bao', 'https://www.soci.org/awards/past-recipients/beilby-medal-and-prize']}"
+      }
+    },
+    {
+      "id": "simpleqa-0667",
+      "question": "What number step is \"ubusuna jinja ni kiyu hokokuh\" in the Shinto funeral process?",
+      "expected": "7",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Number', 'urls': ['https://www.econdolence.com/learning-center/religion-and-culture/shinto/shinto-funeral--burial-customs', 'https://yamatomagazine.home.blog/2021/11/25/appreciating-the-intricacies-of-shinto-funerals-with-daken-and-wolverine/', 'https://religionknowledge14.home.blog/2019/12/25/shinto-birth-rituals-in-christianity/', 'https://www.econdolence.com/learning-center/religion-and-culture/shinto/shinto-funeral--burial-customs']}"
+      }
+    },
+    {
+      "id": "simpleqa-0669",
+      "question": "Which streamer won the \"Best Variety Streamer\" award at The Streamer Awards in 2022?",
+      "expected": "moistcr1tikal",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://www.invenglobal.com/articles/16733/all-the-award-winners-at-the-streamer-awards-2022', 'https://en.wikipedia.org/wiki/The_Streamer_Awards', 'https://en.wikipedia.org/wiki/Cr1TiKaL', 'https://thestreamerawards.com/winners', 'https://www.twitch.tv/moistcr1tikal']}"
+      }
+    },
+    {
+      "id": "simpleqa-0671",
+      "question": "What is a bridge called in Kashmiri?",
+      "expected": "Kadal",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/List_of_bridges_in_Srinagar', 'https://namratawakhloo.medium.com/bridges-of-srinagar-52c858376c7c#:~:text=A%20bridge%20in%20Kashmiri%20is%20called%20Kadal.', 'https://en.wikipedia.org/wiki/Safa_Kadal#:~:text=The%20word%20kadal%20means%20bridge,reign%20of%20Mughal%20emperor%20Aurangzeb.', 'https://en.wikipedia.org/wiki/List_of_bridges_in_Srinagar']}"
+      }
+    },
+    {
+      "id": "simpleqa-0677",
+      "question": "In the 2020 census, what was the population of Seneca Township in Lenawee County?",
+      "expected": "1,155",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://wikiroulette.co/?p=Seneca_Township,_Michigan', 'https://data.census.gov/profile/Seneca_township,_Lenawee_County,_Michigan?g=060XX00US2609172440', 'https://data.census.gov/all?q=Seneca%20township,%20Lenawee%20County,%20Michigan', 'https://data.census.gov/table/DECENNIALPL2020.P1?q=Seneca%20township,%20Lenawee%20County,%20Michigan']}"
+      }
+    },
+    {
+      "id": "simpleqa-0682",
+      "question": "What is the name of the individual who was awarded the Paul Karrer Gold Medal in 2004?",
+      "expected": "Ada Yonath",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Paul_Karrer_Gold_Medal', 'https://en.wikipedia.org/wiki/Paul_Karrer_Gold_Medal', 'https://www.pas.va/en/academicians/ordinary/yonath.html', 'https://www.nobelprize.org/events/nobel-prize-summit/2021/panellists/ada-yonath/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0722",
+      "question": "What was the day, month, and year when Adrian Robert James Pettigrew, an English former professional footballer, was born?",
+      "expected": "12 November 1986",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Adrian_Pettigrew', 'https://en.wikipedia.org/wiki/Adrian_Pettigrew', 'https://dbpedia.org/page/Adrian_Pettigrew', 'http://thechels.info/wiki/Adrian_Pettigrew']}"
+      }
+    },
+    {
+      "id": "simpleqa-0738",
+      "question": "What did Daemon say to Vaemond before killing him in HOTD Season 1?",
+      "expected": "\"Say it.\"",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Other', 'urls': ['https://villains.fandom.com/wiki/Daemon_Targaryen', 'https://hero.fandom.com/wiki/Vaemond_Velaryon#:~:text=Daemon%3A%20Say%20it.,before%20his%20murder%20by%20Daemon.', 'https://scrapsfromtheloft.com/tv-series/house-of-the-dragon-s01e08-lord-of-tides-transcript/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0750",
+      "question": "What is the name of the man who purchased Belmont on St. Saviour's Hill, Jersey, UK, in 1822?",
+      "expected": "Sir Colin Halkett",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Person', 'urls': ['https://www.governmenthouse.gov.je/governmenthouse/', 'https://www.governmenthouse.gov.je/governmenthouse/#:~:text=He%20then%20built%20the%20present,Colin%20Halkett%20acquired%20the%20house.', 'https://www.theislandwiki.org/index.php/Government_House', 'https://en.wikipedia.org/wiki/Government_House,_Jersey']}"
+      }
+    },
+    {
+      "id": "simpleqa-0761",
+      "question": "What was Bindy Johal's age in years when he immigrated to Vancouver, British Columbia, with his parents during his childhood?",
+      "expected": "4 years.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Bindy_Johal#Early_life', 'https://en.wikipedia.org/wiki/Bindy_Johal#:~:text=9%20External%20links-,Early%20life,respect%20and%20remorse%20for%20others.', 'https://cfseu.bc.ca/gangster-profile/', 'https://medium.com/@Samuel.kerr/im-still-around-32db1572765a']}"
+      }
+    },
+    {
+      "id": "simpleqa-0781",
+      "question": "Which scientists received the American Chemical Society Award in Pure Chemistry in 1937?",
+      "expected": "E. Bright Wilson",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/ACS_Award_in_Pure_Chemistry', 'https://en.wikipedia.org/wiki/ACS_Award_in_Pure_Chemistry', 'https://foundation.alphachisigma.org/professional-awards/acs', 'https://www.acs.org/funding/awards/acs-award-in-pure-chemistry/past-recipients.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-0783",
+      "question": "The K-class blimp (1938), the K-14, had a total diameter of what in meters?",
+      "expected": "17.63 m",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/K-class_blimp', 'https://en.wikipedia.org/wiki/K-class_blimp#Specifications_(K-14)', 'https://military-history.fandom.com/wiki/K-class_blimp', 'https://en-academic.com/dic.nsf/enwiki/1289080']}"
+      }
+    },
+    {
+      "id": "simpleqa-0805",
+      "question": "What was the first line after the salutation in the letter sent to Sri Biswambhar Goswami by A.C. Bhaktivedanta, also known as A.C. Bhaktivedanta Swami Prabhupada, on December 25, 1956?",
+      "expected": "Kindly accept my respectful obeisances.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Other', 'urls': ['https://vedabase.io/en/library/letters/letter-to-sri-biswambhar-goswami/', 'https://vedabase.io/en/library/letters/letter-to-sri-biswambhar-goswami/', 'https://prabhupadabooks.com/letters/shanti_kutir/december/01/1956/sri_biswambhar_goswami']}"
+      }
+    },
+    {
+      "id": "simpleqa-0812",
+      "question": "In what year was the beetle species Conaliamorpha lutea described by Ermisch?",
+      "expected": "1968",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Conaliamorpha', 'https://en.wikipedia.org/wiki/Conaliamorpha', 'https://es-academic.com/dic.nsf/eswiki/1384892', 'https://www.collegesidekick.com/study-docs/6486960']}"
+      }
+    },
+    {
+      "id": "simpleqa-0824",
+      "question": "What was the name of Project Zero Dawn's Extinction Failsafe Protocol in the video game Horizon Zero Dawn (2017)?",
+      "expected": "HADES",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Other', 'urls': ['https://horizon.fandom.com/wiki/HADES', 'https://horizon.fandom.com/wiki/HADES', 'https://hzd.fandom.com/wiki/HADES', 'https://screenrant.com/horizon-forbidden-west-subordinate-functions-purpose-gaia-project/']}"
+      }
+    },
+    {
+      "id": "simpleqa-0825",
+      "question": "How many CDs is the Sen no Kiseki IV - The End of Saga - original soundtrack?",
+      "expected": "3",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Number', 'urls': ['https://vgmdb.net/album/81324', 'https://www.play-asia.com/the-legend-of-heroes-sen-no-kiseki-iv-the-end-of-saga-original/13/70cdob', 'https://www.amazon.com/Sen-Kiseki-End-Saga-S-T/dp/B07JW7VSHB', 'https://kiseki.fandom.com/wiki/Sen_no_Kiseki_IV_-The_End_of_Saga-_Original_Soundtrack']}"
+      }
+    },
+    {
+      "id": "simpleqa-0831",
+      "question": "As of 2022, what is the population of Mersin Province?",
+      "expected": "1,916,432",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Mersin_Province', 'https://www.researchgate.net/figure/Mersin-province-land-asset-distribution-http-wwwmersingovtr-tarim-2023-The_fig1_375858965#:~:text=Mersin%20province%20land%20asset%20distribution%20(%25)%20(http%3A%2F%2Fwww.mersin,1%2C916%2C432%20people%20according%20to%202022.', 'https://en.wikipedia.org/wiki/Mersin_Province#:~:text=Mersin%20Province%20(Turkish%3A%20Mersin%20ili,population%20is%201%2C916%2C432%20(2022).']}"
+      }
+    },
+    {
+      "id": "simpleqa-0833",
+      "question": "Who was Horacio Coppola's second wife?",
+      "expected": "Raquel Palomeque",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Horacio_Coppola', 'https://www.theguardian.com/artanddesign/2012/jun/22/horacio-coppola', 'https://en.wikipedia.org/wiki/Horacio_Coppola#:~:text=He%20and%20Ms.,married%20Raquel%20Palomeque%2C%20a%20pianist.']}"
+      }
+    },
+    {
+      "id": "simpleqa-0873",
+      "question": "What is the last name of the player who got a yellow card in the 71st minute of the match between Germany and Sweden during the 2018 FIFA World Cup?",
+      "expected": "Boateng",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_F', 'https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_F', 'https://www.espn.com/soccer/match/_/gameId/498175/sweden-germany']}"
+      }
+    },
+    {
+      "id": "simpleqa-0894",
+      "question": "In which year did Julian Bradley, the first Black Republican to serve in the Wisconsin Senate and only the second Black Republican to serve in the Wisconsin Legislature, first move to La Crosse, Wisconsin, with his mother?",
+      "expected": "1992",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Julian_Bradley_(politician)', 'https://en.wikipedia.org/wiki/Julian_Bradley_(politician)', 'https://julianbradley.org/about/', 'https://docs.legis.wisconsin.gov/2023/legislators/senate/2412']}"
+      }
+    },
+    {
+      "id": "simpleqa-0896",
+      "question": "Who won the Margaret Oakley Dayhoff Award in 2011?",
+      "expected": "Diane Lidke",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Margaret_Oakley_Dayhoff_Award', 'https://en.wikipedia.org/wiki/Margaret_Oakley_Dayhoff_Award', 'https://www.biophysics.org/awards-funding/society-awards']}"
+      }
+    },
+    {
+      "id": "simpleqa-0972",
+      "question": "What color is the third stripe from the top of the aromantic pride flag created in 2014?",
+      "expected": "Whitehttps://www.sfgmc.org/blog/pride-flags#block-yui_3_17_2_1_1683145657332_180414",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Pride_flag', 'https://www.sfgmc.org/blog/pride-flags#block-yui_3_17_2_1_1683145657332_180414', 'https://equity.ok.ubc.ca/pride-flags/#:~:text=Aromantic%20Flag&text=The%20light%20green%20represents%20aromanticism,black%20represents%20the%20sexuality%20spectrum.', 'https://flagsforgood.com/blogs/news/all-about-aromantic-the-aro-experience-and-aro-pride-flag-explained']}"
+      }
+    },
+    {
+      "id": "simpleqa-0979",
+      "question": "What is the name of the astronomer who discovered 216433 Milianleo in 2009?",
+      "expected": "Erwin Schwab",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/216433_Milianleo', 'https://en.wikipedia.org/wiki/216433_Milianleo', 'https://www.wikidata.org/wiki/Q5684740', 'https://www.wikiwand.com/en/216433_Milianleo']}"
+      }
+    },
+    {
+      "id": "simpleqa-1017",
+      "question": "What governor decided that Juneteenth should only be recognized for one year in 2020?",
+      "expected": "Kristi Noem",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Juneteenth', 'https://en.wikipedia.org/wiki/Juneteenth', 'https://www.argusleader.com/story/news/politics/2020/06/18/noem-issues-juneteenth-proclamation-some-south-dakotans-push-state-recognized-holiday/3212781001/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1020",
+      "question": "How many times was the first mayor of Paris, Ontario, Hugh Finlayson, elected to the Dominion Parliament?",
+      "expected": "3",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Number', 'urls': ['https://digitalcollections.ucalgary.ca/archive/At-the-forks-of-the-Grand---20-historical-essays-on-Paris--Ontario-2R3BF1FJHDS5T.html', 'https://sites.rootsweb.com/~onbrant/biossd.htm#:~:text=He%20was%20a%20member%20of%20Parliament%20three%20sessions%2C%20and%20sat%20twelve%20years%20in%20the%20Local%20House%3B', 'https://en.wikipedia.org/wiki/Hugh_Finlayson#:~:text=Electoral%20history%5B,%E2%88%926.09', 'https://www.ola.org/en/members/all/hugh-finlayson#:~:text=F%20%20Hugh%20Finlayson-,Hugh%20Finlayson,September%203%2C%201867%20%E2%80%93%20February%2025%2C%201871,-Career%20details']}"
+      }
+    },
+    {
+      "id": "simpleqa-1025",
+      "question": "From which university did Raissa M. D'Souza complete her B.S. in physics?",
+      "expected": "University of Illinois at Urbana–Champaign.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Other', 'urls': ['https://engineering.ucdavis.edu/people/raissa-dsouza#:~:text=2017%20UC%20Davis%20College%20of%20Engineering%20Outstanding%20Mid-Career,Research%20Award%202013%20ACM%20SIGSOFT%20Distinguished%20Paper%20Award', \"https://en.wikipedia.org/wiki/Raissa_D%27Souza#:~:text=Early%20life%20and%20education,-When%20D'Souza&text=She%20eventually%20settled%20on%20university,Mehran%20Kardar%20and%20Norman%20Margolus.\", 'https://engineering.ucdavis.edu/people/raissa-dsouza', 'https://mae.ucdavis.edu/news/raissa-dsouza-appointed-lead-editor-physical-review-research']}"
+      }
+    },
+    {
+      "id": "simpleqa-1028",
+      "question": "What is the name of the high school from which American painter Kathleen Gemberling graduated?",
+      "expected": "Garfield",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Kathleen_Gemberling_Adkison', 'https://en.wikipedia.org/wiki/Kathleen_Gemberling_Adkison#:', 'https://obituaries.seattletimes.com/obituary/kathleen-adkison-1080154329', 'https://www.legacy.com/us/obituaries/seattletimes/name/kathleen-adkison-obituary?id=14758968']}"
+      }
+    },
+    {
+      "id": "simpleqa-1135",
+      "question": "Who was the first Red Sox manager to win two World Series?",
+      "expected": "Bill Carrigan",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/2007_World_Series', 'https://en.wikipedia.org/wiki/Bill_Carrigan', 'https://en.wikipedia.org/wiki/List_of_Boston_Red_Sox_managers', 'https://www.boston.com/sports/boston-red-sox/2012/10/04/ranking-the-red-sox-managers-2/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1142",
+      "question": "In what inning of Game 3 of the '07 World Series did Matsuzaka get his first-ever hit in the Major Leagues?",
+      "expected": "3rd",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/2007_World_Series', 'https://en.wikipedia.org/wiki/2007_World_Series', 'https://youtu.be/q5nGgFJJavo', 'https://www.cbsnews.com/pictures/2007-world-series-game-three/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1263",
+      "question": "On what month, day, and year was the cave known as Ursa Minor first discovered in Sequoia National Park, California, United States?",
+      "expected": "August 19, 2006",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://web.archive.org/web/20180612141850/https://news.nationalgeographic.com/news/2006/09/060926-cave-california.html', 'https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1007&context=inside_earth', 'https://www.cavetexas.org/anl/PDF/anl200610.pdf', 'http://npshistory.com/newsletters/inside-earth/v9n1.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-1270",
+      "question": "During which years was Manasseh Sogavare affiliated with the Solomon Islands Social Credit Party?",
+      "expected": "2005–2009",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Manasseh_Sogavare', 'https://en.wikipedia.org/wiki/Manasseh_Sogavare', 'https://www.wikiwand.com/en/Manasseh_Sogavare', 'https://kids.kiddle.co/Manasseh_Sogavare']}"
+      }
+    },
+    {
+      "id": "simpleqa-1271",
+      "question": "Which country did Audrey McLaughlin volunteer in with Canadian Crossroads International in 1986?",
+      "expected": "Barbados",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Audrey_McLaughlin', 'https://en.wikipedia.org/wiki/Crossroads_International#:~:text=Audrey%20McLaughlin%20volunteered%20in%20Barbados,elections%20of%201988%20and%201993.', 'https://cintl.org/who-we-are/honorary-patrons/', 'https://en.wikipedia.org/wiki/Audrey_McLaughlin']}"
+      }
+    },
+    {
+      "id": "simpleqa-1302",
+      "question": "On what day, month, and year was 3412 Kafka, an asteroid from the inner regions of the asteroid belt, discovered?",
+      "expected": "10 January 1983",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/3412_Kafka#:~:text=It%20was%20discovered%20on%2010%20January%201983', 'https://en.wikipedia.org/wiki/3412_Kafka#:~:text=3412%20Kafka%2C%20provisional%20designation%201983%20AU2%2C%20is%20an%20asteroid%20from%20the%20inner%20regions%20of%20the%20asteroid%20belt%2C%20approximately%206%20kilometers%20in%20diameter.%20It%20was%20discovered%20on%2010%20January%201983%2C%20by%20American%20astronomers%20Randolph%20Kirk%20and%20Donald%20Rudy%20at%20Palomar%20Observatory%20in%20California%2C%20United%20States.', 'https://www.wikiwand.com/en/3412_Kafka#cite_note-MPC-Kafka-5:~:text=It%20was%20discovered%20on%2010%20January%201983%2C%20by%20American%20astronomers%20Randolph%20Kirk%20and%20Donald%20Rudy%20at%20Palomar%20Observatory%20in%20California%2C%20United%20States.']}"
+      }
+    },
+    {
+      "id": "simpleqa-1317",
+      "question": "What was Augustine George Masih's position just before being appointed as a judge of the Supreme Court of India?",
+      "expected": "Former chief justice of the Rajasthan High Court",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Augustine_George_Masih', 'https://en.wikipedia.org/wiki/Augustine_George_Masih', 'https://www.sci.gov.in/judge/justice-augustine-george-masih/', 'https://www.scconline.com/blog/post/2024/03/12/know-your-judge-justice-augustine-george-masih-legal-research/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1359",
+      "question": "On what day, month, and year was a second petition to dissolve the Gordon Heights Fire District in New York filed?",
+      "expected": "December 31, 2008",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Gordon_Heights_Fire_Department', 'https://en.wikipedia.org/wiki/Gordon_Heights_Fire_Department', 'https://www.nytimes.com/2009/03/22/nyregion/long-island/22fireli.html#:~:text=Residents%20of%20Gordon%20Heights%2C%20a,Gordon%20Heights%20has%20936%20households.', 'https://archive.longislandpress.com/2011/02/11/special-district-consolidation-gains-steam-on-long-island/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1415",
+      "question": "What was the Hampstead, London, street address of art collector Margaret Gardiner's home?",
+      "expected": "35 Downshire Hill",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Margaret_Gardiner_(art_collector)', 'Hillhttps://en.wikipedia.org/wiki/Margaret_Gardiner_(art_collector)#:~:text=She%20made%20her%20home%20at,)%2C%20author%20of%20Black%20Athena.', 'https://www.pierartscentre.com/blog/24/7/2019/margaret-gardiner-and-naum-gabo', 'https://downshirehillra.com/living-history-downshire-hill/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1437",
+      "question": "Who is the Japanese voice actor for Jusis Albarea in \"Trails of Cold Steel 1\"?",
+      "expected": "Shinnosuke Tachibana",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Person', 'urls': ['https://www.behindthevoiceactors.com/video-games/The-Legend-of-Heroes-Trails-of-Cold-Steel/japanese-cast/', 'https://www.behindthevoiceactors.com/video-games/The-Legend-of-Heroes-Trails-of-Cold-Steel/Jusis-Albarea/', 'https://www.behindthevoiceactors.com/Shinnosuke-Tachibana/', 'https://en.wikipedia.org/wiki/Shinnosuke_Tachibana']}"
+      }
+    },
+    {
+      "id": "simpleqa-1438",
+      "question": "In what patch was the classic version Shaman class ability Totemic Focus removed in World of Warcraft?",
+      "expected": "Patch 5.0.4",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Date', 'urls': ['https://warcraft.wiki.gg/wiki/Totemic_Focus_(Classic)', 'https://warcraft.wiki.gg/wiki/Totemic_Focus_(Classic)', 'https://wowpedia.fandom.com/wiki/Totemic_Focus_(Classic)']}"
+      }
+    },
+    {
+      "id": "simpleqa-1480",
+      "question": "In Season 16 of The Bachelor, which contestant quit?",
+      "expected": "Brittney Schreiner",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/The_Bachelor_(American_TV_series)_season_16', 'https://en.wikipedia.org/wiki/The_Bachelor_(American_TV_series)_season_16', 'https://bachelor-nation.fandom.com/wiki/The_Bachelor_(Season_16)', 'https://www.imdb.com/news/ni21469862/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1490",
+      "question": "In what city was the mathematician Enrico D'Ovidio born?",
+      "expected": "Campobasso",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Enrico_D%27Ovidio', 'https://en.wikipedia.org/wiki/Enrico_D%27Ovidio', 'https://areeweb.polito.it/strutture/cemed/museovirtuale/english/storia/2-02/2-2-01/2-2-0133.htm', \"http://www.geometry.net/detail/scientists/d'ovidio_enrico.html\"]}"
+      }
+    },
+    {
+      "id": "simpleqa-1501",
+      "question": "In what year did Stepan Prokopovich Timoshenko receive the Worcester Reed Warner Medal?",
+      "expected": "1935",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Worcester_Reed_Warner#Worcester_Reed_Warner_Medal', 'https://www.asme.org/about-asme/honors-awards/literature-awards/worcester-reed-warner-medal', 'https://en.wikipedia.org/wiki/Worcester_Reed_Warner', 'https://watermark.silverchair.com/493_1.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAABGAwggRcBgkqhkiG9w0BBwagggRNMIIESQIBADCCBEIGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMvegxpaLqdbE_YqFiAgEQgIIEExwkQFNwsKOV8IWn1_Ph1kRUgo9CDJYdKtVmb2O86ntfitIs5dZkJas0rBsVfBxYAOSe5jWXvAquk-zndamvgLUp4zyHdfAbqc5dVvgziFkrmVyQyDPQygh609I8Gsjg6jWTP-3RChfRP0yDcmJMMMqSvxpKNNSwHPi-kMFVDVMgF0efOowaHBXtpoNTMz0tRna4gQDIOvs6jKlX-L025zNTtQ7yGRy8aTPT7P-MvTWTVq7hr3Nuv4o9gcc7e0dLwmDWScm6MLWRQ6BBdpkNPOJLMmL_0gvHE4NaOjbGsY7ClreUmW_414sXIvIueWC3-eH9RSSzWK57BGnG9qYUftRNWe5lDXVBetwLNBe0Hk4pdj4OWHyhl7KLs_NPcxKf4j2Vb_9VRsNtH_dcPcVGNwAD8NTEnSIDQZuYXezus8NXDplNhAUKaVUoGsIId86fb05aMxLp7Qj5kg0U62WscfQVGc8x-6zhKinYCcR7UDShxA0VYAjjlp5qzifR4MPbw8P-TadLc9Ak_naStJ2R3EtsHTG6-kaOju9CsFKtV-L5-ufUtel_KQFfvBEV8ArOK5dOpp3LO0gzFsBZELKfHfk4aC88SQdUicVZakrfjYEm_ODscjEDokQeu2G9mb_4PKS8VXMEDM6a49dv7reLyG97yA2s6FfahF7PpjgmDU-5T5M3UYi3fmDnsDbbs91OHnI0Z3eBNnWfCVNuNMqlkeb5l9ML7zgkTqPX1Zrd0fs-BqQ-QevgKSy4tpXw9K6pyc47S1FqM9TrdYiIU1pfCHHz_tPrCYbtBKuVBsJY4alhmoIdxeH9MrjUR2zaMzLA7DFzp4t4hk0cfIo_yp0tfxzcOASojsFI83xMGfspwTUXTjAkkcmEAwZJDPX0qxrlDjkeXjNUT_k7qhAIOuUFGCU0ZSIAx0Il2K4pNVLu5Pgi1vRMddBGtj8KgFr22wXb5Wl4T1uskI0k_e227zZe8Y-TFa5OyN5BxhQwa7g-TmiNfOx78MGhv-TPMZ_Mxkd9R82vYhCOb1N_pTJkdjvaXFF_3sz_1k7xSa1aL1IahIsmqvSD5zwzfBGkTlngw17dqmfayxAYdWcc-qiUS3pvOev93SSiGLzPT-gFWO6lmN2o9wP6MKbQ-NHtT9X-s4NK-cFxgV4mQg93TidtVNFGz-c9ggV90xcU8XWQfy02slUJuytC15mwMVDUFqNUi-tOof5sxGurimRfSNbl8LJ565rnNR-a3Cl9HWBM6nReQtxA5T-HmL02AxPPht44c5darqjky3EksZjaZzJHx0tdRJDSdyEDxao6B0RuZKp8jUGaiPzBdxnug87de2OXhO7TqnuYOL31OEOTVIkGVl3QsMNib_hhWkVpz-V-H-egVcA3JVGo']}"
+      }
+    },
+    {
+      "id": "simpleqa-1504",
+      "question": "What is the first name of the individual who won the Marlow Medal and Prize, an early-career award in physical chemistry given by the Royal Society of Chemistry, in 1975?",
+      "expected": "Geoffrey",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Marlow_Award#:~:text=1975,Geoffrey%20Duxbury', 'https://en.wikipedia.org/wiki/Marlow_Award', 'https://www.rsc.org/prizes-funding/prizes/find-a-prize/faraday-division-early-career-award-marlow-award/previous-winners/', 'https://www.researchgate.net/profile/Geoffrey-Duxbury']}"
+      }
+    },
+    {
+      "id": "simpleqa-1510",
+      "question": "What are the names of the children of Princess Shruti Rajya Lakshmi Devi Shah and Kumar Gorakh Shumsher Jang Bahadur Rana of Nepal?",
+      "expected": "Girwani Rajya Lakshmi Devi Rana and Surangana Rajya Lakshmi Devi Rana",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Princess_Shruti_of_Nepal', 'https://en.wikipedia.org/wiki/Princess_Shruti_of_Nepal', 'https://en.nepalkhabar.com/news/detail/5557/', 'https://nepalbharatupdate.blogspot.com/2015/11/where-are-princess-shruti-shah-ranas.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-1514",
+      "question": "Name the artist and radio broadcaster of Srinagar, Kashmir, who represented India in the 2002 International Exhibition of Quranic Paintings in Iran.",
+      "expected": "Arshad Sauleh",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Arshad_Sauleh', 'https://en.wikipedia.org/wiki/Arshad_Sauleh#:~:text=Arshad%20Sauleh%20(Urdu%3A%20%D8%A7%D8%B1%D8%B4%D8%B1%20%D8%B5%D8%A7%D9%84%D8%AD,College%20of%20Education%20in%20Srinagar.', 'https://alchetron.com/Arshad-Sauleh']}"
+      }
+    },
+    {
+      "id": "simpleqa-1518",
+      "question": "In which month and year did photographer Mr. Elbank first include a photo of Harnaam Kaur in his exhibit at Somerset House in London?",
+      "expected": "March 2015",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Harnaam_Kaur', 'https://en.wikipedia.org/wiki/Harnaam_Kaur#:~:text=In%20March%202015%2C%20photographer%20Mr,over%2080%20individuals%20with%20beards.', 'https://shutterhub.org.uk/beard-by-mr-elbank-at-somerset-house/', 'https://www.ephotozine.com/article/beard----a-new-free-exhibition-at-somerset-house-27003']}"
+      }
+    },
+    {
+      "id": "simpleqa-1525",
+      "question": "What is the first and last name of the first female television meteorologist in the U.S.?",
+      "expected": "June Bacon-Bercey",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Person', 'urls': ['https://www.encyclopedia.com/education/news-wires-white-papers-and-books/bacon-bercey-june-1932#:~:text=June%20Bacon%2DBercey%201932%E2%80%93&text=June%20Bacon%2DBercey%20was%20the,%2C%20New%20York%2C%20in%201970', 'https://www.tkaamuseum.org/junebacon-bercey#:~:text=THE%20FIRST%20FEMALE%20CHIEF%20METEOROLOGIST,in%20the%20male%20dominated%20field.', 'https://art19.com/shows/off-the-radar/episodes/dccbfb89-cb61-48db-9465-bc078f656e33', 'https://pix11.com/news/black-history-month/black-history-month-remembering-june-bacon-bercey-the-1st-female-tv-meteorologist/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1540",
+      "question": "What was the name of Iris Litt's direct predecessor as director of the Clayman Institute for Gender Research?",
+      "expected": "Deborah L. Rhode",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Stanford_University_centers_and_institutes#Michelle_R._Clayman_Institute_for_Gender_Research', 'https://gender.stanford.edu/people/adrian-daub/former-directors']}"
+      }
+    },
+    {
+      "id": "simpleqa-1548",
+      "question": "What was the first historically Black college to be accredited by the Southern Association of Colleges and Schools?",
+      "expected": "Fisk University",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Fisk_University', 'https://en.wikipedia.org/wiki/Fisk_University', 'https://www.searchablemuseum.com/historically-black-colleges-and-universities-hbcus', 'https://artsandculture.google.com/story/what-was-black-college-life-like-in-the-new-deal-u-s-national-archives/MQVRz8fqBMyjIQ?hl=en']}"
+      }
+    },
+    {
+      "id": "simpleqa-1579",
+      "question": "In 2022, what was the population of the Kızılağaç district of Kaş, Antalya Province, Turkey?",
+      "expected": "221",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/K%C4%B1z%C4%B1la%C4%9Fa%C3%A7,_Ka%C5%9F', 'https://en.wikipedia.org/wiki/K%C4%B1z%C4%B1la%C4%9Fa%C3%A7,_Ka%C5%9F', 'https://www.academia.edu/112308546/The_Population_Structure_and_Characteristic_of_Ka%C5%9F_District_Antalya_?uc-sb-sw=19348302']}"
+      }
+    },
+    {
+      "id": "simpleqa-1583",
+      "question": "What is the new baseline set in bytes after Alexander Ratushnyak won the first time the Hutter Prize was awarded in 2006?",
+      "expected": "17,073,018 bytes",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Hutter_Prize', 'https://en.wikipedia.org/wiki/Hutter_Prize#:~:text=At%20that%20point%20he%20was%20declared%20the%20first,the%20new%20baseline%20was%20set%20to%2017%2C073%2C018%20bytes.', 'http://prize.hutter1.net/', 'https://groups.google.com/g/Hutter-Prize/c/Pz-Ax23RRRM?pli=1']}"
+      }
+    },
+    {
+      "id": "simpleqa-1615",
+      "question": "What is the surname of the individual who won the Faraday Medal, awarded by the Electrochemistry Group of the Royal Society of Chemistry in 1999?",
+      "expected": "Allongue",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Faraday_Medal_(electrochemistry)#:~:text=1999%20Philippe%20Allongue', 'https://www.rsc.org/membership-and-community/connect-with-others/through-interests/interest-groups/electrochemistry/faraday-medal/#F-winners', 'https://www.humboldt-foundation.de/en/connect/explore-the-humboldt-network/singleview/1000493/dr-philippe-allongue']}"
+      }
+    },
+    {
+      "id": "simpleqa-1627",
+      "question": "In what month and year did the Society of Illustrators purchase 128 East 63rd Street, New York, NY?",
+      "expected": "August 1939",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://societyillustrators.org/about/history-of-128-east-63rd-street/', 'https://societyillustrators.org/about/history-of-128-east-63rd-street/', 'https://www.nyc-arts.org/organizations/museum-of-american-illustration/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1636",
+      "question": "What single item is Max, the resin gnome sculpture designed by Tom Clark at Cairn Studio in 1985 (Item #1090), holding in his left hand?",
+      "expected": "A coffee bean",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://picclick.com/Tom-Clark-Gnome-1090-MAX-Coin-Coffee-Beans-221959514470.html', 'https://www.ebay.com/itm/305604089212']}"
+      }
+    },
+    {
+      "id": "simpleqa-1642",
+      "question": "In which episode and season of South Park does Aunt Jemima first appear? Give me the number and title.",
+      "expected": "Episode 2: Gluten Free Ebola, Season eighteen",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Other', 'urls': ['https://southpark.fandom.com/wiki/Aunt_Jemima\\nhttps://southpark.fandom.com/wiki/Gluten_Free_Ebola', 'https://en.wikipedia.org/wiki/Gluten_Free_Ebola', 'https://southpark.fandom.com/wiki/Aunt_Jemima', 'https://southpark.fandom.com/wiki/Gluten_Free_Ebola']}"
+      }
+    },
+    {
+      "id": "simpleqa-1644",
+      "question": "What year was the municipality of Hispania, Antioquia, Colombia, founded?",
+      "expected": "1925",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Hispania_(Antioquia)', 'http://www.hispania-antioquia.gov.co/municipio/nuestro-municipio-530800', 'https://es.wikipedia.org/wiki/Hispania_(Antioquia)', 'https://www.puebliandoporantioquia.com.co/subregion-suroeste/municipio-hispania/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1708",
+      "question": "What is the judicial title of the person who was appointed as Chairman of the Scottish Law Commission on January 1, 2014, for a period of five years until December 31, 2018?",
+      "expected": "Lord Pentland",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Paul_Cullen,_Lord_Pentland', 'https://en.wikipedia.org/wiki/Paul_Cullen,_Lord_Pentland#The_Bench', 'https://www.scotlawcom.gov.uk/news/archive/lord-pentland-appointed-chair-of-the-scottish-law-commission/', 'https://judiciary.scot/home/judiciary/judicial-office-holders/senators-of-the-college-of-justice/lord-pentland']}"
+      }
+    },
+    {
+      "id": "simpleqa-1787",
+      "question": "What is the surname of the individual who won the RSC Supramolecular Chemistry Award in 2016?",
+      "expected": "Ward",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Supramolecular_Chemistry_Award#:~:text=2016%3A%20Michael%20D.%20Ward', 'https://en.wikipedia.org/wiki/Supramolecular_Chemistry_Award', 'https://warwick.ac.uk/fac/sci/chemistry/staff/mikeward/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1795",
+      "question": "In which year, month, and day was the Nokia 8110 announced?",
+      "expected": "9 September 1996",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': [\"https://en.wikipedia.org/wiki/Nokia_8110#:~:text=Nokia%208110%20is%20a%20mobile,a%20'slider'%20form%20factor.\", 'https://en.wikipedia.org/wiki/Nokia_8110', 'https://www.mobilephonemuseum.com/phone-detail/nokia-8110', 'https://www.absolutegeeks.com/article/quick-reads/forgotten-tech-nokia-8110/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1808",
+      "question": "What were the year and month when the Contract Law of the People's Republic of China was abolished?",
+      "expected": "January 2021",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': [\"https://en.wikipedia.org/wiki/Contract_Law_of_the_People%27s_Republic_of_China#:~:text=The%20Contract%20Law%20of%20the,the%20People's%20Republic%20of%20China.\", 'https://en.wikipedia.org/wiki/Contract_Law_of_the_People%27s_Republic_of_China', 'https://www.reedsmith.com/en/perspectives/2020/06/the-adoption-of-the-chinese-civil-code-and-its-implications-on-contracts', 'https://www.roedl.com/insights/china-civil-code']}"
+      }
+    },
+    {
+      "id": "simpleqa-1839",
+      "question": "In which year was Monir Shahroudy Farmanfarmaian (an Iranian artist) awarded the Venice Biennale?",
+      "expected": "1958",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Monir_Shahroudy_Farmanfarmaian', 'https://www.monirff.com/exhibitions', 'https://www.hainesgallery.com/artists/47-monir-shahroudy-farmanfarmaian/', 'https://web.archive.org/web/20230322115754/https://thethirdline.com/artists/45-monir-shahroudy-farmanfarmaian/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1851",
+      "question": "On what day, month, and year was the 2021 research paper titled \"Classification of Relaxation and Concentration Mental States with EEG\" by Shingchern D. You accepted for publication in the scientific journal \"Information\"?",
+      "expected": "23 April 2021",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://www.mdpi.com/2078-2489/12/5/187', 'https://www.mdpi.com/2078-2489/12/5/187', 'https://www.researchgate.net/publication/351143684_Classification_of_Relaxation_and_Concentration_Mental_States_with_EEG']}"
+      }
+    },
+    {
+      "id": "simpleqa-1867",
+      "question": "What is the name of track 7 on Disc 1 of the Super Mario Galaxy Original Soundtrack Platinum Version?",
+      "expected": "Egg Planet",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Other', 'urls': ['https://vgmdb.net/album/5411', 'https://www.mariolegacy.com/wii/super-mario-galaxy-platinum-soundtrack.htm', 'https://downloads.khinsider.com/game-soundtracks/album/super-mario-galaxy-ost-super-mario-35th-anniversary-release', 'https://musicbrainz.org/release/463fa280-48dc-3a33-93d6-7a5fa63f6beb']}"
+      }
+    },
+    {
+      "id": "simpleqa-1884",
+      "question": "What was the population number at the 2011 census of Askham Richard in the north of England?",
+      "expected": "351",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Askham_Richard', 'https://askham-richard.parish.uk/', 'https://wikishire.co.uk/wiki/Askham_Richard', 'https://citypopulation.de/en/uk/yorkshireandthehumber/admin/york/E04000594__askham_richard/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1892",
+      "question": "At which technology park in Liverpool was Psygnosis Limited headquartered starting in 1995?",
+      "expected": "Wavertree Technology Park",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Psygnosis#History', 'https://en.wikipedia.org/wiki/Psygnosis#:~:text=Psygnosis%20Limited%20(%2Fs%C9%AA%C9%A1%CB%88n%C9%99%CA%8A.,Wavertree%20Technology%20Park%20in%20Liverpool.', 'https://www.liverpoolmuseums.org.uk/stories/psygnosis-how-did-liverpool-company-transform-gaming-world', 'https://ultimatepopculture.fandom.com/wiki/Psygnosis']}"
+      }
+    },
+    {
+      "id": "simpleqa-1927",
+      "question": "In which year was the municipality of Murindó, Antioquia, Colombia, founded?",
+      "expected": "1835",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Murind%C3%B3', 'https://en.wikipedia.org/wiki/Murind%C3%B3', 'http://www.murindo-antioquia.gov.co/municipio/nuestro-municipio', 'https://infolocal.comfenalcoantioquia.com/index.php/murindo']}"
+      }
+    },
+    {
+      "id": "simpleqa-1928",
+      "question": "Who placed 3rd in Women's Épée Individual in the 2020 Tokyo Olympics?",
+      "expected": "Katrina Lehis",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Person', 'urls': ['https://olympics.com/en/olympic-games/tokyo-2020/results/fencing/women-s-epee-individual', 'https://en.wikipedia.org/wiki/Katrina_Lehis', 'https://en.wikipedia.org/wiki/Katrina_Lehis', 'https://olympics.com/en/olympic-games/tokyo-2020/results/fencing/women-s-epee-individual']}"
+      }
+    },
+    {
+      "id": "simpleqa-1930",
+      "question": "What is the name of the U.S. President who received a posthumous \"Raven\" Award in 1959?",
+      "expected": "Franklin Delano Roosevelt",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Person', 'urls': ['https://mysterywriters.org/about-mwa/mwa-history/', 'https://en.wikipedia.org/wiki/Raven_Award', 'http://www.mysteryplayground.net/2015/04/']}"
+      }
+    },
+    {
+      "id": "simpleqa-1944",
+      "question": "On what day, month, and year was John Bramston appointed as a member of the Queensland Legislative Council?",
+      "expected": "July 3, 1863",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/John_Bramston_(Australian_politician)', 'https://en.wikipedia.org/wiki/John_Bramston_(Australian_politician)#:~:text=On%203%20July%201863%2C%20he,August%201865%20to%2011%20September', 'https://www.parliament.qld.gov.au/Members/Former-Members/Former-Members-Register/Former-Member-Details?id=703411056#:~:text=Legislative%20Council,3%20Jul%201863', 'https://adb.anu.edu.au/biography/bramston-sir-john-3044#:~:text=Bramston%20entered%20Queensland%27s%20Legislative%20Council%20in%20July%201863%2C%20serving%20in%20Herbert%27s%20ministry%20to%20February%201866.']}"
+      }
+    },
+    {
+      "id": "simpleqa-1951",
+      "question": "What is the name of the sole survivor of the Busy Bee Congo 2019 crash?",
+      "expected": "Muma Emmanuel",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/List_of_sole_survivors_of_aviation_accidents_and_incidents\\nhttps://www.ecofinagency.com/public-management/2511-40691-muma-emmanuel-the-only-survivor-of-the-deadly-plane-crash-that-occurred-on-nov-24-in-dr-congo', 'https://en.wikipedia.org/wiki/List_of_sole_survivors_of_aviation_accidents_and_incidents', 'https://www.ecofinagency.com/public-management/2511-40691-muma-emmanuel-the-only-survivor-of-the-deadly-plane-crash-that-occurred-on-nov-24-in-dr-congo', 'https://cameroonnewsagency.com/cameroonian-born-is-lone-survivor-of-congo-plane-crash/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2042",
+      "question": "What day, month, and year was Sergio Flamigni, an Italian politician and writer, born?",
+      "expected": "22 October 1925",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Sergio_Flamigni#:~:text=Sergio%20Flamigni%20(born%2022%20October,and%20on%20the%20Italian%20Mafia.', 'https://en.wikipedia.org/wiki/Sergio_Flamigni', 'https://alchetron.com/Sergio-Flamigni', 'https://www.famousfix.com/list/italian-partisans']}"
+      }
+    },
+    {
+      "id": "simpleqa-2081",
+      "question": "What is the name of Track 4 on the Sonic Free Riders Original Soundtrack released in 2010?",
+      "expected": "\"Theme of Rocky Ridge\"",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Other', 'urls': ['https://vgmdb.net/album/21988', 'https://sonic.fandom.com/wiki/Break_Free:_Sonic_Free_Riders_Original_Soundtrack', 'https://music.apple.com/us/album/sonic-free-riders-original-soundtrack-break-free/518208280', 'https://www.amazon.com/SONIC-FREE-RIDERS-Original-Soundtrack/dp/B00AH9RHKA']}"
+      }
+    },
+    {
+      "id": "simpleqa-2118",
+      "question": "As of 31 March 2017, how many post offices does the Indian Postal Service have?",
+      "expected": "154,965",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Ministry_of_Communications_(India)', 'https://en.wikipedia.org/wiki/Ministry_of_Communications_(India)#:~:text=As%20of%2031%20March%202017,%25)%20are%20in%20urban%20areas.', 'https://www.indiapost.gov.in/VAS/Pages/AboutUs/PostOfficeNetwork.aspx', 'https://en.wikipedia.org/wiki/India_Post']}"
+      }
+    },
+    {
+      "id": "simpleqa-2130",
+      "question": "During which year did Gerhard Richter have a solo exhibition named \"Gerhard Richter 4900 Colours: Version II\"?",
+      "expected": "2008",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Gerhard_Richter#Exhibitions', 'https://www.serpentinegalleries.org/whats-on/gerhard-richters-4900-colours-version-ii/', 'https://en.wikipedia.org/wiki/Gerhard_Richter', 'http://artobserved.com/2008/09/go-see-gerhard-richter-at-serpentine-gallery-london-opening-today-september-23-through-november-16/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2134",
+      "question": "Which is the first state in India to operationalize an ABDM microsite under the 100 Microsites Project by the National Health Authority?",
+      "expected": "Mizoram",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Place', 'urls': ['https://www.livemint.com/news/india/mizoram-first-state-to-operationalize-ayushman-bharat-s-microsite-project-11692786610132.html', 'https://www.business-standard.com/health/first-abdm-microsite-under-nha-100-microsites-project-launched-in-mizoram-123082300324_1.html', 'https://pib.gov.in/PressReleasePage.aspx?PRID=1951299', 'https://www.gktoday.in/question/which-is-the-first-state-in-india-to-operationalize-an-abdm-microsite']}"
+      }
+    },
+    {
+      "id": "simpleqa-2148",
+      "question": "In what year was Glipodes bordoni described by Franciscolo?",
+      "expected": "1990",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Glipodes_bordoni', 'https://en.wikipedia.org/wiki/Glipodes_bordoni', 'https://www.famousfix.com/list/beetles-described-in-1990', 'https://worldspecies.org/ntaxa/2148294']}"
+      }
+    },
+    {
+      "id": "simpleqa-2163",
+      "question": "In what year was the praying mantis species Eremiaphila cycloptera described by Uvarov?",
+      "expected": "1939",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Eremiaphila_cycloptera', 'https://en.wikipedia.org/wiki/Eremiaphila_cycloptera#:~:text=Eremiaphila%20cycloptera%20is%20a%20species%20of%20praying%20mantis%20native%20to%20Saudi%20Arabia.', 'https://www.gbif.org/species/1404132', 'http://mantodea.speciesfile.org/Common/basic/Taxa.aspx?TaxonNameID=1182407']}"
+      }
+    },
+    {
+      "id": "simpleqa-2191",
+      "question": "On what date, month, and year was Clifford Cunnell, an English cricketer, born?",
+      "expected": "31 August 1944",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Clifford_Cunnell', 'https://en.wikipedia.org/wiki/Clifford_Cunnell', 'https://accringtoncc.com/Archive/Players/34/34555/34555.html', 'https://www.names.org/n/cunnell/about']}"
+      }
+    },
+    {
+      "id": "simpleqa-2204",
+      "question": "What day, month, and year was the New Zealand actress Ria Vandervis born?",
+      "expected": "5 July 1984",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Ria_Vandervis', 'https://www.imdb.com/name/nm2562820/', 'https://en.wikipedia.org/wiki/Ria_Vandervis', 'https://www.amazon.com/prime-video/actor/Ria-Vandervis/amzn1.dv.gti.41d64aa4-3783-4b23-8039-655ccb4f3fa3/#:~:text=Ria%20Vandervis%20was%20born%20on,to%20Chris%20Ashton%20since%202012.']}"
+      }
+    },
+    {
+      "id": "simpleqa-2295",
+      "question": "In what year did Dr. William Schwartz discover that sulfanilamide also acts as a diuretic in people with congestive heart failure?",
+      "expected": "1949",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['9. 2-3 https://www.heart.org/-/media/files/about-us/history/history-of-the-american-heart-association.pdf', 'https://www.heart.org/-/media/files/about-us/history/history-of-the-american-heart-association.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-2351",
+      "question": "What breed was Dolly the Sheep?",
+      "expected": "Finn-Dorset",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Other', 'urls': ['https://www.britannica.com/topic/Dolly-cloned-sheep', 'https://www.ed.ac.uk/roslin/about/dolly/facts/life-of-dolly', 'https://en.wikipedia.org/wiki/Dolly_(sheep)', 'https://www.britannica.com/topic/Dolly-cloned-sheep']}"
+      }
+    },
+    {
+      "id": "simpleqa-2411",
+      "question": "In what year did fashion designer Mowalola Ogunlesi drop out of Central Saint Martins?",
+      "expected": "2018",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Mowalola_Ogunlesi', 'https://www.ssense.com/en-us/editorial/fashion/total-exposure-with-mowalola-ogunlesi']}"
+      }
+    },
+    {
+      "id": "simpleqa-2441",
+      "question": "What role did Tottie Goldsmith play in the TV movie Underbelly Files: Infiltration?",
+      "expected": "Sara Herlihy",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Tottie_Goldsmith', 'https://www.imdb.com/title/tt1741678/characters/nm0326135', 'https://en.wikipedia.org/wiki/Underbelly_Files:_Infiltration', 'https://www.tvguide.com/movies/underbelly-files-infiltration/cast/2030183587/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2451",
+      "question": "What is the forest cover area of Nagaland in square kilometers according to the interpretation of IRS Resourcesat-2 LISS III satellite data from 2017-18?",
+      "expected": "12,486.40",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://fsi.nic.in/isfr2019/isfr-fsi-vol2.pdf', 'https://fsi.nic.in/isfr19/vol2/isfr-2019-vol-ii-nagaland.pdf', 'https://static.pib.gov.in/WriteReadData/userfiles/ISFR2019%20Vol-II.pdf', 'https://www.morungexpress.com/nagalands-forest-carbon-stock-13553-million-tonnes']}"
+      }
+    },
+    {
+      "id": "simpleqa-2453",
+      "question": "In which year was Mascarin Peak, the active volcano on Marion Island, renamed for the first time?",
+      "expected": "2003",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Mascarin_Peak', \"https://en.wikipedia.org/wiki/Mascarin_Peak#:~:text=Mascarin%20Peak%20is%20South%20Africa's,du%20Fresne's%20frigate%20Le%20Mascarin.\", 'https://alchetron.com/Mascarin-Peak']}"
+      }
+    },
+    {
+      "id": "simpleqa-2462",
+      "question": "What is the guard stability of the Broken Straight Sword in Dark Souls II?",
+      "expected": "5",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Number', 'urls': ['http://darksouls2.wikidot.com/broken-straight-sword', 'https://darksouls.fandom.com/wiki/Broken_Straight_Sword_(Dark_Souls_II)', 'https://darksouls2.wiki.fextralife.com/Broken+Straight+Sword', 'http://darksouls2.wikidot.com/broken-straight-sword']}"
+      }
+    },
+    {
+      "id": "simpleqa-2517",
+      "question": "What month and year was the \"Bust of Charles I\" by Gian Lorenzo Bernini destroyed?",
+      "expected": "January 1698",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Bust_of_King_Charles_I_(Bernini)#:', 'https://en.wikipedia.org/wiki/Bust_of_King_Charles_I_(Bernini)#:~:text=The%20bust%20of%20Charles%20was,Whitehall%20Palace%20in%20January%201698.', 'https://royal-academy-production-asset.s3.amazonaws.com/uploads/f165c681-272f-451b-856f-bec56632c50f/Charles+I_LPG_MERGE.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-2521",
+      "question": "What is the name of the project that won the 2021 ACM Software System Award?",
+      "expected": "CompCert",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Other', 'urls': ['https://awards.acm.org/xpages/software-system/index#:~:text=Xavier%20Leroy%2C%20Coll%C3%A8ge%20de%20France%3B%20Sandrine%20Blazy%2C%20University,a%20complete%2C%20mechanically%20checked%20proof%20of%20its%20correctness.', 'https://en.wikipedia.org/wiki/ACM_Software_System_Award', 'https://awards.acm.org/award-recipients/tristan_4628686', 'https://www.bc.edu/bc-web/bcnews/science-tech-and-health/technology/tristan-receives-acm-software-system-award.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-2539",
+      "question": "In ancient times, what was Wular Lake also known as?",
+      "expected": "Mahapadmasar",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Wular_Lake', 'https://en.wikipedia.org/wiki/Wular_Lake#:~:text=In%20ancient%20times%2C%20Wular%20Lake,also%20mentions%20it%20as%20Mahapadmasaras.', 'https://namratawakhloo.medium.com/wular-the-largest-freshwater-lake-in-india-f8fd2c1e38a3', 'https://www.tripuntold.com/jammu-kashmir/bandipora/wular-lake/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2553",
+      "question": "What was the full name of the Indian medical doctor and surgical oncologist who received the Padma Shri and the Lal Bahadur Shastri National Award in January and October 2013, respectively?",
+      "expected": "Rajendra Achyut Badwe",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Rajendra_Achyut_Badwe', 'https://en.wikipedia.org/wiki/Rajendra_Achyut_Badwe', 'https://instituteofcancerpolicy.org/who-we-are/rajendra-badwe', 'https://en.wikipedia.org/wiki/Lal_Bahadur_Shastri_National_Award']}"
+      }
+    },
+    {
+      "id": "simpleqa-2564",
+      "question": "What were the month and year when Obama launched the Priority Enforcement Program, an immigration enforcement program that had been pioneered by George W. Bush, and the Secure Communities fingerprinting and immigration status data-sharing program?",
+      "expected": "July 2009",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Barack_Obama#Legislative_career', 'https://en.wikipedia.org/wiki/Barack_Obama', 'https://www.ice.gov/doclib/foia/secure_communities/securecommunitiesstrategicplan09.pdf', 'https://en.wikipedia.org/wiki/Priority_Enforcement_Program']}"
+      }
+    },
+    {
+      "id": "simpleqa-2588",
+      "question": "What grade did Rosie Perez learn that she had a speech impediment?",
+      "expected": "Third",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Rosie_Perez', 'https://en.wikipedia.org/wiki/Rosie_Perez#:~:text=When%20she%20was%20in%20third,the%20nuns%20during%20her%20childhood.', 'https://uinterview.com/ubio/rosie-perez-biography-in-her-own-words-exclusive-video-news-photos-age/', 'https://archive.nytimes.com/tmagazine.blogs.nytimes.com/2011/06/08/rosie-perezs-prom-night/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2605",
+      "question": "What is the title of the firework display that Cornelia Parker showed at the opening of Jupiter Artland?",
+      "expected": "Nocturne (A Moon Landing)",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://artuk.org/discover/artworks/nocturne-a-moon-landing-265509#:~:text=The%20fireworks%20incorporated%20an%20actual,Moon%20Landings%20made%20by%20Parker.', 'https://artuk.org/discover/artworks/nocturne-a-moon-landing-265509', 'https://en.wikipedia.org/wiki/Cornelia_Parker', 'https://www.jupiterartland.org/art/cornelia-parker-nocturne-a-moon-landing/#:']}"
+      }
+    },
+    {
+      "id": "simpleqa-2651",
+      "question": "What year was the municipality of Güicán, Boyacá, Colombia, founded?",
+      "expected": "1756",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/G%C3%BCic%C3%A1n', 'https://en.wikipedia.org/wiki/G%C3%BCic%C3%A1n#:~:text=The%20municipality%20was%20founded%20by,Blasco%20on%20February%2026%2C%201756.', 'https://www.familysearch.org/en/wiki/G%C3%BCic%C3%A1n,_Guti%C3%A9rrez,_Boyac%C3%A1,_Colombia_Genealogy']}"
+      }
+    },
+    {
+      "id": "simpleqa-2662",
+      "question": "What is the maximum width of Gangabal Lake in kilometers?",
+      "expected": "1 km",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Gangabal_Lake', 'https://en.wikipedia.org/wiki/Gangabal_Lake#:~:text=The%20lake%20has%20a%20maximum,1%20kilometre%20(0.62%20mi).', 'https://travelthehimalayas.com/new-page-1', 'https://kashmirlife.net/the-lake-at-the-peak-61140/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2663",
+      "question": "In which year was the municipality of Pachavita, Boyacá, Colombia, founded?",
+      "expected": "1716",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Pachavita', 'https://en.wikipedia.org/wiki/Pachavita#:~:text=%22Proud%20chief%22.-,History,founded%20on%20November%2017%2C%201716.', 'https://www.familysearch.org/en/wiki/Pachavita,_Neira,_Boyac%C3%A1,_Colombia_Genealogy', 'https://www.wikidata.org/wiki/Q1654528']}"
+      }
+    },
+    {
+      "id": "simpleqa-2681",
+      "question": "In what month and year did Gavino Angius become one of the vice-presidents of the Italian Senate?",
+      "expected": "May 2006",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Gavino_Angius', 'https://en.wikipedia.org/wiki/Gavino_Angius#:~:text=Confirmed%20as%20deputy%20in%201992,Italian%20Senate%20in%20May%202006.', 'https://www.celebsagewiki.com/gavino-angius']}"
+      }
+    },
+    {
+      "id": "simpleqa-2728",
+      "question": "In honor of whom was the role of Poet Laureate of Ontario established?",
+      "expected": "Gord Downie",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Poet_Laureate_of_Ontario', 'https://en.wikipedia.org/wiki/Poet_Laureate_of_Ontario', 'https://globalnews.ca/news/6290772/ontario-poet-laureate-gord-downie/', 'https://www.ontario.ca/laws/statute/s19016#']}"
+      }
+    },
+    {
+      "id": "simpleqa-2773",
+      "question": "In \"The Young and the Restless\" series, which friend of Victoria's did her father marry?",
+      "expected": "Sabrina Costelana",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/List_of_The_Young_and_the_Restless_characters_(2000s)#Sabrina_Costelana_Newman', 'https://en.wikipedia.org/wiki/Victor_and_Nikki_Newman#:~:text=However%2C%20they%20divorce%20again%2C%20and,and%20Victor%20and%20Ashley%20divorced.', 'https://en.wikipedia.org/wiki/Victor_Newman', 'https://www.thelist.com/778449/how-many-times-has-victor-newman-been-married-on-the-young-and-the-restless/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2781",
+      "question": "Who is the municipality of Donmatías, Antioquia, Colombia, named after?",
+      "expected": "Don Matías Jaramillo",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Don_Mat%C3%ADas', 'https://en.wikipedia.org/wiki/Don_Mat%C3%ADas', 'https://www.donmatias-antioquia.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx#gsc.tab=0']}"
+      }
+    },
+    {
+      "id": "simpleqa-2786",
+      "question": "How many Big East Championships did Frank Beamer win?",
+      "expected": "3",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Frank_Beamer', \"https://en.wikipedia.org/wiki/Frank_Beamer#:~:text=Bill%20Dooley's%20last%20team,1995%2C%201996%2C%20and%201999.\", 'https://footballfoundation.org/hof_search.aspx?hof=2430', 'https://www.sunbowl.org/the_sun_bowl_game/legend/33']}"
+      }
+    },
+    {
+      "id": "simpleqa-2804",
+      "question": "What total number of newly discovered pieces of music by Maddalena Casulana were played for the first time in 400 years on March 8, 2022, as part of BBC Radio 3's programming for International Women's Day?",
+      "expected": "12",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Maddalena_Casulana', \"https://en.wikipedia.org/wiki/Maddalena_Casulana#:~:text=A%20total%20of%2066%20madrigals,programming%20for%20International%20Women's%20Day.\", 'https://www.theguardian.com/music/2022/mar/05/maddalena-casulana-missing-renaissance-madrigals-rediscovered', 'https://www.famouscampaigns.com/2022/03/iconic-female-composers-lost-work-to-be-heard-for-the-first-time-in-400-years/']}"
+      }
+    },
+    {
+      "id": "simpleqa-2844",
+      "question": "What was the street address of the studio George Reid and Mary Hiester established after they settled in Toronto following their honeymoon?",
+      "expected": "31 King Street East",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Place', 'urls': ['http://www.biographi.ca/en/bio/hiester_mary_augusta_catharine_15E.html', 'https://www.aci-iac.ca/art-books/mary-hiester-reid/biography/', 'http://www.biographi.ca/en/bio/hiester_mary_augusta_catharine_15E.html', 'https://ago.ca/agoinsider/retroago-go-back-1922-and-explore-agos-first-one-woman-show']}"
+      }
+    },
+    {
+      "id": "simpleqa-2849",
+      "question": "Which village in Ontario was first settled in 1824 by Mr. A. Hurd, and had the Post Office established in 1836, with Mr. J. Leach being the first Postmaster, according to \"Conner & Coltson's Directory of the County of Ontario for 1869-70\"?",
+      "expected": "Prince Albert.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Place', 'urls': ['https://freepages.rootsweb.com/~wjmartin/genealogy/ontario.htm#FOLEY', 'https://www.canadiana.ca/view/oocihm.33815/74']}"
+      }
+    },
+    {
+      "id": "simpleqa-2859",
+      "question": "In what month and year was Barry Goldwater's fourth child born?",
+      "expected": "July 1944",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Barry_Goldwater', 'https://en.wikipedia.org/wiki/Barry_Goldwater', 'https://kids.kiddle.co/Barry_Goldwater', 'https://pendium.fandom.com/wiki/Barry_Goldwater']}"
+      }
+    },
+    {
+      "id": "simpleqa-2875",
+      "question": "In which month and year did the UN General Assembly unanimously elect Maurice Strong to be the first head of the UN Environment?",
+      "expected": "December 1972",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/United_Nations_Environment_Programme', 'https://en.wikipedia.org/wiki/United_Nations_Environment_Programme#:~:text=In%20December%201972%2C%20the%20UN,first%20head%20of%20UN%20Environment.', 'https://www.unep.org/unep-50-leaders-through-years/maurice-strong', 'https://www.mauricestrong.net/index.php?option=com_content&view=article&id=15&Itemid=24']}"
+      }
+    },
+    {
+      "id": "simpleqa-2889",
+      "question": "Which sculpture is the earliest known work by Gian Lorenzo Bernini?",
+      "expected": "The Goat Amalthea with the Infant Jupiter and a Faun",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/The_Goat_Amalthea_with_the_Infant_Jupiter_and_a_Faun', 'https://borghese.gallery/collection/sculpture/goat-amalthea-with-infant-jupiter-and-a-faun.html#:~:text=and%20a%20Faun-,The%20Goat%20Amalthea%20with%20the%20Infant%20Jupiter%20and%20a%20Faun,the%20Borghese%20Gallery%20in%20Rome.', 'https://en.wikipedia.org/wiki/The_Goat_Amalthea_with_the_Infant_Jupiter_and_a_Faun']}"
+      }
+    },
+    {
+      "id": "simpleqa-2914",
+      "question": "What was John Graham Lough's cause of death?",
+      "expected": "Pneumonia",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Campbell_De_Morgan', 'https://en.wikipedia.org/wiki/John_Graham_Lough#:~:text=He%20was%20a%20close%20friend,in%20Kensal%20Green%20cemetery%2C%20London.', 'https://www.wikidata.org/wiki/Q6235982']}"
+      }
+    },
+    {
+      "id": "simpleqa-2923",
+      "question": "In what year was Glipodes dietrichi described by Franciscolo?",
+      "expected": "1962",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Glipodes_dietrichi', 'https://en.wikipedia.org/wiki/Glipodes#:~:text=Glipodes%20is%20a%20genus%20of,Glipodes%20dietrichi%20Franciscolo%2C%201962', 'https://www.gbif.org/species/7003367']}"
+      }
+    },
+    {
+      "id": "simpleqa-2943",
+      "question": "Which day, month, and year did Şahika Ercümen break a world record in the VNF category at Kaş, Antalya, Turkey, with 100 m?",
+      "expected": "26 October 2021",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/%C5%9Eahika_Erc%C3%BCmen#:~:text=100%C2%A0m%20(330%C2%A0ft)%20%2D%20October%2026%2C%202021%20in%20Ka%C5%9F%2C%20Antalya%2C%20Turkey', 'https://en.wikipedia.org/wiki/%C5%9Eahika_Erc%C3%BCmen#:~:text=On%2026%20October%202021%2C%20she%20set%20a%20new%20world%20record%20in%20variable%20weight%20apnea%20without%20fins%20at%20sea%20(VNF)%20category%20at%20Ka%C5%9F%2C%20Antalya%2C%20Turkey%20with%20100%C2%A0m%20(330%C2%A0ft)%2C%20which%20is%20valid%20for%20women%20and%20men.%5B13%5D', 'https://www.aa.com.tr/en/sports/turkish-diver-sahika-ercumen-breaks-world-record-in-antalya/2403026']}"
+      }
+    },
+    {
+      "id": "simpleqa-2954",
+      "question": "In which year was John B. Goodenough elected a Foreign Member of the Royal Society?",
+      "expected": "2010",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/John_B._Goodenough', 'John Bannister Goodenough (/ˈɡʊdɪnʌf/ GUUD-in-uf;[3] July 25, 1922 – June 25, 2023) was an American materials scientist, a solid-state physicist, and a Nobel laureate in chemistry.\\nIn 2010, he was elected a Foreign Member of the Royal Society.[57] The Royal Society of Chemistry grants a John B. Goodenough Award in his honor.[', 'https://royalsociety.org/people/john-goodenough-11514/', 'https://www.electrochem.org/dl/interface/spr/spr14/spr14_p13_21.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-2994",
+      "question": "How many feet deep is the Mississippi River at its source, Lake Itasca?",
+      "expected": "3 feet",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Mississippi_River#Depth', 'https://en.wikipedia.org/wiki/Mississippi_River#:~:text=begin%20in%20Pennsylvania.-,Depth,feet%20(0.91%20m)%20deep.', 'https://www.worldatlas.com/rivers/the-mississippi-river.html', 'https://www.readtheplaque.com/plaque/basic-facts-about-the-mississippi-river']}"
+      }
+    },
+    {
+      "id": "simpleqa-2995",
+      "question": "What song by Carla Bruni was used in the Chuck episode \"Chuck vs. the First Class\"?",
+      "expected": "L'amoureuse",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/Carla_Bruni', 'https://en.wikipedia.org/wiki/Carla_Bruni_discography', 'https://chucktv.net/music/music-season-3/', 'https://www.tvfanatic.com/music/shows/chuck/episodes/chuck-versus-first-class.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-3010",
+      "question": "From which university did Louise M. Antony (American philosopher) receive her bachelor's degree in philosophy?",
+      "expected": "Syracuse University",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Louise_Antony', 'https://en.wikipedia.org/wiki/Louise_Antony', 'https://www.umass.edu/philosophy/about/directory/louise-antony', 'https://www.amherst.edu/news/news_releases/2003/10_2003/node/9417']}"
+      }
+    },
+    {
+      "id": "simpleqa-3022",
+      "question": "What is the full name of the 37th mayor of San Francisco in California from the 1900s?",
+      "expected": "George Richard Moscone",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/George_Moscone', 'https://en.wikipedia.org/wiki/George_Moscone#:~:text=George%20Richard%20Moscone%20(%E2%AB%BDm,his%20assassination%20in%20November%201978.', 'https://www.ranker.com/review/george-moscone/1059265?l=311350', 'https://en.wikipedia.org/wiki/Mayor_of_San_Francisco']}"
+      }
+    },
+    {
+      "id": "simpleqa-3092",
+      "question": "In what church was the organ installed in 2000 at St. John's Church, Gateshead Fell, previously located?",
+      "expected": "St Aidan's Church, Blackhill, Consett",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/St_John%27s_Church,_Gateshead_Fell', \"https://en.wikipedia.org/wiki/St_John%27s_Church,_Gateshead_Fell#:~:text=It%20replaced%20an%20organ%20made,Aidan's%20Church%2C%20Blackhill%2C%20Consett.\", 'https://www.geocaching.com/geocache/GC7PCWM', 'https://www.harrisonorgans.com/wp-content/uploads/2019/04/Catalogue-of-HH-Organs-2019.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-3103",
+      "question": "What was the name of the building where Indian YouTuber, vlogger, and social media activist Dhruv Rathee got married in 2021?",
+      "expected": "Belvedere Palace",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Dhruv_Rathee#Personal_life', 'https://www.dnaindia.com/viral/report-meet-dhruv-rathee-mechanical-engineer-turned-famous-youtuber-compared-india-with-north-korea-net-worth-3079315', 'https://www.news18.com/news/buzz/dhruv-rathee-marries-girlfriend-juli-vienna-palace-indian-youtuber-4495205.html', 'https://www.bollywoodshaadis.com/articles/dhruv-rathee-married-in-a-dreamy-wedding-in-vienna-28791']}"
+      }
+    },
+    {
+      "id": "simpleqa-3107",
+      "question": "In what round of the Nations Cup team competition at the FEI European Championships did a member of the jump crew interfere with Cian O'Connor and Good Luck?",
+      "expected": "Second",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Other', 'urls': ['https://www.chronofhorse.com/article/what-do-you-think-cian-oconnors-controversial-european-championships-round/', 'https://www.chronofhorse.com/article/what-do-you-think-cian-oconnors-controversial-european-championships-round/', 'https://www.noellefloyd.com/blogs/archives/cian-o-connor-confirms-further-action-will-be-taken-regarding-ring-interference-incident', 'https://www.espn.com/olympics/story/_/id/13488822/cian-oconnor-totally-gutted-ireland-showjumping-team-rio-olympics-qualification-hopes-were-wrecked']}"
+      }
+    },
+    {
+      "id": "simpleqa-3127",
+      "question": "In what city did Ciara perform for her Beauty Marks Tour on September 13, 2019?",
+      "expected": "Puyallup",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Beauty_Marks_(album)', 'https://en.wikipedia.org/wiki/Beauty_Marks_(album)#Tour_dates', 'https://ratedrnb.com/2019/06/ciara-announces-beauty-marks-tour/', 'https://www.wehiphop.com/ciara-announces-beauty-marks-tour-i-want-to-make-sure-its-a-unique-experience/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3140",
+      "question": "What year did Roberto Battaglia win a gold medal in the team épée event?",
+      "expected": "1952",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Roberto_Battaglia', 'https://en.wikipedia.org/wiki/Roberto_Battaglia#:~:text=Roberto%20Battaglia%20(23%20June%201909,at%20the%201952%20Summer%20Olympics.', 'https://olympics.com/en/athletes/roberto-battaglia', 'https://www.sport-olympic.gr/sp/index.php/olympic-games/modern-olympic-games/summer-olympic-games/1952-helsinki-summer-olympics/1703-1952-summer-olympics-the-results-fencing']}"
+      }
+    },
+    {
+      "id": "simpleqa-3159",
+      "question": "On what day, month, and year did Anna Krzeptowska-Żebracka, a Polish cross-country skier, die?",
+      "expected": "December 1st, 2017",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Anna_Krzeptowska-%C5%BBebracka', 'https://en.wikipedia.org/wiki/Anna_Krzeptowska-%C5%BBebracka', 'https://www.olympedia.org/athletes/81579']}"
+      }
+    },
+    {
+      "id": "simpleqa-3186",
+      "question": "In which city did pianist David Eugene Tudor set up India’s first electronic music studio?",
+      "expected": "Ahmedabad.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/David_Tudor', \"https://mitpress.mit.edu/9781913689582/subcontinental-synthesis/#:~:text=The%20history%20of%20India's%20first,in%20Ahmedabad%20by%20David%20Tudor.\", 'https://en.wikipedia.org/wiki/David_Tudor', 'https://preparedguitar.blogspot.com/2016/06/conversation-with-david-tudor.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-3200",
+      "question": "What is the shear modulus of selenium in gigapascals?",
+      "expected": "3.7",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Selenium', 'https://pt.kle.cz/en_US/selenium.html', 'https://periodictable.com/Properties/A/ShearModulus.v.html', 'https://en.wikipedia.org/wiki/Selenium']}"
+      }
+    },
+    {
+      "id": "simpleqa-3220",
+      "question": "How far is Quainton Road Railway Station from London in miles?",
+      "expected": "44 miles",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Quainton_Road_railway_station', 'https://en.wikipedia.org/wiki/Quainton_Road_railway_station#:~:text=Quainton%20Road%20railway%20station%20was,(71%20km)%20from%20London.', 'https://www.buckinghamshirelive.com/news/history/quainton-road-forgotten-london-underground-7221169', 'https://u.co.uk/shows/secrets-of-the-london-underground/series-2/episode-8/6307686573112']}"
+      }
+    },
+    {
+      "id": "simpleqa-3237",
+      "question": "In Season 2 of the TV show \"Physical,\" who wrote Episode 6, \"Don't You Have Enough\"?",
+      "expected": "Jackie Li",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Physical_(TV_series)', 'https://en.wikipedia.org/wiki/Physical_(TV_series)', 'https://physical.fandom.com/wiki/Don%27t_You_Have_Enough', 'https://screenrant.com/physical-season-2-rose-byrne-exclusive-clip/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3271",
+      "question": "In which industry did painter William Moore Davis work before he became a full-time painter?",
+      "expected": "In the shipbuilding industry.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/William_Moore_Davis', 'https://en.wikipedia.org/wiki/William_Moore_Davis', 'https://tfaoi.org/aa/3aa/3aa383.htm', 'https://www.questroyalfineart.com/artist/william-m-davis/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3282",
+      "question": "What track did Jimmie Johnson record his only win at in 2001?",
+      "expected": "Chicagoland Speedway",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Jimmie_Johnson', 'https://en.wikipedia.org/wiki/Jimmie_Johnson#Racing_career', 'https://www.nascar.com/gallery/jimmie-johnson-through-the-years/', 'https://www.britannica.com/biography/Jimmie-Johnson']}"
+      }
+    },
+    {
+      "id": "simpleqa-3295",
+      "question": "In what year did Dennis Ichiyama become the designer-in-residence at the Hamilton Wood Type and Printing Museum in Two Rivers, Wisconsin, working with historic wood type?",
+      "expected": "1999",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Dennis_Ichiyama', 'https://en.wikipedia.org/wiki/Dennis_Ichiyama', 'https://ksmallgallery.com/products/a-woodtype-print-by-dennis-y-ichiyama-white']}"
+      }
+    },
+    {
+      "id": "simpleqa-3343",
+      "question": "According to Wikipedia, how many feet above sea level is the Getty Center?",
+      "expected": "900",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Getty_Center', 'https://en.wikipedia.org/wiki/Getty_Center', 'https://localwiki.org/la/Getty_Center_Los_Angeles', 'https://www.architect-us.com/blog/2019/01/the-getty-center/#:~:text=Thanks%20to%20its%20unique%20location,connects%20LA%20with%20the%20Valley.']}"
+      }
+    },
+    {
+      "id": "simpleqa-3379",
+      "question": "Which Indian institute won the 2017 IEEE Spectrum Technology in the Service of Society Award?",
+      "expected": "Indian Institute of Technology Madras",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Place', 'urls': ['https://renewablewatch.in/2017/03/02/iit-madras-wins-ieee-spectrum-technology-in-the-service-of-society-award-2017/', 'https://ieeetv.ieee.org/ieeetv-specials/indian-institute-of-technology-madras-accepts-the-spectrum-technology-in-the-service-of-society-award-honors-ceremony-2017', 'https://renewablewatch.in/2017/03/02/iit-madras-wins-ieee-spectrum-technology-in-the-service-of-society-award-2017/', 'https://indiaeducationdiary.in/iit-madras-wins-2017-ieee-spectrum-technology-service-society-award-solar-dc-technology/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3389",
+      "question": "In what year did Sir William Beechey (British portraitist) first exhibit at the Royal Academy Schools?",
+      "expected": "1776",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/William_Beechey', 'https://en.wikipedia.org/wiki/William_Beechey', 'http://archivecatalogue.npg.org.uk/CalmView/Record.aspx?id=WB&src=CalmView.Catalog', 'https://priory-fine-art.co.uk/products/sir-william-beechey-r-a-english-1753-1839']}"
+      }
+    },
+    {
+      "id": "simpleqa-3411",
+      "question": "On which day, month, and year did Fathima Beevi retire as the governor of the Indian state of Tamil Nadu?",
+      "expected": "03 July 2001",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Fathima_Beevi#', 'https://en.wikipedia.org/wiki/Fathima_Beevi', 'https://simple.wikipedia.org/wiki/List_of_governors_of_Tamil_Nadu', 'https://www.oneindia.com/tamil-nadu-governors-list/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3463",
+      "question": "Which river of India is known as the Lion's Mouth in Tibet?",
+      "expected": "Indus River",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Other', 'urls': ['https://byjus.com/question-answer/which-of-the-following-is-known-as-the-lion-s-mouth-brahmaputra-ganga-indus-yamuna/', \"https://unacademy.com/content/upsc/study-material/indian-geography/indian-river-system/#:~:text=At%20an%20elevation%20of%204164,Khamban%2C%20meaning%20the%20lion's%20mouth\", 'https://www.clearias.com/indus-river-system/', 'https://civilspedia.com/indus-river-system/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3474",
+      "question": "What place did Shristi Shrestha, a winner of the Miss Nepal 2012 pageant, achieve in the Beach Beauty segment of Miss World 2012?",
+      "expected": "Eighth place",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Shristi_Shrestha', 'https://en.wikipedia.org/wiki/Shristi_Shrestha#:~:text=Shrestha%20is%20the%20first%20Miss,contestants%20for%20the%20Multimedia%20Award.', 'https://www.angelopedia.com/news/Miss-Nepal-2019-Finale-In-Seven-Days-Miss-World-Nepal-2012-Shristi-Shrestha-Anniversary/48901', 'https://www.pageantnepal.com/archives/88']}"
+      }
+    },
+    {
+      "id": "simpleqa-3479",
+      "question": "How many seats did the Celebrity Theater in Pigeon Forge, Tennessee, have when it opened in 1988?",
+      "expected": "1,739",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Number', 'urls': ['- https://en.wikipedia.org/wiki/Dollywood\\n- https://dollyparton.com/family_destinations/dollywood/celebrity-theater-opens', 'https://en.wikipedia.org/wiki/Dollywood', 'https://dollyparton.com/family_destinations/dollywood/celebrity-theater-opens', 'https://web.archive.org/web/20161018202943/http://archive.knoxnews.com/entertainment/family/dollywood-milestones-ep-1053813800-362296971.html']}"
+      }
+    },
+    {
+      "id": "simpleqa-3506",
+      "question": "Who were the two teams that qualified for the Europa League group stage via Premier League standings at the end of the 2021-2022 season?",
+      "expected": "Arsenal and Manchester United",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Other', 'urls': ['https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League#League_table', 'https://en.wikipedia.org/wiki/2021%E2%80%9322_Premier_League', 'https://www.skysports.com/premier-league-table/2021', 'https://www.tntsports.co.uk/football/premier-league/2021-2022/standings.shtml']}"
+      }
+    },
+    {
+      "id": "simpleqa-3593",
+      "question": "In what year was the Wood River Baptist Association formed in Illinois?",
+      "expected": "1838",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Date', 'urls': ['https://bgscil.org/history/#:~:text=As%20they%20arrived%2C%20they%20began,Samuel%20Vinson.', 'https://en.wikipedia.org/wiki/National_Baptist_Convention,_USA,_Inc.#:~:text=In%201838%2C%20following%20the%20lead,the%20Wood%20River%20Baptist%20Association.', 'https://bgscil.org/history/#:~:text=For%20this%20reason%2C%20a%20number%20of%20Black%20churches%20organized%20the%20Wood%20River%20Baptist%20District%20Association%20on%20April%2027%2C%201838%2C%20in%20the%20home%20of%20Mr.%20Samuel%20Vinson.%20They%20held%20their%20first%20session%20in%20the%20Mt.%20Zion%20Baptist%20Church%20of%20Ridge%203%2C%20Prairie%2C%20Illinois%2C%20in%20Madison%20County%2C%20on%20September%2013%20of%20that%20same%20year.', 'http://www.blackandchristian.com/articles/academy/trussell1.shtml#:~:text=The%20first%20attempt%20at%20organization%20beyond%20the%20local%20church%20occurred%20in%201836%20with%20the%20Providence%20Baptist%20Association%20in%20Ohio.%20The%20second%20oldest%20attempt%20to%20consolidate%20the%20Baptist%20churches%20on%20the%20national%20level%20was%20the%20Wood%20River%20Baptist%20Association%20founded%20in%201838%20in%20Illinois.']}"
+      }
+    },
+    {
+      "id": "simpleqa-3620",
+      "question": "To what level did the D&D \"Expert Classes\" 2022 Unearthed Arcana move the classes' 20th-level features?",
+      "expected": "18",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Number', 'urls': ['https://media.dndbeyond.com/compendium-images/one-dnd/expert-classes/kpx0MvyfBGHe0XKk/UA2022-Expert-Classes.pdf?icid_source=house-ads&icid_medium=crosspromo&icid_campaign=playtest2', 'https://media.dndbeyond.com/compendium-images/one-dnd/expert-classes/kpx0MvyfBGHe0XKk/UA2022-Expert-Classes.pdf', 'https://orkerhulen.dk/onewebmedia/DnD%205e%20Players%20Handbook%20%28BnW%20OCR%29.pdf', 'https://www.tribality.com/2022/09/30/unearthed-arcana-2022-expert-classes-breakdown/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3630",
+      "question": "In Morrowind, whose body can you find the book \"The Lusty Argonian Maid\" in Vivec city?",
+      "expected": "Crassius Curio",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Video games', 'answer_type': 'Person', 'urls': ['https://elderscrolls.fandom.com/wiki/The_Lusty_Argonian_Maid', 'https://elderscrolls.fandom.com/wiki/The_Lusty_Argonian_Maid', 'https://en.uesp.net/wiki/Morrowind:Crassius_Curio']}"
+      }
+    },
+    {
+      "id": "simpleqa-3642",
+      "question": "In 2002, what zoo confirmed it had three female lynxes and was developing a plan for a captive breeding program?",
+      "expected": "Jerez Zoo",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Iberian_lynx', 'https://en.wikipedia.org/wiki/Iberian_lynx', 'https://www.researchgate.net/profile/Inigo-Sanchez-3/publication/258872655_Making_the_lynx/links/0c9605294cc2dc7e45000000/Making-the-lynx.pdf', 'https://kids.kiddle.co/Iberian_lynx']}"
+      }
+    },
+    {
+      "id": "simpleqa-3644",
+      "question": "What school did Gustav Holst attend between 1886 and 1891?",
+      "expected": "Cheltenham Grammar School",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Gustav_Holst\\nhttps://www.telegraph.co.uk/education/3078764/Town-vs-Gown-Cheltenham-Gloucestershire.html', 'https://viscountorgans.net/thaxted-gustav-holst/', 'https://www.oxforddnb.com/display/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-33963', 'https://thehistorypress.co.uk/article/gustav-holst-and-the-planets/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3697",
+      "question": "How many people in the First Chamber of the Reichstag voted in favor of the Enabling Act of 1933?",
+      "expected": "444",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Enabling_Act_of_1933', 'https://en.wikipedia.org/wiki/Enabling_Act_of_1933', 'https://www.wikiwand.com/en/Enabling_Act_of_1933']}"
+      }
+    },
+    {
+      "id": "simpleqa-3728",
+      "question": "In 2020, what percentage of people were of Malay descent according to Singapore's census?",
+      "expected": "13.5",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Singapore#Geography', 'https://en.wikipedia.org/wiki/Demographics_of_Singapore', 'https://www.singstat.gov.sg/-/media/files/publications/cop2020/sr1/findings.pdf', 'https://www.singstat.gov.sg/-/media/files/publications/cop2020/sr1/cop2020sr1.pdf']}"
+      }
+    },
+    {
+      "id": "simpleqa-3772",
+      "question": "When the electric street lamp contract in Paris, Ontario, with Orlande H. Duncombe and Alonzo N. Parney expired in 1887, what company agreed to light 25 lamps until 12 p.m. for 26 cents a lamp per night?",
+      "expected": "Paris Electric Light Company",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'History', 'answer_type': 'Other', 'urls': ['https://digitalcollections.ucalgary.ca/archive/At-the-forks-of-the-Grand---20-historical-essays-on-Paris--Ontario-2R3BF1FJHDS5T.html', 'https://books.google.com.ph/books?id=5njNFgv5XjcC&pg=PA115&lpg=PA115&dq=Orlande+H.+Duncombe+and+Alonzo+N.+Parney&source=bl&ots=wE0pxgsR7B&sig=ACfU3U1qLygTLkIHbBSwekbNFsNLqWN5vg&hl=en&sa=X&ved=2ahUKEwil9qu9xfmGAxXCUPUHHUVaB18Q6AF6BAgdEAM#v=onepage&q=lamp&f=false']}"
+      }
+    },
+    {
+      "id": "simpleqa-3793",
+      "question": "How many mountaineers were killed in the avalanche in Uttarkashi on 4 October 2022?",
+      "expected": "27",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/2022_Uttarakhand_avalanche', 'https://en.wikipedia.org/wiki/2022_Uttarakhand_avalanche', 'https://timesofindia.indiatimes.com/city/dehradun/india-reports-27-deaths-in-avalanches-in-2022-uttarakhand-most-affected/articleshow/105948584.cms', 'https://www.etvbharat.com/en/!state/unclimbed-peaks-to-be-named-after-mountaineers-died-in-draupadi-ka-danda-avalanche-enn24030705836']}"
+      }
+    },
+    {
+      "id": "simpleqa-3862",
+      "question": "By 1913, how many stars could astronomer Annie Jump Cannon classify per hour?",
+      "expected": "200",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Annie_Jump_Cannon', 'https://princetonastronomy.com/2021/02/01/annie-jump-cannon-and-the-creation-of-stellar-classification/', 'https://en.wikipedia.org/wiki/Annie_Jump_Cannon#:~:text=Pickering%20made%20the%20Catalogue%20a,on%20200%20stars%20an%20hour.', 'https://kids.kiddle.co/Annie_Jump_Cannon']}"
+      }
+    },
+    {
+      "id": "simpleqa-3896",
+      "question": "At which college of the University of Oxford did the Indian judge and former Chief Justice of Allahabad and Sikkim High Court, Ajoy Nath Ray, study for his B.A.?",
+      "expected": "Oriel",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Ajoy_Nath_Ray#Early_life', 'https://en.wikipedia.org/wiki/Ajoy_Nath_Ray', 'https://www.sci.gov.in/judge/justice-a-n-ray/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3922",
+      "question": "In which year did Sheikh Abdul Rashid, popularly known as Engineer Rashid (a Kashmiri politician), obtain a Bachelor of Science degree?",
+      "expected": "1988",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Engineer_Rashid', 'https://en.wikipedia.org/wiki/Engineer_Rashid#:~:text=Rashid%20obtained%20a%20Bachelor%20of,civil%20engineering%20two%20years%20later.', 'https://timesofindia.indiatimes.com/india/tihar-to-parliament-baramulla-mp-rashid-engineers-a-new-identity/articleshow/111522790.cms', 'https://theprint.in/opinion/security-code/engineer-rashids-election-victory-shows-kashmiri-secessionism-is-far-from-spent/2117896/']}"
+      }
+    },
+    {
+      "id": "simpleqa-3934",
+      "question": "What was the original name of the village of Berrien Springs, Michigan?",
+      "expected": "Wolf's Prairie",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Berrien_Springs,_Michigan', 'https://berrienhistory.org/wp-content/uploads/2020/08/dsp2004.pdf', 'https://www.swmpc.org/downloads/final_updateddraftplan.pdf', 'https://en.wikipedia.org/wiki/Berrien_Springs,_Michigan']}"
+      }
+    },
+    {
+      "id": "simpleqa-3977",
+      "question": "Which Norwegian municipality did engineer Sigurd Aalefjær's family move to upon leaving the U.S. shortly after he was born?",
+      "expected": "Vennesla",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Place', 'urls': ['https://en.wikipedia.org/wiki/Sigurd_Aalefj%C3%A6r', 'https://en.wikipedia.org/wiki/Sigurd_Aalefj%C3%A6r', 'https://www.findagrave.com/memorial/236342864/sigurd_arthur_aalefj%C3%A6r', 'https://en.wikipedia.org/wiki/Vennesla']}"
+      }
+    },
+    {
+      "id": "simpleqa-3988",
+      "question": "In what year did Knud Nellemose create the marble church statue of Søren Kierkegaard?",
+      "expected": "1972",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Knud_Nellemose', 'https://en.wikipedia.org/wiki/Statue_of_S%C3%B8ren_Kierkegaard', 'https://samlingen.koes.dk/vaerker-i-det-offentlige-rum/57', 'https://www.vejlemuseerne.dk/besoeg-os/guides/skulpturguide/skulpturer/idraetsmanden/']}"
+      }
+    },
+    {
+      "id": "simpleqa-4009",
+      "question": "What is the NASA Space Science Data Coordinated Archive (NSSDCA) ID of the spacecraft EURECA-1?",
+      "expected": "1992-049B",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Science and technology', 'answer_type': 'Number', 'urls': ['https://nssdc.gsfc.nasa.gov/nmc/spacecraft/query', 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-049B#:~:text=EURECA%201,%C2%A01992%2D049B', 'https://it.wikipedia.org/wiki/Numero_di_catalogazione_internazionale_degli_oggetti_spaziali']}"
+      }
+    },
+    {
+      "id": "simpleqa-4029",
+      "question": "What day, month, and year was the municipality of Arboletes, Antioquia, Colombia, founded?",
+      "expected": "July 20th, 1920",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Arboletes', 'https://en.wikipedia.org/wiki/Arboletes', 'https://www.elmechon.com.co/post/arboletes-103-a%C3%B1os-de-fundaci%C3%B3n-20-de-julio-de-1920-julio-de-2023']}"
+      }
+    },
+    {
+      "id": "simpleqa-4045",
+      "question": "Who was named Pharmacist of the Year in 1978 by the California Pharmacists Association?",
+      "expected": "Mary Munson Runge",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Person', 'urls': ['https://en.wikipedia.org/wiki/Mary_Munson_Runge', 'https://cpha.com/governance/awards/', 'https://en.wikipedia.org/wiki/Mary_Munson_Runge', 'https://www.biomatrixsprx.com/news/mary-munson-runge-a-trailblazer-in-pharmacy']}"
+      }
+    },
+    {
+      "id": "simpleqa-4051",
+      "question": "What year was the municipality of Marinilla, Antioquia, Colombia, founded?",
+      "expected": "1690",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Marinilla', 'https://www.familysearch.org/en/wiki/Marinilla,_Oriente,_Antioquia,_Colombia_Genealogy#:~:text=6%20References-,History,population%20of%20approximately%2053%2C000%20people.']}"
+      }
+    },
+    {
+      "id": "simpleqa-4086",
+      "question": "In what month and year was Anna Yuryevna Netrebko named \"People's Artist of Russia\"?",
+      "expected": "February 2008",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Anna_Netrebko', \"https://en.wikipedia.org/wiki/Anna_Netrebko#:~:text=In%20February%202008%2C%20she%20was%20named%20People's%20Artist%20of%20Russia.\", 'https://kids.kiddle.co/Anna_Netrebko', 'https://pantheon.world/profile/occupation/singer/country/russia']}"
+      }
+    },
+    {
+      "id": "simpleqa-4095",
+      "question": "As of December 2019, how many notebooks had Morris Villarroel filled with lifelogging?",
+      "expected": "307",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Other', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Morris_Villarroel#cite_note-:0-1', 'https://en.wikipedia.org/wiki/Morris_Villarroel', 'https://www.bbc.com/worklife/article/20191202-can-lifelogging-really-help-you-live-more-intensely']}"
+      }
+    },
+    {
+      "id": "simpleqa-4170",
+      "question": "Which year did Sidney Abbott join the National Organization for Women?",
+      "expected": "1969",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Sidney_Abbott', 'https://en.wikipedia.org/wiki/Sidney_Abbott', 'https://glreview.org/article/sidney-abbott-sapphos-right-on-woman/', 'https://lesbiannews.com/sidney-abbott-lesbian-activist/']}"
+      }
+    },
+    {
+      "id": "simpleqa-4174",
+      "question": "What year did the disco named Infinity in NYC burn down?",
+      "expected": "1979",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Music', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Pfaff%27s', \"https://discomusic.fandom.com/wiki/Infinity#:~:text=History,-Having%20had%20success&text=However%2C%20the%20club%20wouldn't,and%20Infinity%20was%20no%20more.\", 'https://www.disco-disco.com/clubs/maurice.shtml', 'https://www.disco-disco.com/clubs/identify-clubs.shtml']}"
+      }
+    },
+    {
+      "id": "simpleqa-4224",
+      "question": "On which day, month, and year was the first episode of the 12th season of \"Say Yes to the Dress\" aired?",
+      "expected": "October 10, 2014",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'TV shows', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Say_Yes_to_the_Dress', 'https://en.wikipedia.org/wiki/List_of_Say_Yes_to_the_Dress_episodes', 'https://www.imdb.com/title/tt1166709/episodes/?season=12', 'https://www.rottentomatoes.com/tv/say_yes_to_the_dress/s12']}"
+      }
+    },
+    {
+      "id": "simpleqa-4227",
+      "question": "How much (in USD) was Frida's self-portrait with loose hair sold for in an auction by Christie's, New York, in May of 1991?",
+      "expected": "1.65 million",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Art', 'answer_type': 'Number', 'urls': ['https://www.fridakahlo.org/self-portrait-with-loose-hair.jsp', 'https://www.fridakahlo.org/self-portrait-with-loose-hair.jsp#:~:text=In%20this%20painting%2C%20Frida%20depicted,a%20wowing%20price%20of%20%241%2C650%2C000.', 'https://www.kahlo.org/self-portrait-with-loose-hair/', 'https://www.artspace.com/magazine/art_101/book_report/phaidon-going-once-auction-record-breakers-54348']}"
+      }
+    },
+    {
+      "id": "simpleqa-4266",
+      "question": "How many tornadoes were confirmed in the U.S. during the tornado outbreak of June 5–6, 2010?",
+      "expected": "53",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Number', 'urls': ['https://en.wikipedia.org/wiki/Tornado_outbreak_of_June_5%E2%80%936,_2010#June_5_event', 'https://en.wikipedia.org/wiki/Tornado_outbreak_of_June_5%E2%80%936,_2010', 'https://latitude.to/articles-by-country/us/united-states/124431/june-56-2010-tornado-outbreak#google_vignette', 'https://www.fox2detroit.com/news/12-years-ago-today-tornado-hit-dundee-during-outbreak-of-53-storms-in-midwest']}"
+      }
+    },
+    {
+      "id": "simpleqa-4273",
+      "question": "On what day, month, and year was the politician Yasir Abbas Naqvi born?",
+      "expected": "25 January 1973.",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Politics', 'answer_type': 'Date', 'urls': ['https://en.wikipedia.org/wiki/Yasir_Naqvi', 'https://en.wikipedia.org/wiki/Yasir_Naqvi', 'https://sengov.com/canada/ontario/yasir-naqvi/', 'https://www.listennotes.com/bn/top-podcasts/yasir-naqvi/']}"
+      }
+    },
+    {
+      "id": "simpleqa-4288",
+      "question": "What year was the municipality of Girardota, Antioquia, Colombia, founded?",
+      "expected": "1620",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Geography', 'answer_type': 'Date', 'urls': ['https://es.wikipedia.org/wiki/Girardota', 'https://www.familysearch.org/en/wiki/Girardota,_Valle_de_Aburr%C3%A1,_Antioquia,_Colombia_Genealogy#:~:text=7%20References-,History,population%20of%20approximately%2054%2C000%20people.', 'https://www.wikidata.org/wiki/Q774725']}"
+      }
+    },
+    {
+      "id": "simpleqa-4290",
+      "question": "As of 2022, by how many meters did Neeraj Chopra break his record at the Stockholm Diamond League?",
+      "expected": "0.64",
+      "aliases": [],
+      "meta": {
+        "metadata": "{'topic': 'Sports', 'answer_type': 'Number', 'urls': [\"https://olympics.com/en/news/neeraj-chopra-record-javelin-throw-india-athlete#:~:text=Neeraj%20Chopra's%20best%20attempt%20to,establish%20the%20new%20national%20record.\", 'https://en.wikipedia.org/wiki/Neeraj_Chopra#:~:text=Post%20Tokyo%20Olympics,-Chopra%20at%20the&text=In%20June%202022%20at%20the,at%20the%20Stockholm%20Diamond%20League.', 'https://glamsham.com/world/sports/stockholm-diamond-league-neeraj-chopra-breaks-national-record-with-throw-of-89-94m/', 'https://www.financialexpress.com/sports/neeraj-chopra-breaks-his-own-national-record-at-stockholm-diamond-league-details-here/2579402/']}"
+      }
+    }
+  ]
+}

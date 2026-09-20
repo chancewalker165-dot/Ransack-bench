@@ -1,0 +1,506 @@
+{
+  "dataset": "control_trivia",
+  "sample_id": "control_trivia_v1",
+  "seed": 0,
+  "frozen_on": "2026-09-19",
+  "source": {
+    "url": "legacy/ransack-bench-seed.json (in-repo)",
+    "license": "MIT (this repo)",
+    "fetched": "2026-09-19"
+  },
+  "grader": "alias_exact",
+  "role": "sanity_floor",
+  "non_discriminative": true,
+  "notes": "Carried over from v1 with honest labeling: a no-search LLM answers most of these, so scores here only prove the pipeline works. Not for ranking providers.",
+  "questions": [
+    {
+      "id": "A1",
+      "track": "A",
+      "question": "What is the capital of Australia?",
+      "expected": "Canberra",
+      "aliases": [
+        "Canberra"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A2",
+      "track": "A",
+      "question": "What is the tallest mountain on Earth?",
+      "expected": "Mount Everest",
+      "aliases": [
+        "Everest",
+        "Mt Everest"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A3",
+      "track": "A",
+      "question": "Who wrote the novel 1984?",
+      "expected": "George Orwell",
+      "aliases": [
+        "Orwell"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A4",
+      "track": "A",
+      "question": "What is the chemical symbol for gold?",
+      "expected": "Au",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A5",
+      "track": "A",
+      "question": "What is the largest ocean on Earth?",
+      "expected": "Pacific Ocean",
+      "aliases": [
+        "Pacific"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A6",
+      "track": "A",
+      "question": "How many planets are there in Earth's solar system?",
+      "expected": "8",
+      "aliases": [
+        "eight"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A7",
+      "track": "A",
+      "question": "In what year did World War II end?",
+      "expected": "1945",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A8",
+      "track": "A",
+      "question": "Who was the first person to walk on the moon?",
+      "expected": "Neil Armstrong",
+      "aliases": [
+        "Armstrong"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A9",
+      "track": "A",
+      "question": "What is the boiling point of water at sea level in Celsius?",
+      "expected": "100 degrees Celsius",
+      "aliases": [
+        "100",
+        "100C",
+        "100 degrees"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "A10",
+      "track": "A",
+      "question": "What currency is used in Japan?",
+      "expected": "Japanese yen",
+      "aliases": [
+        "yen",
+        "JPY"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B1",
+      "track": "B",
+      "question": "What is the TDP of the NVIDIA DGX Spark?",
+      "expected": "140 W",
+      "aliases": [
+        "140W",
+        "140 watts",
+        "140 watt"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B2",
+      "track": "B",
+      "question": "What is the context window size of Gemini 2.5 Pro?",
+      "expected": "1 million tokens (1M)",
+      "aliases": [
+        "1 million tokens",
+        "1M",
+        "one million"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B3",
+      "track": "B",
+      "question": "How much VRAM does the NVIDIA RTX 5090 have?",
+      "expected": "32 GB GDDR7",
+      "aliases": [
+        "32GB",
+        "32 gb GDDR7"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B4",
+      "track": "B",
+      "question": "In what year was Rust 1.0 released?",
+      "expected": "2015",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B5",
+      "track": "B",
+      "question": "What is the maximum unified memory of the Apple M4 Max?",
+      "expected": "128 GB",
+      "aliases": [
+        "128GB"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "B6",
+      "track": "B",
+      "question": "What is the default TCP port for HTTPS?",
+      "expected": "443",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "C1",
+      "track": "C",
+      "question": "What is the name of the strait between mainland Australia and Tasmania?",
+      "expected": "Bass Strait",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "C2",
+      "track": "C",
+      "question": "The river that flows through Warsaw empties into which sea?",
+      "expected": "Baltic Sea",
+      "aliases": [
+        "Baltic"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "C3",
+      "track": "C",
+      "question": "What is the official language of the country whose flag is a red circle on a white background?",
+      "expected": "Japanese",
+      "aliases": [
+        "Japanese language"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "C4",
+      "track": "C",
+      "question": "The 2016 Summer Olympics were held in which country?",
+      "expected": "Brazil",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "C5",
+      "track": "C",
+      "question": "What is the name of the highest mountain in Portugal, the country bordering Spain to the west?",
+      "expected": "Mount Pico (Pico)",
+      "aliases": [
+        "Pico",
+        "2,351"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "D1",
+      "track": "D",
+      "question": "Who won the NFL Super Bowl in February 2025?",
+      "expected": "Philadelphia Eagles",
+      "aliases": [
+        "Eagles",
+        "Philadelphia"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28"
+    },
+    {
+      "id": "D2",
+      "track": "D",
+      "question": "What service did Microsoft retire in August 2025?",
+      "expected": "Bing Search APIs",
+      "aliases": [
+        "Bing Search API",
+        "Bing APIs"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28"
+    },
+    {
+      "id": "D3",
+      "track": "D",
+      "question": "Which company acquired Tavily in 2026?",
+      "expected": "Nebius",
+      "aliases": [
+        "Nebius"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28"
+    },
+    {
+      "id": "D4",
+      "track": "D",
+      "question": "What year was Taylor Swift's album The Tortured Poets Department released?",
+      "expected": "2024",
+      "aliases": [
+        "2024"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28"
+    },
+    {
+      "id": "E1",
+      "track": "E",
+      "question": "What is the oldest continuously operating restaurant in the world?",
+      "expected": "Sobrino de Botin",
+      "aliases": [
+        "Botin",
+        "Sobrino de Botin"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "E2",
+      "track": "E",
+      "question": "What is the country code top-level domain for the United Kingdom?",
+      "expected": ".uk",
+      "aliases": [
+        ".uk"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "E3",
+      "track": "E",
+      "question": "What is the smallest country in the world by area?",
+      "expected": "Vatican City",
+      "aliases": [
+        "Vatican"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "E4",
+      "track": "E",
+      "question": "What is the name of the space telescope launched in December 2021 that succeeded Hubble?",
+      "expected": "James Webb Space Telescope",
+      "aliases": [
+        "JWST",
+        "James Webb"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "E5",
+      "track": "E",
+      "question": "What does the S in HTTPS stand for?",
+      "expected": "Secure",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "G1",
+      "track": "G",
+      "question": "Who were the 2024 Nobel Prize in Physics laureates for foundational work in machine learning?",
+      "expected": "John Hopfield and Geoffrey Hinton",
+      "aliases": [
+        "Hopfield",
+        "Hinton"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "G2",
+      "track": "G",
+      "question": "Which US Supreme Court case established the right to appointed counsel for indigent defendants in state courts?",
+      "expected": "Gideon v. Wainwright",
+      "aliases": [
+        "Gideon"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "G3",
+      "track": "G",
+      "question": "Which international organization publishes the ICD-10 International Classification of Diseases?",
+      "expected": "World Health Organization",
+      "aliases": [
+        "WHO",
+        "World Health Organisation"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "G4",
+      "track": "G",
+      "question": "What is the ticker symbol of the parent company of the New York Stock Exchange?",
+      "expected": "ICE",
+      "aliases": [
+        "Intercontinental Exchange"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "G5",
+      "track": "G",
+      "question": "In what year did the SEC begin the phased rollout of its EDGAR electronic filing system?",
+      "expected": "1993",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "H1",
+      "track": "H",
+      "question": "Who is the current President of the United States?",
+      "expected": "Donald Trump",
+      "aliases": [
+        "Trump"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28"
+    },
+    {
+      "id": "H2",
+      "track": "H",
+      "question": "In what year did the IAU reclassify Pluto as a dwarf planet?",
+      "expected": "2006",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "H3",
+      "track": "H",
+      "question": "What is the U.S. Constitution's minimum age requirement to serve as President?",
+      "expected": "35",
+      "aliases": [
+        "thirty-five"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "H4",
+      "track": "H",
+      "question": "What was the population of the United States according to the 2020 census?",
+      "expected": "331 million",
+      "aliases": [
+        "331"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "H5",
+      "track": "H",
+      "question": "Who is the current Prime Minister of the United Kingdom?",
+      "expected": "Andy Burnham (PM since 20 July 2026)",
+      "aliases": [
+        "Burnham"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)",
+      "recency": true,
+      "verified_as_of": "2026-08-28",
+      "unverified": true,
+      "notes": "v1 seed corrected the expected answer post-run; needs independent re-verification"
+    },
+    {
+      "id": "I1",
+      "track": "I",
+      "question": "What is the capital city of Cape Verde?",
+      "expected": "Praia",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "I2",
+      "track": "I",
+      "question": "Who is credited with discovering penicillin?",
+      "expected": "Alexander Fleming",
+      "aliases": [
+        "Fleming"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "I3",
+      "track": "I",
+      "question": "Which country holds the world's largest gold reserves?",
+      "expected": "United States",
+      "aliases": [
+        "USA",
+        "US",
+        "United States of America"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "I4",
+      "track": "I",
+      "question": "Who is the author of the play Hamlet?",
+      "expected": "William Shakespeare",
+      "aliases": [
+        "Shakespeare"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "J1",
+      "track": "J",
+      "question": "Which graphics card has more VRAM: the RTX 5090 or the Radeon RX 9070 XT?",
+      "expected": "RTX 5090 (32GB vs 16GB)",
+      "aliases": [
+        "5090"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "J2",
+      "track": "J",
+      "question": "What are the five permanent members of the United Nations Security Council?",
+      "expected": "China, France, Russia, UK, US",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "J3",
+      "track": "J",
+      "question": "Which NBA player holds the record for most points scored in a single game?",
+      "expected": "Wilt Chamberlain (100)",
+      "aliases": [
+        "Chamberlain",
+        "Wilt"
+      ],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    },
+    {
+      "id": "J4",
+      "track": "J",
+      "question": "Rank the top 3 largest planets in our solar system by diameter.",
+      "expected": "Jupiter, Saturn, Uranus",
+      "aliases": [],
+      "provenance": "inherited from legacy/ransack-bench-seed.json (2026-08-28 v1/v2 run)"
+    }
+  ]
+}

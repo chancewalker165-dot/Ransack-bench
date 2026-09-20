@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile all python
+        run: python3 -m compileall -q bench.py rotcheck.py scripts bench
+
+      - name: Validate dataset manifests
+        run: python3 bench.py validate
+
+      - name: rotcheck (report-only; strict is for recency datasets)
+        run: python3 rotcheck.py
+
+      - name: Offline smoke run (mock provider)
+        run: |
+          python3 bench.py run --dataset control_trivia --provider mock --limit 5 --tag ci
+          latest=$(ls -1d results/*/ | tail -1)
+          test -f "$latest/summary.md"
+          test -f "$latest/transcript.jsonl"
+          cat "$latest/summary.md"
+
+      - name: Compare needs two runs
+        run: |
+          python3 bench.py run --dataset control_trivia --provider mock --limit 3 --tag ci2
+          python3 bench.py compare $(ls -1d results/*/ | head -2)

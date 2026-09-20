@@ -1,59 +1,103 @@
-# Ransack Bench
+# Ransack-bench v2
 
-A reproducible evaluation harness for [ransack.tools](https://ransack.tools), a web search + research API for AI agents. The bench calls ransack through its real MCP surface (not a tuned internal endpoint) and grades it deterministically against a fixed, hand-curated question set.
+A combined, re-runnable evaluation suite for web search APIs. It adopts the
+public benchmarks the category already trusts (SimpleQA, FRAMES), adds a
+no-search LLM control, grades deterministically with auditable spans, and
+reports honest metrics: retrieval hit-rate for search lanes, answer accuracy
+for answer-producing lanes, with Wilson confidence intervals on everything.
 
-**v1 headline: 29/30 CORRECT (96.7%), 1 PARTIAL, 0 WRONG. Mean latency 3.2s, p50 2.9s, p95 5.4s. Zero errors, zero rate-limit hits.**
+v1 graded its own product on 30 trivia questions and called the score a
+benchmark. v2 exists so nobody has to trust anyone's grader: every sample is
+frozen and reproducible, every run ships raw transcripts, and every provider
+(competitors included) runs through the same harness. See
+[BENCH_CHANGES.md](BENCH_CHANGES.md) and [METHODOLOGY.md](METHODOLOGY.md).
 
-## Why this shape
-
-- Every question has a known answer, so grading is deterministic: CORRECT if the output contains the expected fact, PARTIAL if related-but-not-exact, WRONG otherwise. No LLM judge.
-- Queries go through the same MCP tool an agent would use, so the bench measures the actual product path end to end.
-- Latency and token counts come free from the response footer on every call.
-- The fixed seed doubles as a regression truth set: any pipeline change is re-run against it, and a change that doesn't win the A/B gets reverted.
-
-## Tracks
-
-| Track | Qs | What it is | Mirrors |
-|---|---|---|---|
-| A | 10 | simple-fact ("capital of Australia") | SimpleQA |
-| B | 6 | spec/technical (DGX Spark TDP, RTX 5090 VRAM, ports) | vendor demo queries |
-| C | 5 | multi-hop ("river through Warsaw, which sea") | FRAMES |
-| D | 4 | recency (2025/2026 events) | FreshQA / LiveNewsBench |
-| E | 5 | hard-to-find/obscure | BrowseComp |
-| F | 1 | agentic lane: `execute_research` vs plain `search` on the same query | n/a |
-
-Per-track scoring makes segment-level accuracy visible (v1: 100% everywhere except C at 80%).
-
-## Files
-
-| File | What it is |
-|---|---|
-| `ransack-bench-seed.json` | the fixed 30-question seed + per-question grading hints |
-| `ransack-bench-README.md` | the original protocol doc from the source repo |
-| `ransack-bench-results.md` | v1 full run: per-question verdicts, latency, tokens, aggregates |
-| `ransack-bench-evidence.json` | machine-readable per-query evidence for the v1 run |
-| `concurrent_load.py` | stdlib-only concurrency harness: fires N parallel requests and reports client p50/p95/p99, status breakdown, throughput |
-
-## Protocol
-
-1. For each seed question, call ransack in search mode with `format=markdown`, `verbose=true` (footer carries latency, token estimate, per-minute rate-limit headroom), `max_results=5`.
-2. Record per query: verdict, latency (s), token estimate, sources used count, errors.
-3. Grade deterministically against the seed's expected answer and grading hints.
-4. Aggregate into a results doc: per-track accuracy, p50/p95 latency, error rate.
-5. Optionally run Track F: the same query through the agentic research lane for a latency/coverage contrast.
-
-## Concurrency harness
-
-`concurrent_load.py` is dependency-free (stdlib only). The bench token is supplied via env or flag, never stored in the repo:
+## Quickstart (60 seconds)
 
 ```bash
-RANSACK_BENCH_TOKEN=secret python3 concurrent_load.py --url https://ransack.tools --n 100
+python3 bench.py list                    # datasets + providers
+python3 bench.py validate                # schema-check every manifest
+python3 bench.py run --dataset control_trivia --provider mock --limit 3   # offline smoke
 ```
 
-It fires N concurrent POSTs at the real search pipeline and polls the server-side metrics endpoint before/after to surface server p50/p95/p99, in-flight gauges, and 429 counters.
+Live runs need one env var per provider (see table below):
 
-## Reproducibility notes
+```bash
+RANSACK_MCP_TOKEN=... python3 bench.py run --dataset frames --provider ransack --repeat 3
+TAVILY_API_KEY=...  python3 bench.py run --dataset frames --provider tavily  --repeat 3
+python3 bench.py compare results/<tavily-run-dir> results/<ransack-run-dir>
+```
 
-- The seed is fixed and versioned here; graders should tag which commit of the seed a run used.
-- Latency figures are live-network numbers from a residential connection; treat absolute values as indicative, relative A/B deltas as the signal.
-- Questions in track D (recency) have a shelf life: re-verify their expected answers before reusing this seed later.
+## Datasets
+
+| Manifest | Questions | Grader | License | Role |
+|---|---|---|---|---|
+| `datasets/control_trivia.json` | 48 (all of v1's seed) | alias_exact | MIT (this repo) | sanity floor, labeled non-discriminative |
+| `datasets/frames_sample_100.json` | 100 of 824, seed 20260919, source sha `b9a11b5df50b...` | alias_exact | Apache-2.0 (google/frames-benchmark) | multi-hop benchmark |
+| `datasets/simpleqa_sample_200.json` | 200 of 4,326, seed 20260919, source sha `d1f858a88645...` | alias_exact + optional official judge | MIT (openai/simple-evals) | adversarial short-fact benchmark |
+
+Sampling is deterministic: sorted ids + `random.Random(seed).sample`, committed
+with the source file's sha256. Re-generate with `scripts/make_sample.py`;
+full sources are fetched by `scripts/fetch_datasets.py` into `data/`
+(gitignored, never redistributed unless the license says so).
+
+## Providers
+
+| Provider | Env | Metric it supports |
+|---|---|---|
+| `mock` | none (offline fixture) | pipeline smoke only |
+| `ransack` (search lane, MCP surface) | `RANSACK_MCP_URL` (default https://ransack.tools), `RANSACK_MCP_TOKEN` | hit-rate |
+| `ransack-research` (agentic lane) | same | hit-rate + answer accuracy |
+| `nosearch` (no-search LLM control) | `OPENAI_API_KEY`, `NOSEARCH_MODEL`, `OPENAI_BASE_URL` | answer accuracy (the baseline that exposes weak seeds) |
+| `tavily` | `TAVILY_API_KEY` | hit-rate (+ `answer` when returned) |
+| `brave` | `BRAVE_API_KEY` | hit-rate |
+| `serper` | `SERPER_API_KEY` | hit-rate |
+| `exa` | `EXA_API_KEY` | hit-rate |
+| `exa-answer` (the /answer lane) | `EXA_API_KEY` | hit-rate + answer accuracy |
+| `perplexity` | `PERPLEXITY_API_KEY` | hit-rate + answer accuracy |
+
+## Metrics, defined once
+
+- **Retrieval hit-rate**: expected fact (or alias) present in the returned
+  documents. This is what a search API sells; it is NOT answer accuracy.
+- **Answer accuracy** (answer-producing providers only): the answer field
+  graded CORRECT / WRONG / ABSTAIN. For SimpleQA the official grader prompt
+  (vendored verbatim, MIT) runs as a cross-check when `OPENAI_API_KEY` is set.
+- **Abstains are never correct**: "I don't know" is counted separately, the
+  failure mode v1's containment grading hid.
+- **CIs everywhere**: Wilson 95% on hit-rate and accuracy; repeats via `--repeat`.
+
+Latency is measured client-side by the runner. Server-reported footers are
+kept as `server_latency_s` for diagnostics only, never as the headline.
+
+## Run dirs
+
+Every run writes `results/<UTC ts>_<provider>_<dataset>[_<tag>]/`:
+`run_config.json`, `transcript.jsonl` (untouched raw responses),
+`results.jsonl` (verdicts + spans + latency), `summary.json`, `summary.md`.
+Commit run dirs you want to publish; raw transcripts make grades auditable.
+
+## Extending
+
+- Add a provider: subclass in `bench/providers/`, return the normalized dict
+  from `base.py`, register it in `providers/base.py` and `bench.py`.
+- Add a dataset: build a full source JSON (`data/<name>_full.json` with
+  `questions[]`), freeze a sample with `scripts/make_sample.py`, validate with
+  `python3 bench.py validate`.
+- Recency datasets must carry `verified_as_of` per question; `rotcheck.py`
+  flags rot before a run, not after (the v1 H5 lesson).
+
+## Known issue found while building
+
+`https://ransack.tools/mcp` sits behind Cloudflare, which answers **1010**
+("browser signature blocked") to scripts without a User-Agent, and the MCP
+server then requires a bearer token (JSON-RPC -32001). If you operate the
+server: allowlist scripted clients or publish the token flow, otherwise your
+own benchmark cannot reach your own product.
+
+## Legacy
+
+v1 files (hand-run results, original seed, load tester) are preserved under
+[legacy/](legacy/). `control_trivia.json` is their direct descendant, honestly
+labeled. The load-test script targets a private token-gated endpoint and is
+kept for archaeology, not use.
