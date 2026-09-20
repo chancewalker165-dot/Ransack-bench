@@ -42,7 +42,6 @@ PROVIDER_ENV = {
 PLAN = [
     ("frames_sample_100", "nosearch"),
     ("frames_sample_100", "ransack"),
-    ("frames_sample_100", "ransack-research"),
     ("frames_sample_100", "tavily"),
     ("frames_sample_100", "brave"),
     ("frames_sample_100", "serper"),
