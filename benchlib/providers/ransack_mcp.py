@@ -2,13 +2,10 @@
 
 Env:
   RANSACK_MCP_URL     default https://ransack.tools  (MCP endpoint: <url>/mcp)
-  RANSACK_MCP_TOKEN   optional bearer token if the server requires auth
+  RANSACK_MCP_TOKEN   bearer token if the server requires auth
 
-Notes:
-- Tool names are discovered via tools/list because servers may register them as
-  "ransack" or "ransack_ransack" (and "execute_research" / "ransack_execute_research").
-- lane="search"  -> the plain search tool (documents; hit-rate grading)
-- lane="research"-> the agentic research tool (answer; CORRECT/WRONG/ABSTAIN grading)
+- Tool names are discovered via tools/list because servers may register the
+  search tool as "ransack" or "ransack_ransack".
 - Latency is measured client-side by the runner. Any footer latency the server
   reports is captured as server_latency_s (secondary telemetry, never primary).
 """
@@ -18,7 +15,6 @@ from __future__ import annotations
 import json
 import os
 import re
-import time
 
 from .base import ProviderError, _http, _json_body
 
@@ -65,15 +61,11 @@ def _parse_rpc_response(raw: bytes, content_type: str):
 class RansackMCP:
     name = "ransack"
 
-    def __init__(self, lane: str = "search"):
-        if lane not in ("search", "research"):
-            raise ProviderError("lane must be 'search' or 'research'")
-        self.lane = lane
+    def __init__(self):
         self.base = os.environ.get("RANSACK_MCP_URL", "https://ransack.tools").rstrip("/")
         self.token = os.environ.get("RANSACK_MCP_TOKEN", "")
         self.session_id: str | None = None
         self._search_tool: str | None = None
-        self._research_tool: str | None = None
 
     def _headers(self) -> dict:
         h = dict(JSONRPC_HEADERS)
@@ -105,35 +97,29 @@ class RansackMCP:
         names = [t.get("name", "") for t in tools]
         for t in tools:
             n = t.get("name", "")
-            if "research" in n:
-                self._research_tool = n
-            elif n in ("ransack", "ransack_ransack"):
+            if n in ("ransack", "ransack_ransack"):
                 self._search_tool = n
+                break
         if not self._search_tool:
             # fall back: a ransack-ish tool that is not one of the specialized
             # portal tools (permit search, youtube, memory, reports, tasks)
-            specialized = ("permit", "youtube", "memory", "report", "task")
+            specialized = ("permit", "youtube", "memory", "report", "task", "research")
             for t in tools:
                 n = t.get("name", "")
-                if "ransack" in n and "research" not in n and not any(s in n for s in specialized):
+                if "ransack" in n and not any(s in n for s in specialized):
                     self._search_tool = n
                     break
-        if self.lane == "search" and not self._search_tool:
+        if not self._search_tool:
             raise ProviderError(f"no search tool in tools/list: {names}")
-        if self.lane == "research" and not self._research_tool:
-            raise ProviderError(f"no research tool in tools/list: {names}")
 
     def ask(self, question: str, k: int) -> dict:
         if self.session_id is None:
             self._ensure_session()
             self._discover_tools()
-        tool = self._search_tool if self.lane == "search" else self._research_tool
         args = {"query": question, "mode": "search", "format": "markdown",
                 "verbose": True, "crypto": False, "max_results": k}
-        if self.lane == "research":
-            args = {"query": question, "max_sources": min(k, 4), "time_budget": 25}
         call = self._rpc({"jsonrpc": "2.0", "id": 3, "method": "tools/call",
-                          "params": {"name": tool, "arguments": args}})
+                          "params": {"name": self._search_tool, "arguments": args}})
         if call and "error" in call:
             raise ProviderError(f"tools/call failed: {call['error']}")
         result = (call or {}).get("result", {})
@@ -167,71 +153,6 @@ class RansackMCP:
         if not documents:
             documents = [{"title": "", "url": "", "text": text}]
 
-        answer = text if self.lane == "research" else None
-        return {"answer": answer, "documents": documents[: k * 3],
+        return {"answer": None, "documents": documents[: k * 3],
                 "tokens_est": tokens_est, "server_latency_s": server_latency,
-                "raw": {"tool": tool, "text": text}}
-
-
-class RansackMCPResearch(RansackMCP):
-    """Agentic lane: execute_research is ASYNC. It returns
-    {"taskId","status","poll"} immediately; the report arrives by polling
-    tools/call tasks_get until status=completed, then result JSON carries
-    {query, synthesis, synthesis_failed, sources:[{url,title,engine,text}]}."""
-
-    name = "ransack-research"
-
-    def __init__(self, max_wait_s: float = 150.0, poll_interval_s: float = 4.0):
-        super().__init__(lane="research")
-        self.max_wait_s = max_wait_s
-        self.poll_interval_s = poll_interval_s
-
-    def ask(self, question: str, k: int) -> dict:
-        if self.session_id is None:
-            self._ensure_session()
-            self._discover_tools()
-        args = {"query": question, "max_sources": min(k, 4), "time_budget": 25}
-        call = self._rpc({"jsonrpc": "2.0", "id": 3, "method": "tools/call",
-                          "params": {"name": self._research_tool, "arguments": args}})
-        if call and "error" in call:
-            raise ProviderError(f"tools/call failed: {call['error']}")
-        content = (call or {}).get("result", {}).get("content") or []
-        text = "\n".join(c.get("text", "") for c in content if isinstance(c, dict))
-        try:
-            launch = json.loads(text)
-            task_id = launch["taskId"]
-        except (json.JSONDecodeError, KeyError) as e:
-            raise ProviderError(f"execute_research did not return a taskId: {text[:120]!r}") from e
-
-        started = time.time()
-        status, payload = "unknown", {}
-        while time.time() - started < self.max_wait_s:
-            time.sleep(self.poll_interval_s)
-            poll = self._rpc({"jsonrpc": "2.0", "id": 4, "method": "tools/call",
-                              "params": {"name": "tasks_get", "arguments": {"taskId": task_id}}})
-            if poll and "error" in poll:
-                raise ProviderError(f"tasks_get failed: {poll['error']}")
-            ptext = "\n".join(c.get("text", "") for c in ((poll or {}).get("result", {}).get("content") or [])
-                              if isinstance(c, dict))
-            try:
-                payload = json.loads(ptext)
-            except json.JSONDecodeError:
-                continue
-            status = payload.get("status", "unknown")
-            if status in ("completed", "failed", "error"):
-                break
-        if status != "completed":
-            raise ProviderError(f"research task {task_id[:8]} status={status} after "
-                                f"{round(time.time() - started)}s")
-
-        raw_result = payload.get("result")
-        inner = json.loads(raw_result) if isinstance(raw_result, str) else (raw_result or {})
-        answer = inner.get("synthesis") or ""
-        sources = inner.get("sources") or []
-        documents = [{"title": str(s.get("title") or ""), "url": str(s.get("url") or ""),
-                      "text": str(s.get("text") or "")} for s in sources]
-        return {"answer": answer, "documents": documents,
-                "tokens_est": None, "server_latency_s": round(time.time() - started, 1),
-                "raw": {"tool": self._research_tool, "taskId": task_id,
-                        "status": payload.get("statusMessage"), "synthesis_failed": inner.get("synthesis_failed"),
-                        "answer": answer}}
+                "raw": {"tool": self._search_tool, "text": text}}

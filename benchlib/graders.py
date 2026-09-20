@@ -5,8 +5,8 @@ Honesty rules this module enforces (v2 redesign of the v1 "contains it" rule):
 1. For document-returning providers (search APIs) the primary metric is
    retrieval HIT: the expected fact or an alias appears in the returned
    documents. This is explicitly labeled hit-rate, not answer accuracy.
-2. For answer-returning providers (execute_research lanes, sonar, no-search
-   LLM) the returned answer is additionally graded CORRECT / WRONG / ABSTAIN.
+2. For answer-returning providers (sonar, answer endpoints, no-search LLM)
+   the returned answer is additionally graded CORRECT / WRONG / ABSTAIN.
 3. Abstentions never count as CORRECT; they are counted separately.
 4. Every verdict records WHERE the match landed and a normalized context
    snippet, so any grade is auditable after the fact (v1 recorded nothing).
