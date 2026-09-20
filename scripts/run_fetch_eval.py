@@ -40,7 +40,7 @@ _spec = _ilu.spec_from_file_location("_bench_cli", os.path.join(ROOT, "bench.py"
 _bench_cli = _ilu.module_from_spec(_spec)
 _spec.loader.exec_module(_bench_cli)
 _bench_cli._load_dotenv(ROOT)
-LABEL_RE = re.compile(r"\[(bot wall|dead page|paywall|unreachable|render|archive|error)[^\]]*\]|HTTP \d{3}", re.I)
+LABEL_RE = re.compile(r"\[(bot wall|dead page|paywall|unreachable|render|archive|error|fetch timeout)[^\]]*\]", re.I)
 
 
 def ransack_fetch(mcp: RansackMCP, url: str) -> dict:
