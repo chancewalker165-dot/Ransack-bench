@@ -10,6 +10,7 @@ optional NOSEARCH_MODEL (default gpt-4o-mini).
 
 from __future__ import annotations
 
+import json
 import os
 
 from .base import ProviderError, _http, _json_body, require_env
