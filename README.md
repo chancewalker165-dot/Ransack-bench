@@ -100,7 +100,7 @@ Commit run dirs you want to publish; raw transcripts make grades auditable.
 
 ## Extending
 
-- Add a provider: subclass in `bench/providers/`, return the normalized dict
+- Add a provider: subclass in `benchlib/providers/`, return the normalized dict
   from `base.py`, register it in `providers/base.py` and `bench.py`.
 - Add a dataset: build a full source JSON (`data/<name>_full.json` with
   `questions[]`), freeze a sample with `scripts/make_sample.py`, validate with

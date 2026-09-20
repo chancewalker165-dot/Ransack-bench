@@ -59,17 +59,19 @@ def render_compare(summaries: list[dict]) -> str:
     lines = [
         "# provider comparison",
         "",
-        "| provider | dataset | n | hit-rate | 95% CI | p50 | p95 | errors | ans-acc |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| provider | dataset | n | hit-rate | 95% CI | p50 | p95 | errors | ans-acc | judged |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for s in summaries:
         lo, hi = wilson(s["hits"], s["n_calls"] - s["errors"])
         acc = (f"{s['answer_correct']}/{s['answer_calls']}"
                if s.get("answer_calls") else "-")
+        j = s.get("judge") or {}
+        judge = (f"{j.get('CORRECT', 0)}/{j.get('graded', 0)}" if j.get("graded") else "-")
         lines.append(
             f"| {s['provider']} | {s['dataset']} | {s['n_calls']} | {s['hit_rate_pct']}% "
             f"| [{100 * lo:.1f}%, {100 * hi:.1f}%] | {s['latency_p50_s']}s "
-            f"| {s['latency_p95_s']}s | {s['errors']} | {acc} |")
+            f"| {s['latency_p95_s']}s | {s['errors']} | {acc} | {judge} |")
     lines += ["", "Hit-rate = expected fact present in returned documents (retrieval). "
               "ans-acc = exact composed answer present in the provider's own answer field "
               "(containment; the official judge cross-check needs OPENAI_API_KEY and was not run). "

@@ -18,11 +18,15 @@ Two metrics, never conflated:
    separately. v1's containment rule scored fence-sitting as correct; that
    hole is closed by construction.
 
-Deterministic grading lives in `bench/graders.py` (no LLM). For SimpleQA the
+Deterministic grading lives in `benchlib/graders.py` (no LLM). For SimpleQA the
 official grader prompt from openai/simple-evals (MIT) is vendored verbatim in
-`bench/grader_prompts/` and runs as a published cross-check when
-`OPENAI_API_KEY` is present; runs without the key are labeled as fallback and
-skipped-judge is recorded rather than hidden.
+`benchlib/grader_prompts/` and runs as a published cross-check when
+`OPENAI_API_KEY` is present. Judge identity matters and is disclosed per
+deployment: the 2026-09-20 runs used `z-ai/glm-5.3-flash` via OpenRouter
+(set `JUDGE_MODEL`), i.e., the official PROMPT with a flash-tier judge model,
+not gpt-4o; treat judge numbers as a cross-check, not a gold standard.
+Runs without the key are labeled as fallback and skipped-judge is recorded
+rather than hidden.
 
 ## Sampling and freezing
 
