@@ -11,20 +11,30 @@
    "stratum": "S1_plain_static",
    "url": "https://curl.se/docs/manpage.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "curl - How To Use",
+   "fact_anchor": "If you start the data with the letter @, the rest should be a filename to read the data from, or a single dash (-) if you want curl to read the data from stdin.",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:06Z",
+   "anchor_note": null,
+   "anchor_prev": "curl - How To Use",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-002",
    "stratum": "S1_plain_static",
    "url": "https://www.w3.org/TR/REC-html40/struct/text.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "Paragraphs, Lines, and Phrases",
+   "fact_anchor": "Non-visual user agents are not required to respect extra white space in the content of a PRE element.",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:07Z",
+   "anchor_note": null,
+   "anchor_prev": "Paragraphs, Lines, and Phrases",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-003",
@@ -34,98 +44,142 @@
    "fact_anchor": "Keep a Changelog",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "legacy_title",
+   "anchor_captured_utc": "2026-09-20T23:26:07Z",
+   "anchor_note": "redo pass captured nothing on this run; previous anchor kept"
   },
   {
    "id": "F-004",
    "stratum": "S1_plain_static",
    "url": "https://markdown-guide.readthedocs.io/en/latest/",
    "expected_outcome": "fact_found",
-   "fact_anchor": "Welcome to markdown-guide’s documentation! &mdash; markdown-guide 0.1 documentation",
+   "fact_anchor": "Markdown is a lightweight markup language, originally created by John Gruber and Aaron Swartz allowing",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:25Z",
+   "anchor_note": null,
+   "anchor_prev": "Welcome to markdown-guide’s documentation! &mdash; markdown-guide 0.1 documentation",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-005",
    "stratum": "S1_plain_static",
    "url": "https://numpy.org/doc/stable/user/basics.creation.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "Array creation &#8212; NumPy v2.5 Manual",
+   "fact_anchor": "array ([[[ 1 , 2 ], [ 3 , 4 ]], [[ 5 , 6 ], [ 7 , 8 ]]])",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:26Z",
+   "anchor_note": null,
+   "anchor_prev": "Array creation &#8212; NumPy v2.5 Manual",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-006",
    "stratum": "S1_plain_static",
    "url": "https://datatracker.ietf.org/doc/html/rfc1035",
    "expected_outcome": "fact_found",
-   "fact_anchor": "RFC 1035 - Domain names - implementation and specification",
+   "fact_anchor": "The MINIMUM value in the SOA should be used to set a floor on the TTL of",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:26Z",
+   "anchor_note": null,
+   "anchor_prev": "RFC 1035 - Domain names - implementation and specification",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-007",
    "stratum": "S1_plain_static",
    "url": "https://semver.org/",
    "expected_outcome": "fact_found",
-   "fact_anchor": "Semantic Versioning 2.0.0 | Semantic Versioning",
+   "fact_anchor": "If even the tiniest backward incompatible changes to the public API require a major version bump, won’t I end up at version 42.0.0 very rapidly?",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:27Z",
+   "anchor_note": null,
+   "anchor_prev": "Semantic Versioning 2.0.0 | Semantic Versioning",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-008",
    "stratum": "S1_plain_static",
    "url": "https://sqlite.org/lang_select.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "SELECT",
+   "fact_anchor": "result of a SELECT is zero or more rows of data where each row",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:27Z",
+   "anchor_note": null,
+   "anchor_prev": "SELECT",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-009",
    "stratum": "S1_plain_static",
    "url": "https://docs.python.org/3/library/urllib.request.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "urllib.request — Extensible library for opening URLs &#8212; Python 3.14.7 documentation",
-   "fact_source": "plain_urllib",
+   "fact_anchor": "21.6. urllib.request — Extensible library for opening URLs",
+   "fact_source": "wayback:20121219001353",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "title_only",
+   "anchor_captured_utc": "2026-09-20T23:26:28Z",
+   "anchor_note": "snapshot yielded no body prose; identity anchor only",
+   "anchor_prev": "urllib.request — Extensible library for opening URLs &#8212; Python 3.14.7 documentation",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-010",
    "stratum": "S1_plain_static",
    "url": "https://www.json.org/json-en.html",
    "expected_outcome": "fact_found",
-   "fact_anchor": "JSON",
+   "fact_anchor": "A number is very much like a C or Java number, except that the octal",
    "fact_source": "plain_urllib",
    "needs_owner_verification": false,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:26:33Z",
+   "anchor_note": null,
+   "anchor_prev": "JSON",
+   "anchor_prev_source": "plain_urllib"
   },
   {
    "id": "F-011",
    "stratum": "S2_tls_gated",
    "url": "https://www.zoominfo.com/z/OpenAI",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Build and run GTM workflows triggered by buying signals",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 404
+   "probe_live_status": 404,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:00:21Z",
+   "anchor_note": null
   },
   {
    "id": "F-012",
    "stratum": "S2_tls_gated",
    "url": "https://www.g2.com/products/notion/reviews",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Leverage the power of AI to help you create across all your notes and docs, without the need to jump between your work and a separate AI-powered tool.",
+   "fact_source": "wayback:20240825015914",
    "needs_owner_verification": false,
    "probe_live_status": 403,
-   "owner_verdict": "loads fully in browser for humans; the gate targets bots, not visitors"
+   "owner_verdict": "loads fully in browser for humans; the gate targets bots, not visitors",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:00:23Z",
+   "anchor_note": null
   },
   {
    "id": "F-013",
@@ -135,7 +189,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:10:53Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=777; wayback:20180317202711 chars=255388"
   },
   {
    "id": "F-014",
@@ -145,7 +202,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:11:01Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=191; wayback:20240212134030 chars=31219"
   },
   {
    "id": "F-015",
@@ -155,17 +215,23 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:11:07Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=16; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-016",
    "stratum": "S2_tls_gated",
    "url": "https://www.cbinsights.com/company/openai",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Google itself now offers AI Overviews and AI Mode, while services such as ChatGPT can search the web and provide answers with links to their sources.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:01:14Z",
+   "anchor_note": null
   },
   {
    "id": "F-017",
@@ -175,27 +241,36 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:11:38Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=27; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-018",
    "stratum": "S2_tls_gated",
    "url": "https://www.semrush.com/website/github.com/overview/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "���\u0016���\u0013G\u0001r�Q ���\u000fgzw/R q\u0004�.�2��|���T �� g����3�C� ��Һ�õ��Tf\u0004��Z�,����FW|(�o� (�`��j� ����`.?O�\u0000�[��ǩ\u0013i\u0017�,�����_� �\u0016��\u0002B% ��T",
+   "fact_source": "wayback:20240204124957",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:01:19Z",
+   "anchor_note": null
   },
   {
    "id": "F-019",
    "stratum": "S2_tls_gated",
    "url": "https://www.similarweb.com/website/github.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "more than 22 million people use github to discover, fork, and contribute to over 62 million projects.",
+   "fact_source": "wayback:20170902102601",
    "needs_owner_verification": true,
-   "probe_live_status": 202
+   "probe_live_status": 202,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:12:08Z",
+   "anchor_note": null
   },
   {
    "id": "F-020",
@@ -205,7 +280,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 202
+   "probe_live_status": 202,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:12:18Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=202; plain_urllib chars=0; wayback:20240201032442 chars=20"
   },
   {
    "id": "F-021",
@@ -215,7 +293,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 404
+   "probe_live_status": 404,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:12:26Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=404; plain_urllib chars=271; wayback:20200514180423 chars=700"
   },
   {
    "id": "F-022",
@@ -225,18 +306,24 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:12:43Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=12; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-023",
    "stratum": "S3_js_rendered",
    "url": "https://airtable.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Use structured workflows and AI summaries to surface risks, align teams, and keep launches moving with speed and clarity.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": false,
    "probe_live_status": 200,
-   "owner_verdict": "loads in browser (JS app); confirms JS-rendered stratum"
+   "owner_verdict": "loads in browser (JS app); confirms JS-rendered stratum",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:02:42Z",
+   "anchor_note": null
   },
   {
    "id": "F-024",
@@ -246,57 +333,75 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:13:14Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=556; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-025",
    "stratum": "S3_js_rendered",
    "url": "https://open.spotify.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Last Thing You Need (from GTAVI: The Album)",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:13Z",
+   "anchor_note": null
   },
   {
    "id": "F-026",
    "stratum": "S3_js_rendered",
    "url": "https://www.notion.so/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Notion Custom Agents help our team go beyond doing work with AI to building AI tools that do the work for them.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:14Z",
+   "anchor_note": null
   },
   {
    "id": "F-027",
    "stratum": "S3_js_rendered",
    "url": "https://dribbble.com/shots",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Get 20% off your first payment for design and development services on Dribbble.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:15Z",
+   "anchor_note": null
   },
   {
    "id": "F-028",
    "stratum": "S3_js_rendered",
    "url": "https://www.figma.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Your context, codebase, and agents stay connected so what you design is what gets shipped.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:16Z",
+   "anchor_note": null
   },
   {
    "id": "F-029",
    "stratum": "S3_js_rendered",
    "url": "https://trello.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Best for teams up to 100 that need to track multiple projects and visualize work in a variety of ways.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:17Z",
+   "anchor_note": null
   },
   {
    "id": "F-030",
@@ -306,28 +411,37 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:13:45Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=350; wayback:20110129000652 chars=44"
   },
   {
    "id": "F-031",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.bol.com/nl/nl/",
    "expected_outcome": "explicit_failure_or_honest_label",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "* De voordelen van bol.com gelden niet voor het gehele assortiment.",
+   "fact_source": "wayback:20210623164006",
    "needs_owner_verification": false,
    "probe_live_status": -1,
-   "owner_verdict": "does not load for the owner in a browser (hard wall)"
+   "owner_verdict": "does not load for the owner in a browser (hard wall)",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:24Z",
+   "anchor_note": null
   },
   {
    "id": "F-032",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.flipkart.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:03:43Z",
+   "anchor_note": null
   },
   {
    "id": "F-033",
@@ -338,47 +452,62 @@
    "fact_source": null,
    "needs_owner_verification": false,
    "probe_live_status": 200,
-   "owner_verdict": "loads; sale popup overlay with close button; content exists behind it"
+   "owner_verdict": "loads; sale popup overlay with close button; content exists behind it",
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:13:55Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=0; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-034",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.etsy.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Etsy: Photo Blog by Robert Kalin",
+   "fact_source": "wayback:20041126194627",
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": "title_only",
+   "anchor_captured_utc": "2026-09-20T23:04:15Z",
+   "anchor_note": "snapshot yielded no body prose; identity anchor only"
   },
   {
    "id": "F-035",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.mercadolibre.com.mx/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Mercado Libre México - Envíos Gratis en el día Saltar al contenido Menú de atajos Saltar a",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:04:42Z",
+   "anchor_note": null
   },
   {
    "id": "F-036",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.walmart.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:04:43Z",
+   "anchor_note": null
   },
   {
    "id": "F-037",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.target.com/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "From bold beauty looks to self-care musts, reset your routine for the season.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:04:44Z",
+   "anchor_note": null
   },
   {
    "id": "F-038",
@@ -388,7 +517,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": -1
+   "probe_live_status": -1,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:14:26Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=-1; plain_urllib chars=42; wayback:19970507211156 chars=546"
   },
   {
    "id": "F-039",
@@ -398,7 +530,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:15:13Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=205065; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-040",
@@ -408,17 +543,23 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:15:44Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=162; wayback:20001017185554 chars=557"
   },
   {
    "id": "F-041",
    "stratum": "S6_paywalled",
    "url": "https://www.nytimes.com/",
    "expected_outcome": "honest_label_or_explicit_failure",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Emails and documents demonstrate the political capture of the institution, including how officials once pursued a plan to unload much of the art collection.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:06:29Z",
+   "anchor_note": null
   },
   {
    "id": "F-042",
@@ -428,29 +569,38 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:16:01Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=3242; wayback:19990125104745 chars=306"
   },
   {
    "id": "F-043",
    "stratum": "S6_paywalled",
    "url": "https://www.ft.com/markets",
    "expected_outcome": "fact_found_or_honest_label",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "The New York Mercantile Exchange plans to step up competition against the International Petroleum Exchange by opening a trading floor in its rival's home-base.",
+   "fact_source": "wayback:20050218015457",
    "needs_owner_verification": false,
    "probe_live_status": 403,
-   "owner_verdict": "loads; cookie consent popup only; paywall not confirmed on section page"
+   "owner_verdict": "loads; cookie consent popup only; paywall not confirmed on section page",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:07:00Z",
+   "anchor_note": null
   },
   {
    "id": "F-044",
    "stratum": "S6_paywalled",
    "url": "https://www.wsj.com/tech",
    "expected_outcome": "fact_found_or_honest_label",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "WSJ reporter Katie Mogg joins host Zoe Thomas to explain why these botched results are a sign of a bigger problem for AI tools.",
+   "fact_source": "wayback:20230817062736",
    "needs_owner_verification": false,
    "probe_live_status": 401,
-   "owner_verdict": "device verification interstitial first, then loads; paywall not confirmed on section page"
+   "owner_verdict": "device verification interstitial first, then loads; paywall not confirmed on section page",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:16:11Z",
+   "anchor_note": null
   },
   {
    "id": "F-045",
@@ -460,7 +610,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 403
+   "probe_live_status": 403,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:16:30Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=599; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-046",
@@ -470,7 +623,10 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:17:01Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=9494; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-047",
@@ -480,38 +636,50 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:17:31Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=3900; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-048",
    "stratum": "S6_paywalled",
    "url": "https://www.lemonde.fr/",
    "expected_outcome": "honest_label_or_explicit_failure",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Rihanna', he is both an heir to the tradition of Black dandyism and the embodiment of a masculinity less bound by traditional norms.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": true,
-   "probe_live_status": 200
+   "probe_live_status": 200,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:09:19Z",
+   "anchor_note": null
   },
   {
    "id": "F-049",
    "stratum": "S6_paywalled",
    "url": "https://www.nytimes.com/section/technology",
    "expected_outcome": "fact_found_or_honest_label",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "The Times columnist Kevin Roose sees reasons for optimism — and worry — as the world wakes up to what Silicon Valley has been talking about for years.",
+   "fact_source": "plain_urllib",
    "needs_owner_verification": false,
    "probe_live_status": 200,
-   "owner_verdict": "loads normally; no paywall on section page"
+   "owner_verdict": "loads normally; no paywall on section page",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:09:20Z",
+   "anchor_note": null
   },
   {
    "id": "F-050",
    "stratum": "S6_paywalled",
    "url": "https://www.wsj.com/",
    "expected_outcome": "honest_label_or_explicit_failure",
-   "fact_anchor": null,
-   "fact_source": null,
+   "fact_anchor": "Get a continually updated view of business and news around the world,",
+   "fact_source": "wayback:19970417014007",
    "needs_owner_verification": true,
-   "probe_live_status": 401
+   "probe_live_status": 401,
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:09:22Z",
+   "anchor_note": null
   },
   {
    "id": "F-051",
@@ -621,16 +789,24 @@
    "expected_outcome": "honest_label_or_fact",
    "fact_anchor": null,
    "needs_owner_verification": true,
-   "probe_live_status": -1
+   "probe_live_status": -1,
+   "fact_source": null,
+   "anchor_confidence": null,
+   "anchor_captured_utc": "2026-09-20T23:18:02Z",
+   "anchor_note": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=6402; wayback: no statuscode:200 snapshot"
   },
   {
    "id": "F-062",
    "stratum": "S7_archive_only",
    "url": "http://www.debian.org/banners/2.2/",
    "expected_outcome": "honest_label_or_fact",
-   "fact_anchor": null,
+   "fact_anchor": "(Made by Robert Woodcock for 2.1, later updated by Jim Studt and Josip Rodin)",
    "needs_owner_verification": true,
-   "probe_live_status": 404
+   "probe_live_status": 404,
+   "fact_source": "wayback:20031229223449",
+   "anchor_confidence": "body_text",
+   "anchor_captured_utc": "2026-09-20T23:18:33Z",
+   "anchor_note": null
   }
  ],
  "fact_anchor_note": "fact_anchor strings are VERBATIM quotes of on-page titles and may contain em dashes; this is ground-truth data, not prose. The emdash pre-commit hook correctly blocked the commit; GUARD_ALLOW_EMDASH=1 override used deliberately and recorded here.",

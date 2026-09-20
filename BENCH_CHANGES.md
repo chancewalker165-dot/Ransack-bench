@@ -3,6 +3,40 @@
 Every change to datasets, samples, or grading is recorded here. A frozen
 sample that changes without an entry here is a broken benchmark.
 
+## 2.0.3 - 2026-09-20 (Eval A anchor pass and two harness defects)
+
+No sample URL, stratum, or question was changed. Three grading-side changes:
+
+1. **Fact anchors filled for the hard strata.** `scripts/fill_fact_anchors.py`
+   (new) implements the prereg's ground-truth protocol: plain urllib first, then
+   the Wayback snapshot via the CDX API restricted to `statuscode:200` (so an
+   archived challenge page cannot masquerade as the page under test). Anchors are
+   captured independently of ransack. 34 of the 52 anchorable entries now have an
+   anchor (24 captured live, 10 from Wayback); 18 remain `fact_anchor: null` for
+   the owner's browser pass. The 10 S5 dead-or-404 entries need no anchor: they
+   are scored on status and label honesty.
+2. **S1 anchor KIND changed from page `<title>` to body prose.** Titles are not a
+   gradeable ground truth: the same page exposes different title text in the
+   `<title>` tag, `og:title`, and the product's own title extraction, so a title
+   anchor fails on a page whose content arrived intact. Worked example: F-001's
+   anchor was `curl - How To Use` while the delivered page carried
+   `Title: curl man page`, and the transcript shows full content. Disclosed
+   before/after on the same 44 graded entries: S1 ransack 3/10 and baseline 10/10
+   with title anchors, S1 ransack 7/10 and baseline 5/10 with body anchors. The
+   change makes S1 consistent with every other stratum and removes a known
+   artifact; it is not a tuning pass, and both numbers are recorded here.
+3. **Two harness defects fixed in `scripts/run_fetch_eval.py`.** (a) An entry with
+   no anchor is now EXCLUDED rather than scored as a miss, because grading a fact
+   that was never defined is the same defect class as the two grading bugs
+   corrected on 2026-09-20; excluded ids are written to `excluded.json` and listed
+   in the summary. S5 is exempt (no anchor needed). (b) The baseline lane's read
+   cap was raised from 50,000 to 200,000 chars to match the ransack lane: F-001 and
+   F-005 scored baseline MISS purely from truncation, so the cap was deciding
+   verdicts instead of the ladder.
+
+Run with these changes: `results/fetch_eval_20260920-233546` (44 graded, 18
+excluded). Full table in FINDINGS.md.
+
 ## 2.0.0 - 2026-09-19
 
 Full redesign (breaking). v1 was a 30-question self-graded trivia quiz with

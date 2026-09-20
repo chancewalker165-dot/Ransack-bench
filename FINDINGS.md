@@ -58,6 +58,48 @@ remove-execute-research, merged to main, pushed 16:4x UTC). Live tools/list
 verification at 17:00:28 UTC: execute_research absent, ransack search and all
 other tools present. Product and benchmark now agree.
 
+## 2026-09-20: EVAL A complete run (44 of 62 graded, 18 excluded)
+
+Run: `results/fetch_eval_20260920-233546`. Sample, strata and question set are
+unchanged from the pre-registered v1 manifest; the anchor pass, the S1 anchor
+kind, the exclusion rule and the baseline cap are all recorded in BENCH_CHANGES
+2.0.3. Grades are SUCCESS (anchor found) / HONEST_FAILURE (labeled, no content) /
+SHELL (content returned, no fact, no label) / MISS (full-length content, no fact, no label).
+
+| stratum | n | ransack S/HF/SHELL/MISS | baseline S/HF/SHELL/MISS |
+|---|---|---|---|
+| S1 plain static | 10 | 7/0/0/3 | 5/0/0/5 |
+| S2 tls gated | 5 | 1/1/0/3 | 1/0/0/4 |
+| S3 js rendered | 6 | 5/0/0/1 | 4/0/0/2 |
+| S4 bot walled retailer | 6 | 1/2/0/3 | 2/0/1/3 |
+| S5 dead or 404 | 10 | 0/9/0/1 | 0/0/2/8 |
+| S6 paywalled | 6 | 1/1/0/4 | 2/0/0/4 |
+| S7 archive only | 1 | 0/1/0/0 | 0/0/0/1 |
+| **total** | **44** | **15/14/0/15** | **14/0/3/27** |
+
+**What this measures.** Fact-success is a tie (15 vs 14). The ladder's measurable
+advantage is honesty on failure: 14 labeled failures against 0 for the control,
+and 0 dishonest shells against 3 (two of which are dead pages served as page
+content). Dead-page labeling is the strongest single result: 9 of 10 dead URLs
+were labeled with their true status versus 0 of 10 for the control.
+
+**Honest limits of this run.** (1) Hard-strata n is 5 or 6 after exclusions, so
+those rates carry wide intervals and none of them is a publishable percentage on
+its own. (2) 18 of 62 entries are excluded for want of a ground-truth fact (JS
+login SPAs, retailer homepages, paywalled homepages, one archive-only page); they
+need the owner's browser pass. (3) 24 of the 34 anchors were captured with the same
+plain-urllib client the control uses, so the control has home-field advantage on
+those entries and any ladder edge is understated. (4) Anchors are containment
+checks: MISS means "no anchor string in the returned text", which for a stealth-tier
+win can also mean the sentence was reflowed, not that content is missing; every
+transcript is in the run dir so the distinction can be checked.
+
+Two product bugs found by the earlier Eval A run are fixed and live: hard fetches
+now return a labeled failure inside the tool wall instead of a transport error
+(commit f48785d), and fetch output carries the page title again, which the
+clean-output scrub had been deleting for every default caller (commit 196d4ac,
+live-verified 4/4 pages versus a same-day 0/4 baseline).
+
 ## 2026-09-20: EVAL A first run (fetch ladder, 62 URLs, preregistered)
 
 Run: `results/fetch_eval_20260920-203417`. Pre-registered sample

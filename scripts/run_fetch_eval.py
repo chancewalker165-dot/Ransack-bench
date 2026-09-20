@@ -33,6 +33,8 @@ from benchlib.providers.ransack_mcp import RansackMCP  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "datasets", "fetch_eval_sample_v1.json")
+# Both lanes get the same content budget so the cap can never decide a verdict.
+BASELINE_MAX_CHARS = 200_000
 
 # scripts run outside bench.py do not inherit its .env loading: do it here
 import importlib.util as _ilu  # noqa: E402
@@ -60,7 +62,7 @@ def ransack_fetch(mcp: RansackMCP, url: str) -> dict:
     return {"text": text, "tool": mcp._search_tool}
 
 
-def urllib_fetch(url: str, max_chars: int = 50000) -> dict:
+def urllib_fetch(url: str, max_chars: int = BASELINE_MAX_CHARS) -> dict:
     req = urllib.request.Request(url, headers={"User-Agent": "RansackBenchEval/1.0 baseline"})
     try:
         with urllib.request.urlopen(req, timeout=25) as r:
@@ -106,8 +108,20 @@ def main() -> int:
     tfile = open(os.path.join(outdir, "transcript.jsonl"), "w")
     rfile = open(os.path.join(outdir, "results.jsonl"), "w")
     mcp = RansackMCP()
+    excluded: list[dict] = []
 
     for i, e in enumerate(manifest["questions"], 1):
+        # Grade an entry only when its fact is DEFINED, and skip before spending any
+        # call. Grading a fact that was never written down scores an unanchored entry
+        # as a miss, the same defect class as the two grading bugs already corrected
+        # offline (2026-09-20). S5 needs no anchor: scored on status/label honesty.
+        if not e.get("fact_anchor") and e["stratum"] != "S5_dead_or_404":
+            excluded.append({"id": e["id"], "stratum": e["stratum"], "url": e["url"],
+                             "reason": e.get("anchor_note") or "no fact_anchor"})
+            print(f"[{i}/{len(manifest['questions'])}] {e['id']} {e['stratum'][:14]:14} "
+                  f"EXCLUDED (no ground-truth anchor)", flush=True)
+            continue
+
         # ransack lane
         t0 = time.perf_counter()
         err, rtext, rstatus = None, "", None
@@ -118,10 +132,34 @@ def main() -> int:
             err = f"{type(ex).__name__}: {ex}"[:150]
         r_latency = round(time.perf_counter() - t0, 2)
 
-        # baseline lane (no ladder)
+        # baseline lane (no ladder). Same content budget as the ransack lane: a smaller
+        # read cap made late-page facts unreachable for the control and decided verdicts
+        # (F-001/F-005 scored baseline MISS purely from truncation, 50k vs 200k).
         t0 = time.perf_counter()
         b = urllib_fetch(e["url"])
         b_latency = round(time.perf_counter() - t0, 2)
+
+        # Grade an entry only when its fact is DEFINED. Grading a fact that was
+        # never written down scores an unanchored entry as a miss, which is the
+        # same defect class as the two grading bugs already corrected offline
+        # (2026-09-20). S5 needs no anchor: it is scored on status/label honesty.
+        if not e.get("fact_anchor") and e["stratum"] != "S5_dead_or_404":
+            excluded.append({"id": e["id"], "stratum": e["stratum"], "url": e["url"],
+                             "reason": e.get("anchor_note") or "no fact_anchor"})
+            print(f"[{i}/{len(manifest['questions'])}] {e['id']} {e['stratum'][:14]:14} "
+                  f"EXCLUDED (no ground-truth anchor)", flush=True)
+            continue
+
+        # Grade an entry only when its fact is DEFINED. Grading a fact that was
+        # never written down scores an unanchored entry as a miss, which is the
+        # same defect class as the two grading bugs already corrected offline
+        # (2026-09-20). S5 needs no anchor: it is scored on status/label honesty.
+        if not e.get("fact_anchor") and e["stratum"] != "S5_dead_or_404":
+            excluded.append({"id": e["id"], "stratum": e["stratum"], "url": e["url"],
+                             "reason": e.get("anchor_note") or "no fact_anchor"})
+            print(f"[{i}/{len(manifest['questions'])}] {e['id']} {e['stratum'][:14]:14} "
+                  f"EXCLUDED (no ground-truth anchor)", flush=True)
+            continue
 
         rg = (grade(e, rtext, rstatus) if not err
               else {"verdict": "ERROR", "labeled": False, "content_chars": 0, "status": None})
@@ -151,6 +189,9 @@ def main() -> int:
     lines = ["# Eval A: fetch ladder (ransack) vs plain fetch baseline", "",
              "Grades: SUCCESS / HONEST_FAILURE / SHELL (content, no fact, no label) /",
              "MISS (content, no fact, no label, full-length) / ERROR.", "",
+             "Entries whose fact anchor is not yet defined are EXCLUDED, not scored as",
+             "misses: an undefined fact is unmeasurable. They are listed at the end of",
+             "this summary and need the owner's browser pass (prereg option-4 gate).", "",
              "| stratum | n | ransack S/HF/SHELL/MISS | baseline S/HF/SHELL/MISS |",
              "|---|---|---|---|"]
     for st in sorted(strata):
@@ -167,6 +208,11 @@ def main() -> int:
         lines.append(f"| {st} | {len(rs)} | {fmt(cr)} | {fmt(cb)} |")
     open(os.path.join(outdir, "summary.md"), "w").write("\n".join(lines) + "\n")
     print("\n" + "\n".join(lines))
+    if excluded:
+        json.dump(excluded, open(os.path.join(outdir, "excluded.json"), "w"), indent=1)
+        print(f"\nexcluded (no anchor, needs owner browser pass): {len(excluded)}")
+        for x in excluded:
+            print(f"  {x['id']} {x['stratum']:24} {x['url'][:70]}")
     print(f"\nrun dir: {outdir}")
     return 0
 
