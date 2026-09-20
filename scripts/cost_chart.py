@@ -40,7 +40,11 @@ def main() -> int:
         if spec is None and name.endswith("-answer"):
             # answer lanes are priced off the base vendor entry; exa answers
             # may cost more than searches, flagged as estimate in the output
-            spec = providers.get(name.split("-")[0])
+            name_base = name.split("-")[0]
+            spec = providers.get(name_base)
+            src_name = name_base
+        else:
+            src_name = name
         if not spec:
             continue
         calls = a.budget / (spec["price_per_1k_calls"] / 1000.0)
@@ -62,7 +66,7 @@ def main() -> int:
     ]
     for name, price, calls, hit, hit_calls, is_est in rows:
         flag = " (estimate)" if is_est else ""
-        lines.append(f"| {name} | ${price:.2f}{flag} | {calls:,.0f} | {hit * 100:.1f}% | {hit_calls:,.0f} | [source]({spec_source(p, name)}) |")
+        lines.append(f"| {name} | ${price:.2f}{flag} | {calls:,.0f} | {hit * 100:.1f}% | {hit_calls:,.0f} | [source]({spec_source(p, src_name)}) |")
     lines += [
         "",
         "Reading: the answer engines win the accuracy column; the flat-priced",
