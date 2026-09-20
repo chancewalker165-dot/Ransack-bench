@@ -50,3 +50,10 @@ state mid-wall, or a platform-level cap. Action: check Railway logs
 Note: the research lane (execute_research) was removed from the suite and
 marked for removal from the product on 2026-09-20; its failure analysis is
 preserved in git history (FINDINGS.md revisions + the cross-tab commits).
+
+## 2026-09-20: removal deployed and live-verified
+
+execute_research removed from the MCP surface (ransack-server branch
+remove-execute-research, merged to main, pushed 16:4x UTC). Live tools/list
+verification at 17:00:28 UTC: execute_research absent, ransack search and all
+other tools present. Product and benchmark now agree.
