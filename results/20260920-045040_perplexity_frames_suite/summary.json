@@ -8,17 +8,17 @@
   "n_questions": 100,
   "n_calls": 100,
   "repeat": 1,
-  "hits": 19,
-  "hit_rate_pct": 38.0,
+  "hits": 50,
+  "hit_rate_pct": 50.0,
   "hit_ci95_pct": [
-    25.9,
-    51.8
+    40.4,
+    59.6
   ],
-  "errors": 50,
-  "answer_calls": 50,
-  "answer_correct": 13,
-  "answer_accuracy_pct": 26.0,
-  "abstains": 0,
+  "errors": 0,
+  "answer_calls": 100,
+  "answer_correct": 40,
+  "answer_accuracy_pct": 40.0,
+  "abstains": 1,
   "judge": {
     "graded": 0,
     "CORRECT": 0,
@@ -26,10 +26,10 @@
     "ABSTAIN": 0,
     "JUDGE_ERROR": 0
   },
-  "latency_mean_s": 2.151,
-  "latency_p50_s": 1.838,
-  "latency_p95_s": 4.316,
-  "latency_max_s": 5.906,
+  "latency_mean_s": 2.148,
+  "latency_p50_s": 1.901,
+  "latency_p95_s": 3.911,
+  "latency_max_s": 6.29,
   "per_question": [
     {
       "id": "frames-0003",
@@ -37,39 +37,39 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
-      "mean_latency_s": 1.76
+      "mean_latency_s": 3.294
     },
     {
       "id": "frames-0004",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.16
+      "mean_latency_s": 1.375
     },
     {
       "id": "frames-0011",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.15
+      "mean_latency_s": 1.901
     },
     {
       "id": "frames-0013",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.148
+      "mean_latency_s": 1.397
     },
     {
       "id": "frames-0023",
@@ -79,27 +79,27 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.58
+      "mean_latency_s": 1.654
     },
     {
       "id": "frames-0024",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.161
+      "mean_latency_s": 2.323
     },
     {
       "id": "frames-0034",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.153
+      "mean_latency_s": 2.076
     },
     {
       "id": "frames-0037",
@@ -107,9 +107,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.144
+      "mean_latency_s": 1.98
     },
     {
       "id": "frames-0046",
@@ -119,7 +119,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.587
+      "mean_latency_s": 1.54
     },
     {
       "id": "frames-0050",
@@ -129,7 +129,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.632
+      "mean_latency_s": 1.783
     },
     {
       "id": "frames-0056",
@@ -137,9 +137,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "ABSTAIN"
       ],
-      "mean_latency_s": 0.156
+      "mean_latency_s": 6.29
     },
     {
       "id": "frames-0064",
@@ -147,19 +147,19 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.154
+      "mean_latency_s": 2.439
     },
     {
       "id": "frames-0069",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.174
+      "mean_latency_s": 1.646
     },
     {
       "id": "frames-0082",
@@ -169,7 +169,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.688
+      "mean_latency_s": 2.46
     },
     {
       "id": "frames-0083",
@@ -177,9 +177,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.161
+      "mean_latency_s": 2.019
     },
     {
       "id": "frames-0084",
@@ -187,39 +187,39 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.163
+      "mean_latency_s": 2.617
     },
     {
       "id": "frames-0085",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.15
+      "mean_latency_s": 1.82
     },
     {
       "id": "frames-0095",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.167
+      "mean_latency_s": 2.617
     },
     {
       "id": "frames-0100",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.16
+      "mean_latency_s": 2.058
     },
     {
       "id": "frames-0101",
@@ -229,7 +229,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.515
+      "mean_latency_s": 1.632
     },
     {
       "id": "frames-0103",
@@ -239,17 +239,17 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.946
+      "mean_latency_s": 2.29
     },
     {
       "id": "frames-0104",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.166
+      "mean_latency_s": 1.474
     },
     {
       "id": "frames-0122",
@@ -259,7 +259,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.975
+      "mean_latency_s": 1.873
     },
     {
       "id": "frames-0128",
@@ -267,29 +267,29 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.189
+      "mean_latency_s": 3.744
     },
     {
       "id": "frames-0142",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.164
+      "mean_latency_s": 1.639
     },
     {
       "id": "frames-0158",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.17
+      "mean_latency_s": 1.729
     },
     {
       "id": "frames-0169",
@@ -299,7 +299,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 4.316
+      "mean_latency_s": 3.877
     },
     {
       "id": "frames-0185",
@@ -307,9 +307,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.152
+      "mean_latency_s": 2.16
     },
     {
       "id": "frames-0186",
@@ -319,17 +319,17 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 4.891
+      "mean_latency_s": 4.075
     },
     {
       "id": "frames-0188",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.187
+      "mean_latency_s": 1.379
     },
     {
       "id": "frames-0189",
@@ -337,9 +337,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.148
+      "mean_latency_s": 1.479
     },
     {
       "id": "frames-0201",
@@ -349,27 +349,27 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.999
+      "mean_latency_s": 2.563
     },
     {
       "id": "frames-0213",
-      "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
-      "verdicts": [
-        "ERROR"
-      ],
-      "mean_latency_s": 0.201
-    },
-    {
-      "id": "frames-0224",
       "calls": 1,
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 2.721
+      "mean_latency_s": 4.01
+    },
+    {
+      "id": "frames-0224",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.999
     },
     {
       "id": "frames-0226",
@@ -379,7 +379,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.313
+      "mean_latency_s": 2.029
     },
     {
       "id": "frames-0229",
@@ -389,7 +389,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 3.183
+      "mean_latency_s": 4.478
     },
     {
       "id": "frames-0236",
@@ -399,17 +399,17 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.676
+      "mean_latency_s": 1.596
     },
     {
       "id": "frames-0260",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.164
+      "mean_latency_s": 1.465
     },
     {
       "id": "frames-0264",
@@ -417,9 +417,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.149
+      "mean_latency_s": 1.68
     },
     {
       "id": "frames-0273",
@@ -427,9 +427,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.166
+      "mean_latency_s": 1.47
     },
     {
       "id": "frames-0286",
@@ -439,7 +439,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.385
+      "mean_latency_s": 2.992
     },
     {
       "id": "frames-0319",
@@ -449,37 +449,37 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.719
+      "mean_latency_s": 1.735
     },
     {
       "id": "frames-0325",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.176
+      "mean_latency_s": 3.045
     },
     {
       "id": "frames-0332",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.157
+      "mean_latency_s": 1.756
     },
     {
       "id": "frames-0346",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.153
+      "mean_latency_s": 1.473
     },
     {
       "id": "frames-0359",
@@ -489,7 +489,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.548
+      "mean_latency_s": 1.266
     },
     {
       "id": "frames-0374",
@@ -499,7 +499,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.561
+      "mean_latency_s": 1.541
     },
     {
       "id": "frames-0392",
@@ -507,39 +507,39 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.153
+      "mean_latency_s": 1.59
     },
     {
       "id": "frames-0411",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.165
+      "mean_latency_s": 1.472
     },
     {
       "id": "frames-0426",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.159
+      "mean_latency_s": 1.366
     },
     {
       "id": "frames-0432",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.163
+      "mean_latency_s": 1.541
     },
     {
       "id": "frames-0434",
@@ -549,7 +549,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.747
+      "mean_latency_s": 2.608
     },
     {
       "id": "frames-0438",
@@ -557,29 +557,29 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.16
+      "mean_latency_s": 1.843
     },
     {
       "id": "frames-0449",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.154
+      "mean_latency_s": 2.36
     },
     {
       "id": "frames-0452",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.165
+      "mean_latency_s": 1.611
     },
     {
       "id": "frames-0482",
@@ -589,7 +589,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.486
+      "mean_latency_s": 1.515
     },
     {
       "id": "frames-0487",
@@ -597,9 +597,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.162
+      "mean_latency_s": 1.558
     },
     {
       "id": "frames-0505",
@@ -607,19 +607,19 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.311
+      "mean_latency_s": 2.45
     },
     {
       "id": "frames-0511",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.152
+      "mean_latency_s": 3.911
     },
     {
       "id": "frames-0521",
@@ -629,17 +629,17 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.878
+      "mean_latency_s": 1.705
     },
     {
       "id": "frames-0544",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.159
+      "mean_latency_s": 1.96
     },
     {
       "id": "frames-0547",
@@ -647,9 +647,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.148
+      "mean_latency_s": 1.755
     },
     {
       "id": "frames-0549",
@@ -657,19 +657,19 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "CORRECT"
+        "WRONG"
       ],
-      "mean_latency_s": 1.784
+      "mean_latency_s": 1.663
     },
     {
       "id": "frames-0550",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.153
+      "mean_latency_s": 1.429
     },
     {
       "id": "frames-0551",
@@ -677,19 +677,19 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.17
+      "mean_latency_s": 2.274
     },
     {
       "id": "frames-0563",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.152
+      "mean_latency_s": 2.113
     },
     {
       "id": "frames-0570",
@@ -699,7 +699,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.12
+      "mean_latency_s": 1.271
     },
     {
       "id": "frames-0573",
@@ -709,7 +709,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 3.063
+      "mean_latency_s": 3.06
     },
     {
       "id": "frames-0581",
@@ -719,7 +719,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 3.184
+      "mean_latency_s": 2.361
     },
     {
       "id": "frames-0583",
@@ -729,7 +729,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.664
+      "mean_latency_s": 1.689
     },
     {
       "id": "frames-0585",
@@ -737,19 +737,19 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.146
+      "mean_latency_s": 1.946
     },
     {
       "id": "frames-0589",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.184
+      "mean_latency_s": 1.945
     },
     {
       "id": "frames-0603",
@@ -757,9 +757,9 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "ERROR"
+        "WRONG"
       ],
-      "mean_latency_s": 0.186
+      "mean_latency_s": 1.852
     },
     {
       "id": "frames-0612",
@@ -769,27 +769,27 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.822
+      "mean_latency_s": 1.935
     },
     {
       "id": "frames-0619",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.184
+      "mean_latency_s": 1.319
     },
     {
       "id": "frames-0630",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.152
+      "mean_latency_s": 1.648
     },
     {
       "id": "frames-0632",
@@ -799,7 +799,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.577
+      "mean_latency_s": 1.91
     },
     {
       "id": "frames-0641",
@@ -809,27 +809,27 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.808
+      "mean_latency_s": 2.448
     },
     {
       "id": "frames-0648",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.158
+      "mean_latency_s": 3.029
     },
     {
       "id": "frames-0670",
       "calls": 1,
-      "hit_all": false,
-      "hit_any": false,
+      "hit_all": true,
+      "hit_any": true,
       "verdicts": [
-        "ERROR"
+        "CORRECT"
       ],
-      "mean_latency_s": 0.179
+      "mean_latency_s": 2.558
     },
     {
       "id": "frames-0674",
@@ -839,7 +839,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.529
+      "mean_latency_s": 1.591
     },
     {
       "id": "frames-0690",
@@ -849,7 +849,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.787
+      "mean_latency_s": 2.87
     },
     {
       "id": "frames-0698",
@@ -859,7 +859,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.838
+      "mean_latency_s": 3.079
     },
     {
       "id": "frames-0700",
@@ -869,7 +869,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.88
+      "mean_latency_s": 1.823
     },
     {
       "id": "frames-0702",
@@ -879,7 +879,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 2.12
+      "mean_latency_s": 1.695
     },
     {
       "id": "frames-0715",
@@ -889,7 +889,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.502
+      "mean_latency_s": 1.395
     },
     {
       "id": "frames-0719",
@@ -899,7 +899,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.008
+      "mean_latency_s": 1.449
     },
     {
       "id": "frames-0737",
@@ -909,7 +909,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.326
+      "mean_latency_s": 2.389
     },
     {
       "id": "frames-0741",
@@ -919,7 +919,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.395
+      "mean_latency_s": 2.326
     },
     {
       "id": "frames-0746",
@@ -929,7 +929,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.523
+      "mean_latency_s": 2.128
     },
     {
       "id": "frames-0749",
@@ -939,7 +939,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.981
+      "mean_latency_s": 1.172
     },
     {
       "id": "frames-0765",
@@ -949,7 +949,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.497
+      "mean_latency_s": 5.305
     },
     {
       "id": "frames-0766",
@@ -959,7 +959,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.638
+      "mean_latency_s": 1.523
     },
     {
       "id": "frames-0771",
@@ -969,7 +969,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.824
+      "mean_latency_s": 2.537
     },
     {
       "id": "frames-0784",
@@ -979,7 +979,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 1.978
+      "mean_latency_s": 1.752
     },
     {
       "id": "frames-0789",
@@ -989,7 +989,7 @@
       "verdicts": [
         "WRONG"
       ],
-      "mean_latency_s": 2.103
+      "mean_latency_s": 2.306
     },
     {
       "id": "frames-0796",
@@ -999,7 +999,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.692
+      "mean_latency_s": 2.486
     },
     {
       "id": "frames-0801",
@@ -1009,7 +1009,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 5.906
+      "mean_latency_s": 1.432
     },
     {
       "id": "frames-0806",
@@ -1019,7 +1019,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 2.35
+      "mean_latency_s": 2.108
     },
     {
       "id": "frames-0807",
@@ -1029,7 +1029,7 @@
       "verdicts": [
         "CORRECT"
       ],
-      "mean_latency_s": 1.536
+      "mean_latency_s": 2.003
     }
   ]
 }

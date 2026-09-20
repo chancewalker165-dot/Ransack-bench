@@ -49,3 +49,20 @@ Caveat: "fact in source text" is normalized containment of the expected
 answer, applied identically to both lanes. Phrasing variants could hide some
 facts from the check for either lane equally; the lane-vs-lane comparison is
 the point, not the absolute counts.
+
+## 2026-09-20: rate-limit empirics (operational note)
+
+During the simpleqa n=200 top-up, the ransack key hit a sustained 429 wall
+after ~700 cumulative calls that day (172 consecutive rejections at 0.1s
+each). Key facts observed:
+- The wall was NOT the documented 60/min window (those calls were spaced
+  2-3s apart); it persisted for minutes, then cleared.
+- Timeline: cap hit ~04:03, same key fully working again by ~04:47. That
+  points to an HOURLY cap on this key tier (roughly 400-600 calls/hour),
+  not a daily one.
+- The bench runner now backs off 20s once per question on 429; a longer
+  sustained wall still needs either a higher tier or a scheduled run.
+
+Owner TODO (only you can answer these): does execute_research's internal
+sub-fetching count individually against the quota? What is the exact
+hourly/daily number per tier? These belong in the API docs before launch.
