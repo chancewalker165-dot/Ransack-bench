@@ -16,15 +16,15 @@
   ],
   "errors": 0,
   "answer_calls": 200,
-  "answer_correct": 136,
-  "answer_accuracy_pct": 68.0,
-  "abstains": 0,
+  "answer_correct": 163,
+  "answer_accuracy_pct": 81.5,
+  "abstains": 4,
   "judge": {
     "graded": 200,
-    "CORRECT": 0,
-    "WRONG": 0,
-    "ABSTAIN": 0,
-    "JUDGE_ERROR": 200
+    "CORRECT": 163,
+    "WRONG": 33,
+    "ABSTAIN": 4,
+    "JUDGE_ERROR": 0
   },
   "latency_mean_s": 2.328,
   "latency_p50_s": 2.159,
@@ -107,7 +107,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.883
     },
@@ -157,7 +157,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "ABSTAIN"
       ],
       "mean_latency_s": 1.829
     },
@@ -167,7 +167,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.312
     },
@@ -227,7 +227,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.652
     },
@@ -237,7 +237,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.499
     },
@@ -247,7 +247,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 4.827
     },
@@ -257,7 +257,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 3.653
     },
@@ -297,7 +297,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 3.41
     },
@@ -327,7 +327,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.159
     },
@@ -407,7 +407,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.868
     },
@@ -427,7 +427,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "CORRECT"
+        "ABSTAIN"
       ],
       "mean_latency_s": 1.405
     },
@@ -457,7 +457,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.46
     },
@@ -487,7 +487,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.358
     },
@@ -577,7 +577,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "CORRECT"
+        "WRONG"
       ],
       "mean_latency_s": 2.511
     },
@@ -607,7 +607,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.952
     },
@@ -647,7 +647,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.915
     },
@@ -677,7 +677,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 4.789
     },
@@ -697,7 +697,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.703
     },
@@ -717,7 +717,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 4.227
     },
@@ -727,7 +727,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.199
     },
@@ -817,7 +817,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.278
     },
@@ -927,7 +927,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 4.701
     },
@@ -957,7 +957,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "CORRECT"
+        "WRONG"
       ],
       "mean_latency_s": 2.029
     },
@@ -967,7 +967,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.565
     },
@@ -1077,7 +1077,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "ABSTAIN"
       ],
       "mean_latency_s": 1.838
     },
@@ -1087,7 +1087,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 4.045
     },
@@ -1107,7 +1107,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.779
     },
@@ -1167,7 +1167,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.103
     },
@@ -1277,7 +1277,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 3.084
     },
@@ -1327,7 +1327,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.48
     },
@@ -1367,7 +1367,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.986
     },
@@ -1477,7 +1477,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.654
     },
@@ -1587,7 +1587,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 1.836
     },
@@ -1717,7 +1717,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.453
     },
@@ -1907,7 +1907,7 @@
       "hit_all": false,
       "hit_any": false,
       "verdicts": [
-        "WRONG"
+        "ABSTAIN"
       ],
       "mean_latency_s": 1.778
     },
@@ -2007,7 +2007,7 @@
       "hit_all": true,
       "hit_any": true,
       "verdicts": [
-        "WRONG"
+        "CORRECT"
       ],
       "mean_latency_s": 2.931
     },
@@ -2031,5 +2031,6 @@
       ],
       "mean_latency_s": 1.904
     }
-  ]
+  ],
+  "judge_note": "offline rejudge from transcript (judge model: z-ai/glm-5.3-flash)"
 }
