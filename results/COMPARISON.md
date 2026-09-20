@@ -9,6 +9,12 @@ tighten these - treat as a cross-check).
 
 ## frames
 
+**Context for the ransack search row (20%):** plain search on multi-hop chains
+is exactly the gap that motivated a research lane; that lane was removed after
+it scored below the no-search control on the same questions (see git history).
+If you use ransack for multi-hop research, pair it with an agent loop over
+search. The number stays published because it is true.
+
 # provider comparison
 
 | provider | dataset | n | hit-rate | 95% CI | p50 | p95 | errors | ans-acc | judged |
@@ -26,6 +32,11 @@ Hit-rate = expected fact present in returned documents (retrieval). ans-acc = co
 
 
 ## simpleqa
+
+**Read this first: ransack is structurally a different product on this table.**
+It is a search lane that returns documents, not a synthesized answer, so it has
+no judged column; hit-rate is its comparable metric. The ans-acc and judged
+columns measure answer engines. Saying it here so nobody has to gotcha it.
 
 # provider comparison
 
