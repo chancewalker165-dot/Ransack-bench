@@ -73,7 +73,7 @@ def render_compare(summaries: list[dict]) -> str:
             f"| [{100 * lo:.1f}%, {100 * hi:.1f}%] | {s['latency_p50_s']}s "
             f"| {s['latency_p95_s']}s | {s['errors']} | {acc} | {judge} |")
     lines += ["", "Hit-rate = expected fact present in returned documents (retrieval). "
-              "ans-acc = exact composed answer present in the provider's own answer field "
-              "(containment; the official judge cross-check needs OPENAI_API_KEY and was not run). "
-              "Answer accuracy only exists for answer-producing lanes."]
+              "ans-acc = containment of the expected answer in the provider's own answer field. "
+              "judged = official SimpleQA grader prompt on that answer (where the manifest "
+              "declares the judge). Answer accuracy only exists for answer-producing lanes."]
     return "\n".join(lines) + "\n"

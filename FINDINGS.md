@@ -80,3 +80,23 @@ chains, (b) the 42-question hard tail both answer lanes miss, and (c)
 SimpleQA-style adversarial facts. Bench design implication: datasets need
 refreshing as model memory grows; static trivia (v1's error) and static
 multi-hop both decay toward the no-search ceiling.
+
+## 2026-09-20: judged results change the story (simpleqa n=200, frames n=100)
+
+With the official SimpleQA grader prompt live (judge: z-ai/glm-5.3-flash via
+OpenRouter):
+
+- SimpleQA is properly discriminative: no-search control 39% hit / 46% judged
+  vs search-answer lanes 70.5-92.5% hit / 81.5-92.5% judged. Search adds
+  +25-50pp over parametric memory on this set. (Comparability caveat: Tavily's
+  published 93.3% used gpt-4.1 extraction on the full 4,326 set.)
+- The judge raises tavily's answer accuracy from 68% (containment) to 81.5%
+  (163/200): containment undercounts paraphrased answers. For answer lanes,
+  the judged column is the fair one.
+- Frames, answer-accuracy: nosearch 47/98 (~48%) vs ransack-research 26/100.
+  The research lane currently scores BELOW the no-search control on exact
+  multi-hop answers. Combined with the conversion cross-tab above (11/20 vs
+  exa's 19/20 on search-lane hits), the synthesis layer is the existential
+  product priority, not a nice-to-have. The lane's differentiators that do
+  hold up: citations, confidence telemetry, honest abstentions (2), and the
+  latency price is paid for 0 errors at n=100.
