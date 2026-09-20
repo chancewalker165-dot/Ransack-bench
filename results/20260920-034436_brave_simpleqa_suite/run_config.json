@@ -1,0 +1,15 @@
+{
+  "dataset": "simpleqa",
+  "sample_id": "simpleqa_n200_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "simpleqa_judge",
+  "provider": "brave",
+  "repeat": 1,
+  "k": 5,
+  "limit": 100,
+  "tag": "suite",
+  "git_sha": "a203acf",
+  "started_utc": "20260920-034436",
+  "question_count": 100
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "frames",
+  "sample_id": "frames_n100_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "alias_exact",
+  "provider": "tavily",
+  "repeat": 1,
+  "k": 5,
+  "limit": 100,
+  "tag": "suite",
+  "git_sha": "a203acf",
+  "started_utc": "20260920-033547",
+  "question_count": 100
+}

@@ -119,6 +119,8 @@ def run(dataset: str, provider_name: str, repeat: int = 1, limit: int | None = N
                     "raw": result.get("raw"),
                 }, default=str) + "\n")
             rfile.write(json.dumps(rec, default=str) + "\n")
+            rfile.flush()
+            tfile.flush()
             records.append(rec)
             status = rec.get("error") and f"ERROR {err[:60]}" or (
                 f"hit={rec['hit']}" + (f" answer={rec['answer_verdict']}" if rec.get("answer_verdict") else ""))

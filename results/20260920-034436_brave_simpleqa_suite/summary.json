@@ -1,0 +1,1035 @@
+{
+  "provider": "brave",
+  "dataset": "simpleqa",
+  "sample_id": "simpleqa_n200_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "simpleqa_judge",
+  "n_questions": 100,
+  "n_calls": 100,
+  "repeat": 1,
+  "hits": 68,
+  "hit_rate_pct": 68.0,
+  "hit_ci95_pct": [
+    58.3,
+    76.3
+  ],
+  "errors": 0,
+  "answer_calls": 0,
+  "answer_correct": 0,
+  "answer_accuracy_pct": null,
+  "abstains": 0,
+  "judge": {
+    "graded": 0,
+    "CORRECT": 0,
+    "WRONG": 0,
+    "ABSTAIN": 0,
+    "JUDGE_ERROR": 0
+  },
+  "latency_mean_s": 0.594,
+  "latency_p50_s": 0.587,
+  "latency_p95_s": 0.686,
+  "latency_max_s": 1.037,
+  "per_question": [
+    {
+      "id": "simpleqa-0031",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.627
+    },
+    {
+      "id": "simpleqa-0034",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.602
+    },
+    {
+      "id": "simpleqa-0039",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.542
+    },
+    {
+      "id": "simpleqa-0072",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.591
+    },
+    {
+      "id": "simpleqa-0095",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.555
+    },
+    {
+      "id": "simpleqa-0110",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.608
+    },
+    {
+      "id": "simpleqa-0117",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.584
+    },
+    {
+      "id": "simpleqa-0131",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.595
+    },
+    {
+      "id": "simpleqa-0142",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.613
+    },
+    {
+      "id": "simpleqa-0184",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.68
+    },
+    {
+      "id": "simpleqa-0189",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.605
+    },
+    {
+      "id": "simpleqa-0192",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.595
+    },
+    {
+      "id": "simpleqa-0204",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.568
+    },
+    {
+      "id": "simpleqa-0230",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.549
+    },
+    {
+      "id": "simpleqa-0260",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.463
+    },
+    {
+      "id": "simpleqa-0272",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.563
+    },
+    {
+      "id": "simpleqa-0297",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.617
+    },
+    {
+      "id": "simpleqa-0298",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.555
+    },
+    {
+      "id": "simpleqa-0340",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.561
+    },
+    {
+      "id": "simpleqa-0368",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.623
+    },
+    {
+      "id": "simpleqa-0376",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.571
+    },
+    {
+      "id": "simpleqa-0379",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.576
+    },
+    {
+      "id": "simpleqa-0404",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.623
+    },
+    {
+      "id": "simpleqa-0409",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.686
+    },
+    {
+      "id": "simpleqa-0454",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.878
+    },
+    {
+      "id": "simpleqa-0512",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.037
+    },
+    {
+      "id": "simpleqa-0516",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.526
+    },
+    {
+      "id": "simpleqa-0522",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.53
+    },
+    {
+      "id": "simpleqa-0553",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.616
+    },
+    {
+      "id": "simpleqa-0556",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.629
+    },
+    {
+      "id": "simpleqa-0572",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.569
+    },
+    {
+      "id": "simpleqa-0626",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.652
+    },
+    {
+      "id": "simpleqa-0651",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.641
+    },
+    {
+      "id": "simpleqa-0653",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.625
+    },
+    {
+      "id": "simpleqa-0655",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.528
+    },
+    {
+      "id": "simpleqa-0662",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.568
+    },
+    {
+      "id": "simpleqa-0663",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.543
+    },
+    {
+      "id": "simpleqa-0667",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.491
+    },
+    {
+      "id": "simpleqa-0669",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.52
+    },
+    {
+      "id": "simpleqa-0671",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.354
+    },
+    {
+      "id": "simpleqa-0677",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.569
+    },
+    {
+      "id": "simpleqa-0682",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.592
+    },
+    {
+      "id": "simpleqa-0722",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.676
+    },
+    {
+      "id": "simpleqa-0738",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.548
+    },
+    {
+      "id": "simpleqa-0750",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.607
+    },
+    {
+      "id": "simpleqa-0761",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.631
+    },
+    {
+      "id": "simpleqa-0781",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 1.002
+    },
+    {
+      "id": "simpleqa-0783",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.613
+    },
+    {
+      "id": "simpleqa-0805",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.562
+    },
+    {
+      "id": "simpleqa-0812",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.641
+    },
+    {
+      "id": "simpleqa-0824",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.585
+    },
+    {
+      "id": "simpleqa-0825",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.578
+    },
+    {
+      "id": "simpleqa-0831",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.636
+    },
+    {
+      "id": "simpleqa-0833",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.577
+    },
+    {
+      "id": "simpleqa-0873",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.609
+    },
+    {
+      "id": "simpleqa-0894",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.621
+    },
+    {
+      "id": "simpleqa-0896",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.539
+    },
+    {
+      "id": "simpleqa-0972",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.574
+    },
+    {
+      "id": "simpleqa-0979",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.641
+    },
+    {
+      "id": "simpleqa-1017",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.596
+    },
+    {
+      "id": "simpleqa-1020",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.598
+    },
+    {
+      "id": "simpleqa-1025",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.568
+    },
+    {
+      "id": "simpleqa-1028",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.53
+    },
+    {
+      "id": "simpleqa-1135",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.594
+    },
+    {
+      "id": "simpleqa-1142",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.564
+    },
+    {
+      "id": "simpleqa-1263",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.62
+    },
+    {
+      "id": "simpleqa-1270",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.587
+    },
+    {
+      "id": "simpleqa-1271",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.527
+    },
+    {
+      "id": "simpleqa-1302",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.592
+    },
+    {
+      "id": "simpleqa-1317",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.532
+    },
+    {
+      "id": "simpleqa-1359",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.686
+    },
+    {
+      "id": "simpleqa-1415",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.602
+    },
+    {
+      "id": "simpleqa-1437",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.359
+    },
+    {
+      "id": "simpleqa-1438",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.583
+    },
+    {
+      "id": "simpleqa-1480",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.557
+    },
+    {
+      "id": "simpleqa-1490",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.639
+    },
+    {
+      "id": "simpleqa-1501",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.57
+    },
+    {
+      "id": "simpleqa-1504",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.575
+    },
+    {
+      "id": "simpleqa-1510",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.595
+    },
+    {
+      "id": "simpleqa-1514",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.584
+    },
+    {
+      "id": "simpleqa-1518",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.656
+    },
+    {
+      "id": "simpleqa-1525",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.606
+    },
+    {
+      "id": "simpleqa-1540",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.605
+    },
+    {
+      "id": "simpleqa-1548",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.618
+    },
+    {
+      "id": "simpleqa-1579",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.598
+    },
+    {
+      "id": "simpleqa-1583",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.536
+    },
+    {
+      "id": "simpleqa-1615",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.509
+    },
+    {
+      "id": "simpleqa-1627",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.789
+    },
+    {
+      "id": "simpleqa-1636",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.504
+    },
+    {
+      "id": "simpleqa-1642",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.57
+    },
+    {
+      "id": "simpleqa-1644",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.645
+    },
+    {
+      "id": "simpleqa-1708",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.614
+    },
+    {
+      "id": "simpleqa-1787",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.524
+    },
+    {
+      "id": "simpleqa-1795",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.527
+    },
+    {
+      "id": "simpleqa-1808",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.622
+    },
+    {
+      "id": "simpleqa-1839",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.553
+    },
+    {
+      "id": "simpleqa-1851",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.577
+    },
+    {
+      "id": "simpleqa-1867",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.539
+    },
+    {
+      "id": "simpleqa-1884",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.598
+    },
+    {
+      "id": "simpleqa-1892",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.482
+    }
+  ]
+}

@@ -1,0 +1,1035 @@
+{
+  "provider": "perplexity",
+  "dataset": "frames",
+  "sample_id": "frames_n100_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "alias_exact",
+  "n_questions": 100,
+  "n_calls": 100,
+  "repeat": 1,
+  "hits": 19,
+  "hit_rate_pct": 38.0,
+  "hit_ci95_pct": [
+    25.9,
+    51.8
+  ],
+  "errors": 50,
+  "answer_calls": 50,
+  "answer_correct": 13,
+  "answer_accuracy_pct": 26.0,
+  "abstains": 0,
+  "judge": {
+    "graded": 0,
+    "CORRECT": 0,
+    "WRONG": 0,
+    "ABSTAIN": 0,
+    "JUDGE_ERROR": 0
+  },
+  "latency_mean_s": 2.151,
+  "latency_p50_s": 1.838,
+  "latency_p95_s": 4.316,
+  "latency_max_s": 5.906,
+  "per_question": [
+    {
+      "id": "frames-0003",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.76
+    },
+    {
+      "id": "frames-0004",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.16
+    },
+    {
+      "id": "frames-0011",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.15
+    },
+    {
+      "id": "frames-0013",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.148
+    },
+    {
+      "id": "frames-0023",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.58
+    },
+    {
+      "id": "frames-0024",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.161
+    },
+    {
+      "id": "frames-0034",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.153
+    },
+    {
+      "id": "frames-0037",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.144
+    },
+    {
+      "id": "frames-0046",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.587
+    },
+    {
+      "id": "frames-0050",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.632
+    },
+    {
+      "id": "frames-0056",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.156
+    },
+    {
+      "id": "frames-0064",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.154
+    },
+    {
+      "id": "frames-0069",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.174
+    },
+    {
+      "id": "frames-0082",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.688
+    },
+    {
+      "id": "frames-0083",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.161
+    },
+    {
+      "id": "frames-0084",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.163
+    },
+    {
+      "id": "frames-0085",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.15
+    },
+    {
+      "id": "frames-0095",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.167
+    },
+    {
+      "id": "frames-0100",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.16
+    },
+    {
+      "id": "frames-0101",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.515
+    },
+    {
+      "id": "frames-0103",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.946
+    },
+    {
+      "id": "frames-0104",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.166
+    },
+    {
+      "id": "frames-0122",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.975
+    },
+    {
+      "id": "frames-0128",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.189
+    },
+    {
+      "id": "frames-0142",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.164
+    },
+    {
+      "id": "frames-0158",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.17
+    },
+    {
+      "id": "frames-0169",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 4.316
+    },
+    {
+      "id": "frames-0185",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.152
+    },
+    {
+      "id": "frames-0186",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 4.891
+    },
+    {
+      "id": "frames-0188",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.187
+    },
+    {
+      "id": "frames-0189",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.148
+    },
+    {
+      "id": "frames-0201",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.999
+    },
+    {
+      "id": "frames-0213",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.201
+    },
+    {
+      "id": "frames-0224",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 2.721
+    },
+    {
+      "id": "frames-0226",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.313
+    },
+    {
+      "id": "frames-0229",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 3.183
+    },
+    {
+      "id": "frames-0236",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.676
+    },
+    {
+      "id": "frames-0260",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.164
+    },
+    {
+      "id": "frames-0264",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.149
+    },
+    {
+      "id": "frames-0273",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.166
+    },
+    {
+      "id": "frames-0286",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.385
+    },
+    {
+      "id": "frames-0319",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.719
+    },
+    {
+      "id": "frames-0325",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.176
+    },
+    {
+      "id": "frames-0332",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.157
+    },
+    {
+      "id": "frames-0346",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.153
+    },
+    {
+      "id": "frames-0359",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.548
+    },
+    {
+      "id": "frames-0374",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.561
+    },
+    {
+      "id": "frames-0392",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.153
+    },
+    {
+      "id": "frames-0411",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.165
+    },
+    {
+      "id": "frames-0426",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.159
+    },
+    {
+      "id": "frames-0432",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.163
+    },
+    {
+      "id": "frames-0434",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.747
+    },
+    {
+      "id": "frames-0438",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.16
+    },
+    {
+      "id": "frames-0449",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.154
+    },
+    {
+      "id": "frames-0452",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.165
+    },
+    {
+      "id": "frames-0482",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.486
+    },
+    {
+      "id": "frames-0487",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.162
+    },
+    {
+      "id": "frames-0505",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.311
+    },
+    {
+      "id": "frames-0511",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.152
+    },
+    {
+      "id": "frames-0521",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.878
+    },
+    {
+      "id": "frames-0544",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.159
+    },
+    {
+      "id": "frames-0547",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.148
+    },
+    {
+      "id": "frames-0549",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.784
+    },
+    {
+      "id": "frames-0550",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.153
+    },
+    {
+      "id": "frames-0551",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.17
+    },
+    {
+      "id": "frames-0563",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.152
+    },
+    {
+      "id": "frames-0570",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.12
+    },
+    {
+      "id": "frames-0573",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 3.063
+    },
+    {
+      "id": "frames-0581",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 3.184
+    },
+    {
+      "id": "frames-0583",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.664
+    },
+    {
+      "id": "frames-0585",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.146
+    },
+    {
+      "id": "frames-0589",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.184
+    },
+    {
+      "id": "frames-0603",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.186
+    },
+    {
+      "id": "frames-0612",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.822
+    },
+    {
+      "id": "frames-0619",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.184
+    },
+    {
+      "id": "frames-0630",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.152
+    },
+    {
+      "id": "frames-0632",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.577
+    },
+    {
+      "id": "frames-0641",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.808
+    },
+    {
+      "id": "frames-0648",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.158
+    },
+    {
+      "id": "frames-0670",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "ERROR"
+      ],
+      "mean_latency_s": 0.179
+    },
+    {
+      "id": "frames-0674",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.529
+    },
+    {
+      "id": "frames-0690",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.787
+    },
+    {
+      "id": "frames-0698",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.838
+    },
+    {
+      "id": "frames-0700",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.88
+    },
+    {
+      "id": "frames-0702",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 2.12
+    },
+    {
+      "id": "frames-0715",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.502
+    },
+    {
+      "id": "frames-0719",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.008
+    },
+    {
+      "id": "frames-0737",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.326
+    },
+    {
+      "id": "frames-0741",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.395
+    },
+    {
+      "id": "frames-0746",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.523
+    },
+    {
+      "id": "frames-0749",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.981
+    },
+    {
+      "id": "frames-0765",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.497
+    },
+    {
+      "id": "frames-0766",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.638
+    },
+    {
+      "id": "frames-0771",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.824
+    },
+    {
+      "id": "frames-0784",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 1.978
+    },
+    {
+      "id": "frames-0789",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 2.103
+    },
+    {
+      "id": "frames-0796",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.692
+    },
+    {
+      "id": "frames-0801",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 5.906
+    },
+    {
+      "id": "frames-0806",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 2.35
+    },
+    {
+      "id": "frames-0807",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 1.536
+    }
+  ]
+}
