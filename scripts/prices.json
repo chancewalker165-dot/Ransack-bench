@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-09-20",
+  "currency": "USD",
+  "note": "Prices are list prices for the cheapest comparable search/answer unit. verification: verified = fetched from the vendor's own page this session (see docs/PRICING.md for shas); estimate = community/third-party figures, re-verify on publish day.",
+  "providers": {
+    "ransack": {
+      "price_per_1k_calls": 1.00,
+      "model": "flat $15/month, 500 calls/day, 15,000 calls/month at full use",
+      "verification": "owner canonical facts (ransack.tools/llms.txt)",
+      "source": "https://ransack.tools/llms.txt"
+    },
+    "tavily": {
+      "price_per_1k_calls": 8.00,
+      "model": "$0.008 per credit, 1 credit basic search",
+      "verification": "verified (vendor pricing page, 2026-09-20)",
+      "source": "https://www.tavily.com/pricing"
+    },
+    "exa": {
+      "price_per_1k_calls": 7.00,
+      "model": "search endpoint, pay as you go",
+      "verification": "verified (vendor's own Exa-vs-Serper comparison page, 2026-09-20)",
+      "source": "https://exa.ai/versus/serper"
+    },
+    "perplexity": {
+      "price_per_1k_calls": 5.00,
+      "model": "Search API bills per successful request; Sonar lanes add token costs on top",
+      "verification": "estimate (official docs page is dynamic; third-party trackers: $5-$14/1k grounded)",
+      "source": "https://docs.perplexity.ai/docs/getting-started/pricing"
+    },
+    "serper": {
+      "price_per_1k_calls": 1.00,
+      "model": "per-query, volume tiers down to ~$0.30/1k",
+      "verification": "estimate (vendor pricing page not statically fetchable, 404 via ladder; community figures $0.30-$1.00/1k)",
+      "source": "https://serper.dev/pricing"
+    },
+    "brave": {
+      "price_per_1k_calls": 5.00,
+      "model": "credit-based, $5 free credits monthly",
+      "verification": "estimate (vendor page shows credit model, no static per-1k figure; community $3-$5/1k)",
+      "source": "https://brave.com/search/api/"
+    },
+    "firecrawl": {
+      "price_per_1k_calls": 7.60,
+      "model": "search costs 2 credits per 10 results on Hobby $19/month",
+      "verification": "owner canonical facts (ransack.tools/llms.txt market context)",
+      "source": "https://ransack.tools/llms.txt"
+    }
+  },
+  "hit_rates_2026_09_20": {
+    "note": "SimpleQA frozen 200-question sample, bench v2.0.2 README table. search lanes: retrieval hit-rate over k=5 docs; answer lanes: containment in the synthesized answer. Not measurement-equivalent across lanes; see README caveats.",
+    "ransack": 0.745,
+    "tavily": 0.830,
+    "exa-answer": 0.910,
+    "perplexity": 0.925,
+    "serper": 0.705,
+    "brave": 0.700
+  }
+}
