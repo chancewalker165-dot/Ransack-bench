@@ -30,19 +30,20 @@ meaningful separations are answer accuracy on hard chains and SimpleQA-style
 adversarial facts. Design implication: datasets decay toward the parametric
 ceiling as model memory grows; refresh them on a schedule.
 
-## 2026-09-20: rate-limit empirics (operational note)
+## 2026-09-20: rate-limit truth from server code (correction)
 
-During a simpleqa n=200 run, the ransack key hit a sustained 429 wall after
-~700 cumulative calls that day (172 consecutive rejections at 0.1s each):
-- Not the documented 60/min window (calls were spaced 2-3s apart).
-- Timeline: cap hit ~04:03, fully working again by ~04:47, pointing to an
-  HOURLY cap on this key tier (roughly 400-600 calls/hour), not daily.
-- The runner backs off 20s once per question on 429; a sustained wall needs
-  a higher tier or a scheduled run.
+Code-verified (server.py + ransack_db.py): per-minute /mcp sliding window is
+120/min paid, 60/min trial, 300/min per-IP (in-memory per replica). Daily
+quota per UTC day: trial 50/day, paid 500/day, Pro 10,000/day, Team
+50,000/day; get_report and tasks_get are quota-exempt; "Daily quota exceeded"
+= stop until UTC midnight.
 
-Owner TODO (only you can answer): does internal sub-fetching count
-individually against the quota? Exact hourly/daily numbers per tier? These
-belong in the API docs before launch.
+The previously hypothesized "hourly cap (~400-600/hour)" is WITHDRAWN. The
+sustained 44-minute 429 wall observed 2026-09-20 ~04:03 UTC does not match
+either gate as coded (daily would persist until UTC midnight; the 60s window
+recovers in 60s). Most plausible: a deploy/restart clearing in-memory limiter
+state mid-wall, or a platform-level cap. Action: check Railway logs
+04:03-04:47 UTC. Correction supersedes the earlier hourly-cap estimate.
 
 ---
 
