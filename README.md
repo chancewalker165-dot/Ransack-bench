@@ -68,7 +68,6 @@ full sources are fetched by `scripts/fetch_datasets.py` into `data/`
 |---|---|---|
 | `mock` | none (offline fixture) | pipeline smoke only |
 | `ransack` (search lane, MCP surface) | `RANSACK_MCP_URL` (default https://ransack.tools), `RANSACK_MCP_TOKEN` | hit-rate |
-| `ransack-research` (agentic lane, **beta**: synthesis gap documented in FINDINGS.md; do not market until fixed) | same | hit-rate + answer accuracy |
 | `nosearch` (no-search LLM control) | `OPENAI_API_KEY`, `NOSEARCH_MODEL`, `OPENAI_BASE_URL` | answer accuracy (the baseline that exposes weak seeds) |
 | `tavily` | `TAVILY_API_KEY` | hit-rate (+ `answer` when returned) |
 | `brave` | `BRAVE_API_KEY` | hit-rate |
@@ -114,8 +113,7 @@ Commit run dirs you want to publish; raw transcripts make grades auditable.
 ("browser signature blocked") to scripts without a User-Agent; the bench sends
 a proper UA. The MCP server then requires a bearer token (JSON-RPC -32001):
 set `RANSACK_MCP_TOKEN`. Verified working end to end with a token on
-2026-09-20 (see `results/` live runs). Note the lane is async: the research
-tool returns a `taskId` and the bench polls `tasks_get` until completion.
+2026-09-20 (see `results/` live runs).
 
 ## Legacy
 

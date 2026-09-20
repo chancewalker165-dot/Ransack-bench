@@ -86,7 +86,6 @@ not allowed to rank providers. That is the exact failure v1 hid.
 - FreshQA fast-changing slice (freshness, with rotcheck enforcement)
 - BrowseComp fixed 50-Q sample (monthly; expensive lane)
 - CRAG robustness slice (missing/misleading documents)
-- DeepResearch Bench English subset for the `ransack-research` lane
 - xbench / GAIA leaderboard submissions (channel, not harness)
 - Judge cross-checks extended beyond SimpleQA with published prompts
 

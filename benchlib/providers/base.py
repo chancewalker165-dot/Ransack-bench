@@ -52,7 +52,6 @@ def from_registry(name: str):
     registry = {
         "mock": mock.MockProvider,
         "ransack": ransack_mcp.RansackMCP,
-        "ransack-research": ransack_mcp.RansackMCPResearch,
         "nosearch": nosearch_llm.NoSearchLLM,
         "tavily": http_search.Tavily,
         "brave": http_search.Brave,

@@ -21,14 +21,13 @@ from benchlib.datasets import list_datasets, load_dataset  # noqa: E402
 from benchlib.report import render_compare  # noqa: E402
 from benchlib.schema import validate_manifest  # noqa: E402
 
-PROVIDERS = ["mock", "ransack", "ransack-research", "nosearch",
+PROVIDERS = ["mock", "ransack", "nosearch",
              "tavily", "brave", "serper", "exa", "exa-answer", "perplexity"]
 
 # env each provider needs to be considered "available" in the suite
 PROVIDER_ENV = {
     "mock": [],
     "ransack": ["RANSACK_MCP_TOKEN"],
-    "ransack-research": ["RANSACK_MCP_TOKEN"],
     "nosearch": ["OPENAI_API_KEY"],
     "tavily": ["TAVILY_API_KEY"],
     "brave": ["BRAVE_API_KEY"],
