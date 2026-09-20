@@ -1,5 +1,7 @@
 # Ransack-bench v2
 
+> [Why I built this](WHY.md): one MCP for an agent's web research instead of five half-tools.
+
 A combined, re-runnable evaluation suite for web search APIs. It adopts the
 public benchmarks the category already trusts (SimpleQA, FRAMES), adds a
 no-search LLM control, grades deterministically with auditable spans, and
