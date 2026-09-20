@@ -79,8 +79,9 @@ def _load_dotenv(root: str) -> int:
 
 def cmd_suite(args) -> int:
     root = os.path.dirname(os.path.abspath(__file__))
-    loaded = _load_dotenv(root)
-    print(f".env: {loaded} var(s) loaded" if loaded else ".env: not found, using current env")
+    # .env is already loaded by main(); report availability instead of re-loading
+    print(".env: available" if os.path.exists(os.path.join(root, ".env"))
+          else ".env: not found, using current env")
 
     def _matches(name: str, wanted: set | None) -> bool:
         if not wanted:
@@ -225,6 +226,8 @@ def main() -> int:
     p_suite.set_defaults(func=cmd_suite)
 
     args = ap.parse_args()
+    _load_dotenv(os.path.dirname(os.path.abspath(__file__)))  # every subcommand sees .env
+    args.env_loaded = None  # suite reports how many vars IT loaded fresh; avoid double-load confusion
     return args.func(args)
 
 
