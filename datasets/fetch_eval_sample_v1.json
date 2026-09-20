@@ -123,8 +123,9 @@
    "expected_outcome": "honest_label_or_fact",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 403
+   "needs_owner_verification": false,
+   "probe_live_status": 403,
+   "owner_verdict": "loads fully in browser for humans; the gate targets bots, not visitors"
   },
   {
    "id": "F-013",
@@ -233,8 +234,9 @@
    "expected_outcome": "honest_label_or_fact",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 200
+   "needs_owner_verification": false,
+   "probe_live_status": 200,
+   "owner_verdict": "loads in browser (JS app); confirms JS-rendered stratum"
   },
   {
    "id": "F-024",
@@ -310,11 +312,12 @@
    "id": "F-031",
    "stratum": "S4_bot_walled_retailer",
    "url": "https://www.bol.com/nl/nl/",
-   "expected_outcome": "honest_label_or_fact",
+   "expected_outcome": "explicit_failure_or_honest_label",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": -1
+   "needs_owner_verification": false,
+   "probe_live_status": -1,
+   "owner_verdict": "does not load for the owner in a browser (hard wall)"
   },
   {
    "id": "F-032",
@@ -333,8 +336,9 @@
    "expected_outcome": "honest_label_or_fact",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 200
+   "needs_owner_verification": false,
+   "probe_live_status": 200,
+   "owner_verdict": "loads; sale popup overlay with close button; content exists behind it"
   },
   {
    "id": "F-034",
@@ -430,21 +434,23 @@
    "id": "F-043",
    "stratum": "S6_paywalled",
    "url": "https://www.ft.com/markets",
-   "expected_outcome": "honest_label_or_explicit_failure",
+   "expected_outcome": "fact_found_or_honest_label",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 403
+   "needs_owner_verification": false,
+   "probe_live_status": 403,
+   "owner_verdict": "loads; cookie consent popup only; paywall not confirmed on section page"
   },
   {
    "id": "F-044",
    "stratum": "S6_paywalled",
    "url": "https://www.wsj.com/tech",
-   "expected_outcome": "honest_label_or_explicit_failure",
+   "expected_outcome": "fact_found_or_honest_label",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 401
+   "needs_owner_verification": false,
+   "probe_live_status": 401,
+   "owner_verdict": "device verification interstitial first, then loads; paywall not confirmed on section page"
   },
   {
    "id": "F-045",
@@ -490,11 +496,12 @@
    "id": "F-049",
    "stratum": "S6_paywalled",
    "url": "https://www.nytimes.com/section/technology",
-   "expected_outcome": "honest_label_or_explicit_failure",
+   "expected_outcome": "fact_found_or_honest_label",
    "fact_anchor": null,
    "fact_source": null,
-   "needs_owner_verification": true,
-   "probe_live_status": 200
+   "needs_owner_verification": false,
+   "probe_live_status": 200,
+   "owner_verdict": "loads normally; no paywall on section page"
   },
   {
    "id": "F-050",
@@ -564,7 +571,8 @@
    "fact_anchor": null,
    "fact_source": null,
    "needs_owner_verification": false,
-   "probe_live_status": 404
+   "probe_live_status": 404,
+   "owner_verdict": "browser: error page then search fallback; URL confirmed dead"
   },
   {
    "id": "F-057",
@@ -625,5 +633,21 @@
    "probe_live_status": 404
   }
  ],
- "fact_anchor_note": "fact_anchor strings are VERBATIM quotes of on-page titles and may contain em dashes; this is ground-truth data, not prose. The emdash pre-commit hook correctly blocked the commit; GUARD_ALLOW_EMDASH=1 override used deliberately and recorded here."
+ "fact_anchor_note": "fact_anchor strings are VERBATIM quotes of on-page titles and may contain em dashes; this is ground-truth data, not prose. The emdash pre-commit hook correctly blocked the commit; GUARD_ALLOW_EMDASH=1 override used deliberately and recorded here.",
+ "owner_review": {
+  "date": "2026-09-20",
+  "method": "browser pass by owner (normal browser, normal visitor conditions)",
+  "checked_ids": [
+   "F-012",
+   "F-023",
+   "F-031",
+   "F-033",
+   "F-043",
+   "F-044",
+   "F-049",
+   "F-056"
+  ],
+  "per_prereg_spot_check": true,
+  "note": "spot-check per prereg completed; remaining flagged entries run on preregistered expected outcomes"
+ }
 }
