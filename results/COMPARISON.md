@@ -1,11 +1,11 @@
 # Ransack-bench comparison - 2026-09-20
 
-All runs n=100 questions from frozen seeded samples (seed 20260919), commit-pinned,
-client-side latency, Wilson 95% CIs, raw transcripts in each run dir.
-Known caveats: (1) perplexity hit rate limiting (50 calls errored, its row understates);
-(2) the no-search baseline lane needs OPENAI_API_KEY and did not run;
-(3) the SimpleQA official judge cross-check needs OPENAI_API_KEY and did not run;
-answer grades for answer lanes are containment-based until then.
+Frozen seeded samples (seed 20260919), client-side latency, Wilson 95% CIs,
+raw transcripts per run dir. simpleqa rows at n=200 where marked.
+Caveats: (1) perplexity frames row rate-limited (50 err/100);
+(2) no-search baseline + SimpleQA judge need OPENAI_API_KEY, not yet run;
+(3) ransack simpleqa row is n=100: the n=200 attempt hit the key's usage cap
+(172 x 429) - the runner now backs off once per question on 429.
 
 
 ## frames
@@ -32,10 +32,10 @@ Hit-rate = expected fact present in returned documents (retrieval). ans-acc = ex
 
 | provider | dataset | n | hit-rate | 95% CI | p50 | p95 | errors | ans-acc |
 |---|---|---|---|---|---|---|---|---|
-| tavily | simpleqa | 100 | 77.0% | [67.8%, 84.2%] | 2.322s | 4.043s | 0 | 57/100 |
-| brave | simpleqa | 100 | 68.0% | [58.3%, 76.3%] | 0.587s | 0.686s | 0 | - |
+| tavily | simpleqa | 200 | 82.0% | [76.1%, 86.7%] | 2.114s | 3.992s | 0 | 136/200 |
+| serper | simpleqa | 200 | 70.5% | [63.8%, 76.4%] | 1.041s | 4.377s | 0 | - |
+| brave | simpleqa | 200 | 70.0% | [63.3%, 75.9%] | 0.461s | 0.676s | 0 | - |
 | ransack | simpleqa | 100 | 66.0% | [56.3%, 74.5%] | 2.263s | 5.249s | 0 | - |
-| serper | simpleqa | 100 | 66.0% | [56.3%, 74.5%] | 1.027s | 3.05s | 0 | - |
 
 Hit-rate = expected fact present in returned documents (retrieval). ans-acc = exact composed answer present in the provider's own answer field (containment; the official judge cross-check needs OPENAI_API_KEY and was not run). Answer accuracy only exists for answer-producing lanes.
 

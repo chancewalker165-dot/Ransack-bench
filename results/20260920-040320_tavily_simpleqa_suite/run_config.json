@@ -4,12 +4,12 @@
   "frozen_on": "2026-09-19",
   "non_discriminative": false,
   "grader": "simpleqa_judge",
-  "provider": "brave",
+  "provider": "tavily",
   "repeat": 1,
   "k": 5,
-  "limit": 100,
+  "limit": null,
   "tag": "suite",
-  "git_sha": "a203acf",
-  "started_utc": "20260920-034436",
-  "question_count": 100
+  "git_sha": "aea6ecd",
+  "started_utc": "20260920-040320",
+  "question_count": 200
 }

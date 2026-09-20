@@ -82,10 +82,15 @@ def cmd_suite(args) -> int:
     loaded = _load_dotenv(root)
     print(f".env: {loaded} var(s) loaded" if loaded else ".env: not found, using current env")
 
+    def _matches(name: str, wanted: set | None) -> bool:
+        if not wanted:
+            return True
+        return any(name == w or name.startswith(w) or w.startswith(name) for w in wanted)
+
     allowed_p = set(args.providers) if args.providers else None
     allowed_d = set(args.datasets) if args.datasets else None
     plan = [(d, p) for d, p in PLAN
-            if (not allowed_p or p in allowed_p) and (not allowed_d or d in allowed_d)]
+            if _matches(p, allowed_p) and _matches(d, allowed_d)]
     if not plan:
         print("nothing to run: no plan entries match", file=sys.stderr)
         return 2

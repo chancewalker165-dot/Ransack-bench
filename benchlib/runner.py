@@ -88,10 +88,18 @@ def run(dataset: str, provider_name: str, repeat: int = 1, limit: int | None = N
             t0 = time.perf_counter()
             err = None
             result = None
-            try:
-                result = provider.ask(q["question"], k)
-            except Exception as e:  # noqa: BLE001 - record everything, never abort the run
-                err = f"{type(e).__name__}: {e}"
+            for attempt in (1, 2):  # one 429 backoff retry before recording an error
+                try:
+                    result = provider.ask(q["question"], k)
+                    break
+                except Exception as e:  # noqa: BLE001 - record everything, never abort the run
+                    err = f"{type(e).__name__}: {e}"
+                    if attempt == 1 and "429" in err:
+                        time.sleep(20)
+                        continue
+                    break
+            else:
+                result = None
             latency = round(time.perf_counter() - t0, 3)
 
             rec = {"id": q["id"], "repeat": rep, "latency_s": latency}
