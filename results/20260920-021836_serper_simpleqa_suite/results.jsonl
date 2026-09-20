@@ -1,0 +1,1 @@
+{"id": "simpleqa-0031", "repeat": 0, "latency_s": 0.156, "error": "ProviderError: HTTP 403 from https://google.serper.dev/search: b'{\"message\":\"Unauthorized.\",\"statusCode\":403}'", "hit": false, "answer_verdict": ""}

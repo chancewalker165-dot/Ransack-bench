@@ -15,7 +15,7 @@ jobs:
           python-version: "3.12"
 
       - name: Compile all python
-        run: python3 -m compileall -q bench.py rotcheck.py scripts bench
+        run: python3 -m compileall -q bench.py rotcheck.py scripts benchlib
 
       - name: Validate dataset manifests
         run: python3 bench.py validate

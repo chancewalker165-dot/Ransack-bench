@@ -23,7 +23,7 @@ import urllib.request
 from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from bench.datasets import DATA_DIR, sha256_file  # noqa: E402
+from benchlib.datasets import DATA_DIR, sha256_file  # noqa: E402
 
 FRAMES_URL = "https://huggingface.co/datasets/google/frames-benchmark"
 SIMPLEQA_URL = "https://openaipublic.blob.core.windows.net/simple-evals/simple_qa_test_set.csv"

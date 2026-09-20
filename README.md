@@ -12,20 +12,39 @@ frozen and reproducible, every run ships raw transcripts, and every provider
 (competitors included) runs through the same harness. See
 [BENCH_CHANGES.md](BENCH_CHANGES.md) and [METHODOLOGY.md](METHODOLOGY.md).
 
-## Quickstart (60 seconds)
+## Quickstart (two commands)
+
+**1. Write your keys once** (copy this, replace the `[BRACKETS]` you have, delete lines you don't; `.env` is gitignored and placeholders are skipped):
+
+```bash
+cd Ransack-bench
+cat > .env <<'EOF'
+RANSACK_MCP_TOKEN=[RANSACK_TOKEN]
+OPENAI_API_KEY=[OPENAI_KEY]
+TAVILY_API_KEY=[TAVILY_KEY]
+BRAVE_API_KEY=[BRAVE_KEY]
+SERPER_API_KEY=[SERPER_KEY]
+EXA_API_KEY=[EXA_KEY]
+PERPLEXITY_API_KEY=[PERPLEXITY_KEY]
+EOF
+chmod 600 .env
+```
+
+**2. Run the whole suite** (auto-loads `.env`, skips providers with missing keys, runs the priority plan, writes `results/COMPARISON.md`):
+
+```bash
+python3 bench.py suite            # confirm with y; add --yes to skip the prompt
+```
+
+Useful variants: `--limit 25` for a fast first pass, `--providers ransack tavily` to restrict, `--repeat 3` for tighter CIs (note: identical re-queries can be cache-warm; see METHODOLOGY.md).
+
+Single runs still work exactly as before:
 
 ```bash
 python3 bench.py list                    # datasets + providers
 python3 bench.py validate                # schema-check every manifest
-python3 bench.py run --dataset control_trivia --provider mock --limit 3   # offline smoke
-```
-
-Live runs need one env var per provider (see table below):
-
-```bash
-RANSACK_MCP_TOKEN=... python3 bench.py run --dataset frames --provider ransack --repeat 3
-TAVILY_API_KEY=...  python3 bench.py run --dataset frames --provider tavily  --repeat 3
-python3 bench.py compare results/<tavily-run-dir> results/<ransack-run-dir>
+python3 bench.py run --dataset frames --provider ransack --limit 10
+python3 bench.py compare results/<dirA> results/<dirB>
 ```
 
 ## Datasets
