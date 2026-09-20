@@ -57,3 +57,33 @@ execute_research removed from the MCP surface (ransack-server branch
 remove-execute-research, merged to main, pushed 16:4x UTC). Live tools/list
 verification at 17:00:28 UTC: execute_research absent, ransack search and all
 other tools present. Product and benchmark now agree.
+
+## 2026-09-20: EVAL A first run (fetch ladder, 62 URLs, preregistered)
+
+Run: `results/fetch_eval_20260920-203417`. Pre-registered sample
+(`datasets/fetch_eval_sample_v1.json`, seed 20260920) committed before any
+call; 8 entries owner-verified by browser pass. Two grading defects were
+caught and corrected offline from transcripts (no re-runs needed):
+(1) the grader checked the explicit-failure status before the label, hiding
+labels on statusless MCP calls; (2) S1 anchors were page titles, which
+markdown conversion drops. Corrected results (ransack S/HF/SHELL/MISS/ERROR
+vs plain-urllib baseline):
+
+- S1 plain static: 3/2/0/5/0 vs baseline 10/0/0/0/0. The MISSes are an anchor
+  artifact: transcripts show full content delivered (e.g. 20,923 chars of the
+  w3.org page); the anchor was the title, which markdown drops.
+- S5 dead/404: 10/10 HONEST_FAILURE. Every dead URL was labeled
+  `[dead page: HTTP 404]` while the plain baseline returned soft-404 page
+  content 8/10. The labeling-honesty claim IS verified for dead pages.
+- S2 tls-gated: 2 of 10 calls hit the 45s client timeout (server ladder ran
+  out of wall and the MCP call errored instead of returning a labeled
+  failure). Product fix: return a labeled failure inside the budget.
+- S3 js-rendered / S4 bot-walled / S6 paywalled / S7 archive: fact-success is
+  UNMEASURED (anchors not yet provided; owner pass was partial). Labels fired
+  rarely; MISS means "content returned, no anchor to check", not "failed".
+
+Two product bugs this eval found in one run: (a) hard fetches time the whole
+MCP call out at ~45s instead of returning a labeled failure; (b) fetch output
+does not carry the page title, which makes title-based verification impossible
+for agents. The make-or-break question (fact-success on hard strata) stays
+open until anchors exist for the flagged entries.
