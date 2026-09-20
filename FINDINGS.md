@@ -66,3 +66,17 @@ each). Key facts observed:
 Owner TODO (only you can answer these): does execute_research's internal
 sub-fetching count individually against the quota? What is the exact
 hourly/daily number per tier? These belong in the API docs before launch.
+
+## 2026-09-20: the no-search control lands (frames n=100)
+
+Run: `20260920-052551_nosearch_frames_suite` (deepseek-v4.1-flash, no web).
+Result: 47% hit-rate, answer accuracy in the same band as the search lanes.
+
+Honest read: a strong 2026 model's parametric knowledge covers nearly half of
+FRAMES-style questions without any search. Frames' discriminative power at
+hit-rate level is therefore weaker than its reputation for this generation of
+models; the meaningful separations are (a) answer accuracy on multi-hop
+chains, (b) the 42-question hard tail both answer lanes miss, and (c)
+SimpleQA-style adversarial facts. Bench design implication: datasets need
+refreshing as model memory grows; static trivia (v1's error) and static
+multi-hop both decay toward the no-search ceiling.
