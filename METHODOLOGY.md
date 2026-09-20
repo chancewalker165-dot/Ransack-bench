@@ -28,6 +28,10 @@ not gpt-4o; treat judge numbers as a cross-check, not a gold standard.
 Runs without the key are labeled as fallback and skipped-judge is recorded
 rather than hidden.
 
+Standing offer: re-grading with a stronger judge costs zero provider calls
+(`scripts/rejudge.py results/<dir>`); anyone can verify whether the ranking
+holds under a different judge without re-running a single provider.
+
 ## Sampling and freezing
 
 - Full source datasets are fetched into `data/` by `scripts/fetch_datasets.py`

@@ -49,6 +49,42 @@ python3 bench.py run --dataset frames --provider ransack --limit 10
 python3 bench.py compare results/<dirA> results/<dirB>
 ```
 
+## Results (2026-09-20)
+
+This README is the source of truth; dated run dirs live in `results/` with raw
+transcripts. Reproduce with `python3 bench.py suite --yes` and your own keys;
+if your numbers differ, open an issue with your run dir.
+
+## simpleqa
+
+**Read this first: ransack is structurally a different product on this table.**
+It is a search lane that returns documents, not a synthesized answer, so it has
+no judged column; hit-rate is its comparable metric. The ans-acc and judged
+columns measure answer engines. Saying it here so nobody has to gotcha it.
+
+# provider comparison
+
+| provider | dataset | n | hit-rate | 95% CI | p50 | p95 | errors | ans-acc | judged |
+|---|---|---|---|---|---|---|---|---|---|
+| perplexity | simpleqa | 200 | 92.5% | [88.0%, 95.4%] | 1.5s | 2.995s | 0 | 187/200 | 185/200 |
+| exa-answer | simpleqa | 200 | 91.0% | [86.2%, 94.2%] | 1.064s | 1.566s | 0 | 183/200 | 181/200 |
+| tavily | simpleqa | 200 | 83.0% | [77.2%, 87.6%] | 2.159s | 4.057s | 0 | 163/200 | 163/200 |
+| ransack | simpleqa | 200 | 74.5% | [68.0%, 80.0%] | 2.454s | 5.534s | 0 | - | - |
+| serper | simpleqa | 200 | 70.5% | [63.8%, 76.4%] | 1.041s | 4.377s | 0 | - | - |
+| brave | simpleqa | 200 | 70.0% | [63.3%, 75.9%] | 0.461s | 0.676s | 0 | - | - |
+| nosearch | simpleqa | 200 | 39.0% | [32.5%, 45.9%] | 5.404s | 34.072s | 0 | 91/197 | 91/197 |
+
+Hit-rate = expected fact present in returned documents (retrieval). ans-acc = containment of the expected answer in the provider's own answer field. judged = official SimpleQA grader prompt on that answer (where the manifest declares the judge). Answer accuracy only exists for answer-producing lanes.
+
+
+
+Full caveats: judge model is flash-tier glm-5.3-flash via OpenRouter on the
+verbatim official prompt (a stronger judge tightens numbers; `scripts/rejudge.py`
+re-grades every simpleqa run with zero provider calls - ranking-robustness
+re-checks are cheap and welcome). Tavily's published 93.3% used their own
+gpt-4.1 pipeline on the full 4,326-question set: not the same eval as this
+frozen 200-question sample.
+
 ## Datasets
 
 | Manifest | Questions | Grader | License | Role |
