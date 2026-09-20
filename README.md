@@ -90,10 +90,11 @@ Commit run dirs you want to publish; raw transcripts make grades auditable.
 ## Known issue found while building
 
 `https://ransack.tools/mcp` sits behind Cloudflare, which answers **1010**
-("browser signature blocked") to scripts without a User-Agent, and the MCP
-server then requires a bearer token (JSON-RPC -32001). If you operate the
-server: allowlist scripted clients or publish the token flow, otherwise your
-own benchmark cannot reach your own product.
+("browser signature blocked") to scripts without a User-Agent; the bench sends
+a proper UA. The MCP server then requires a bearer token (JSON-RPC -32001):
+set `RANSACK_MCP_TOKEN`. Verified working end to end with a token on
+2026-09-20 (see `results/` live runs). Note the lane is async: the research
+tool returns a `taskId` and the bench polls `tasks_get` until completion.
 
 ## Legacy
 

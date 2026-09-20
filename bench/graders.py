@@ -27,7 +27,9 @@ NEG_PATTERNS = [
     r"\b(?:unable|unable) to determine\b",
     r"\bcannot (?:determine|verify|find)\b",
     r"\bno (?:clear|definitive) answer\b",
-    r"\binsufficient information\b",
+    r"\binsufficient (?:information|evidence)\b",
+    r"\bnot enough evidence\b",
+    r"\bcannot be derived\b",
     r"\bunknown\b",
 ]
 

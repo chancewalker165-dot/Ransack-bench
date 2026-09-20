@@ -1,0 +1,135 @@
+{
+  "provider": "ransack-research",
+  "dataset": "frames",
+  "sample_id": "frames_n100_seed20260919",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": false,
+  "grader": "alias_exact",
+  "n_questions": 10,
+  "n_calls": 10,
+  "repeat": 1,
+  "hits": 7,
+  "hit_rate_pct": 70.0,
+  "hit_ci95_pct": [
+    39.7,
+    89.2
+  ],
+  "errors": 0,
+  "answer_calls": 10,
+  "answer_correct": 4,
+  "answer_accuracy_pct": 40.0,
+  "abstains": 0,
+  "judge": {
+    "graded": 0,
+    "CORRECT": 0,
+    "WRONG": 0,
+    "ABSTAIN": 0,
+    "JUDGE_ERROR": 0
+  },
+  "latency_mean_s": 7.95,
+  "latency_p50_s": 4.765,
+  "latency_p95_s": 17.028,
+  "latency_max_s": 17.028,
+  "per_question": [
+    {
+      "id": "frames-0003",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 8.818
+    },
+    {
+      "id": "frames-0004",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 4.622
+    },
+    {
+      "id": "frames-0011",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 4.618
+    },
+    {
+      "id": "frames-0013",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 4.637
+    },
+    {
+      "id": "frames-0023",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 4.637
+    },
+    {
+      "id": "frames-0024",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "CORRECT"
+      ],
+      "mean_latency_s": 8.693
+    },
+    {
+      "id": "frames-0034",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 17.028
+    },
+    {
+      "id": "frames-0037",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 12.881
+    },
+    {
+      "id": "frames-0046",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 4.765
+    },
+    {
+      "id": "frames-0050",
+      "calls": 1,
+      "hit_all": false,
+      "hit_any": false,
+      "verdicts": [
+        "WRONG"
+      ],
+      "mean_latency_s": 8.8
+    }
+  ]
+}

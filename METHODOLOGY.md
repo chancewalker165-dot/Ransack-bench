@@ -53,6 +53,9 @@ not allowed to rank providers. That is the exact failure v1 hid.
 - Latency is client-side (`time.perf_counter` around the provider call).
   Server-reported footers are stored as `server_latency_s` and never quoted
   as the headline. v1 quoted server self-reporting; that stops here.
+  Cache caveat, observed live 2026-09-20: identical repeated queries can be
+  served cache-warm (server footer showed 0.0s on a re-run). For
+  latency-sensitive comparisons, vary phrasing or run each query once.
 - Repeats: `--repeat N` asks each question N times; summary reports per-call
   hit-rate plus per-question all-hit / any-hit.
 - Statistics: Wilson 95% intervals on every rate. n=30 single-run headlines

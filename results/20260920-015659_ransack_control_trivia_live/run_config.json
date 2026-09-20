@@ -1,0 +1,15 @@
+{
+  "dataset": "control_trivia",
+  "sample_id": "control_trivia_v1",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": true,
+  "grader": "alias_exact",
+  "provider": "ransack",
+  "repeat": 1,
+  "k": 5,
+  "limit": 10,
+  "tag": "live",
+  "git_sha": "3a0c0bf",
+  "started_utc": "20260920-015659",
+  "question_count": 10
+}

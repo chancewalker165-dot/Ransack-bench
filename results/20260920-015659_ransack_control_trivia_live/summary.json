@@ -1,0 +1,135 @@
+{
+  "provider": "ransack",
+  "dataset": "control_trivia",
+  "sample_id": "control_trivia_v1",
+  "frozen_on": "2026-09-19",
+  "non_discriminative": true,
+  "grader": "alias_exact",
+  "n_questions": 10,
+  "n_calls": 10,
+  "repeat": 1,
+  "hits": 10,
+  "hit_rate_pct": 100.0,
+  "hit_ci95_pct": [
+    72.2,
+    100.0
+  ],
+  "errors": 0,
+  "answer_calls": 0,
+  "answer_correct": 0,
+  "answer_accuracy_pct": null,
+  "abstains": 0,
+  "judge": {
+    "graded": 0,
+    "CORRECT": 0,
+    "WRONG": 0,
+    "ABSTAIN": 0,
+    "JUDGE_ERROR": 0
+  },
+  "latency_mean_s": 0.549,
+  "latency_p50_s": 0.513,
+  "latency_p95_s": 0.847,
+  "latency_max_s": 0.847,
+  "per_question": [
+    {
+      "id": "A1",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.847
+    },
+    {
+      "id": "A2",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.521
+    },
+    {
+      "id": "A3",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.54
+    },
+    {
+      "id": "A4",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.499
+    },
+    {
+      "id": "A5",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.599
+    },
+    {
+      "id": "A6",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.513
+    },
+    {
+      "id": "A7",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.521
+    },
+    {
+      "id": "A8",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.494
+    },
+    {
+      "id": "A9",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.47
+    },
+    {
+      "id": "A10",
+      "calls": 1,
+      "hit_all": true,
+      "hit_any": true,
+      "verdicts": [
+        "MISS"
+      ],
+      "mean_latency_s": 0.49
+    }
+  ]
+}
