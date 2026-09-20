@@ -54,6 +54,8 @@ PLAN = [
     ("simpleqa_sample_200", "tavily"),
     ("simpleqa_sample_200", "brave"),
     ("simpleqa_sample_200", "serper"),
+    ("simpleqa_sample_200", "perplexity"),
+    ("simpleqa_sample_200", "exa-answer"),
 ]
 
 
