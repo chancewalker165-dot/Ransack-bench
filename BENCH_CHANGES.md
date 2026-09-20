@@ -3,6 +3,17 @@
 Every change to datasets, samples, or grading is recorded here. A frozen
 sample that changes without an entry here is a broken benchmark.
 
+## 2.0.1 - 2026-09-20 (product decision, recorded)
+
+Frames cross-tab + judged table established: execute_research currently scores
+BELOW a no-search control on exact multi-hop answers (26/100 vs ~48%), and
+converts only 11/20 questions whose own sources contain the fact. Decision:
+execute_research is marked beta/experimental; do not market or sell it at full
+price until the synthesis-conversion and retrieval-reach gaps close (spec:
+FINDINGS.md). The benchmark publishes its row regardless; the product stops
+featuring it. Search-lane numbers (simpleqa 74.5% hit n=200, judged
+competitors) stand on their own.
+
 ## 2.0.0 - 2026-09-19
 
 Full redesign (breaking). v1 was a 30-question self-graded trivia quiz with
