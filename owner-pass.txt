@@ -1,0 +1,26 @@
+# OWNER BROWSER PASS  (Eval A ground truth)
+#
+# HOW: open each URL in your normal browser. Copy ONE distinctive sentence or
+# figure from the page BODY (not the menu, not the cookie banner, not the nav).
+# Paste it after the second pipe. 8 or more words is ideal. Then save and tell pi.
+#
+# Example of a good fact:  Target Circle members save 5 percent on every trip
+# Example of a bad fact:   Sign in  (too short, appears on every page)
+#
+# Leave a line blank if the page will not open for you.
+
+F-013 | https://www.crunchbase.com/organization/openai | 
+F-014 | https://www.trustpilot.com/review/github.com | 
+F-015 | https://craft.co/openai | 
+F-017 | https://www.indeed.com/cmp/Openai | 
+F-018 | https://www.semrush.com/website/github.com/overview/ | 
+F-020 | https://www.similarweb.com/website/openai.com/ | 
+F-021 | https://vercel.com/dashboard | 
+F-022 | https://web.telegram.org/ | 
+F-024 | https://www.figma.com/community | 
+F-030 | https://www.canva.com/ | 
+F-033 | https://www.aliexpress.com/ | 
+F-038 | https://www.bestbuy.com/ | 
+F-039 | https://www.wayfair.com/ | 
+F-040 | https://www.amazon.com/ | 
+F-061 | http://www.gnu.org/accessibility/accessibility.ar.html | 
