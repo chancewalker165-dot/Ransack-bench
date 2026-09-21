@@ -1,0 +1,32 @@
+[
+ {
+  "id": "F-013",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.crunchbase.com/organization/openai",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=777; wayback:20180317202711 chars=255388"
+ },
+ {
+  "id": "F-020",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.similarweb.com/website/openai.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=202; plain_urllib chars=0; wayback:20240201032442 chars=20"
+ },
+ {
+  "id": "F-021",
+  "stratum": "S3_js_rendered",
+  "url": "https://vercel.com/dashboard",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=404; plain_urllib chars=271; wayback:20200514180423 chars=700"
+ },
+ {
+  "id": "F-022",
+  "stratum": "S3_js_rendered",
+  "url": "https://web.telegram.org/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=12; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-061",
+  "stratum": "S7_archive_only",
+  "url": "http://www.gnu.org/accessibility/accessibility.ar.html",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=6402; wayback: no statuscode:200 snapshot"
+ }
+]

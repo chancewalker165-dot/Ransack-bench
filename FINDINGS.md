@@ -58,6 +58,43 @@ remove-execute-research, merged to main, pushed 16:4x UTC). Live tools/list
 verification at 17:00:28 UTC: execute_research absent, ransack search and all
 other tools present. Product and benchmark now agree.
 
+## 2026-09-21: EVAL A with the owner browser pass (57 graded, 5 excluded)
+
+Run: `results/fetch_eval_bg_20260921-012447`, background lane (600s budget), poll cap 200s.
+Ten entries received ground-truth facts from the owner's browser pass (`fact_source=owner_browser`,
+recorded by `scripts/apply_owner_anchors.py`), so the previously unmeasurable entries are
+scored for the first time: S2 tls-gated n=8, S3 js-rendered n=8, S4 bot-walled n=10.
+
+| stratum | n | ransack S/HF/SHELL/MISS | baseline S/HF/SHELL/MISS |
+|---|---|---|---|
+| S1 plain static | 10 | 7/0/0/3 | 5/0/0/5 |
+| S2 tls gated | 8 | 5/1/0/2 | 1/0/0/7 |
+| S3 js rendered | 8 | 5/0/0/3 | 4/0/0/4 |
+| S4 bot walled retailer | 10 | 2/0/1/7 | 2/0/1/7 |
+| S5 dead or 404 | 10 | 0/9/0/1 | 0/0/2/8 |
+| S6 paywalled | 10 | 0/1/0/9 | 0/0/0/10 |
+| S7 archive only | 1 | 0/1/0/0 | 0/0/0/1 |
+| **total** | **57** | **19/11/1/25** | **12/0/3/42** |
+
+**What the owner pass added.** The two strongest ladder wins are now measured rather than
+excluded: S2 tls-gated goes 5 successes against 1 for the control (n=8), and the aggregate
+success rate is 19 against 12 over 57 graded pages. Dead-page labeling still reproduces at
+9 of 10 against 0 of 10. [tool: results/fetch_eval_bg_20260921-012447/results.jsonl]
+
+**Two honest negatives in this run.** (1) Bot-walled retailers are a tie at 2 against 2 with
+n=10, so the ladder does not beat a plain fetch on retailer homepages. (2) Ransack recorded
+its first dishonest shell: on amazon.com it returned about 400 characters of challenge page as
+content with no label, while the control returned a plain miss. A shell on the one host the
+sample calls bot-walled is the failure mode this benchmark exists to catch, not a rounding
+issue. [tool: results/fetch_eval_bg_20260921-012447/transcript.jsonl]
+
+**Anchor quality caveat introduced by the owner pass.** Four of the ten owner facts were
+promotional banner lines, which rotate (for example a Black Friday style promo on
+bestbuy.com and a Halloween promo on wayfair.com). Those entries return full-length content
+yet score MISS, so they measure promo rotation, not retrieval. They should be replaced with
+stable body text in a later pass; the anchors are recorded verbatim in the manifest with
+`anchor_prev` for audit. [tool: datasets/fetch_eval_sample_v1.json]
+
 ## 2026-09-21: EVAL A on the full-ladder lane (background=true) plus a lane-variance finding
 
 Runs: `results/fetch_eval_bg_20260921-002146` and `results/fetch_eval_bg_20260921-003236`.

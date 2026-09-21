@@ -1,0 +1,18 @@
+# Eval A: fetch ladder (ransack) vs plain fetch baseline
+
+Grades: SUCCESS / HONEST_FAILURE / SHELL (content, no fact, no label) /
+MISS (content, no fact, no label, full-length) / ERROR.
+
+Entries whose fact anchor is not yet defined are EXCLUDED, not scored as
+misses: an undefined fact is unmeasurable. They are listed at the end of
+this summary and need the owner's browser pass (prereg option-4 gate).
+
+| stratum | n | ransack S/HF/SHELL/MISS | baseline S/HF/SHELL/MISS |
+|---|---|---|---|
+| S1_plain_static | 10 | 7/0/0/3 | 5/0/0/5 |
+| S2_tls_gated | 8 | 5/1/0/2 | 1/0/0/7 |
+| S3_js_rendered | 8 | 5/0/0/3 | 4/0/0/4 |
+| S4_bot_walled_retailer | 10 | 2/0/1/7 | 2/0/1/7 |
+| S5_dead_or_404 | 10 | 0/9/0/1 | 0/0/2/8 |
+| S6_paywalled | 10 | 0/1/0/9 | 0/0/0/10 |
+| S7_archive_only | 1 | 0/1/0/0 | 0/0/0/1 |

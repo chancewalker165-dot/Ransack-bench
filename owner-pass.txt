@@ -10,17 +10,17 @@
 # Leave a line blank if the page will not open for you.
 
 F-013 | https://www.crunchbase.com/organization/openai | 
-F-014 | https://www.trustpilot.com/review/github.com | 
-F-015 | https://craft.co/openai | 
-F-017 | https://www.indeed.com/cmp/Openai | 
-F-018 | https://www.semrush.com/website/github.com/overview/ | 
+F-014 | https://www.trustpilot.com/review/github.com | Evaluating 72 reviews, most reviewers were unhappy with their experience overall
+F-015 | https://craft.co/openai | OpenAI Foundation is an organization that supports research and initiatives related to artificial intelligence
+F-017 | https://www.indeed.com/cmp/Openai | Salary estimated from 80 employees, users, and past and present job advertisements
+F-018 | https://www.semrush.com/website/github.com/overview/ | In August github.com received 1.21B visits with the average session duration 11:47
 F-020 | https://www.similarweb.com/website/openai.com/ | 
 F-021 | https://vercel.com/dashboard | 
 F-022 | https://web.telegram.org/ | 
-F-024 | https://www.figma.com/community | 
-F-030 | https://www.canva.com/ | 
-F-033 | https://www.aliexpress.com/ | 
-F-038 | https://www.bestbuy.com/ | 
-F-039 | https://www.wayfair.com/ | 
-F-040 | https://www.amazon.com/ | 
+F-024 | https://www.figma.com/community | Skills are reusable instructions for the Figma agent that speed up your work
+F-030 | https://www.canva.com/ | Make AI-powered social posts, videos, presentations, and more with Canva
+F-033 | https://www.aliexpress.com/ | AliExpress is an international B to C cross-border electronic commerce platform under the Alibaba group
+F-038 | https://www.bestbuy.com/ | Save up to $1,200 on iPhone 18 Pro with qualified activation and trade-in
+F-039 | https://www.wayfair.com/ | Wayfair Rewards members get an extra 10% off Halloween decor on select items only
+F-040 | https://www.amazon.com/ | Amazon Fire TV Stick HD (newest model), free & live TV, Alexa Voice Remote
 F-061 | http://www.gnu.org/accessibility/accessibility.ar.html | 

@@ -3,6 +3,24 @@
 Every change to datasets, samples, or grading is recorded here. A frozen
 sample that changes without an entry here is a broken benchmark.
 
+## 2.0.5 - 2026-09-21 (owner browser anchors, 57 graded)
+
+1. **Owner browser pass applied.** Ten entries got ground-truth facts read off the live page
+   by the owner in a normal browser, recorded via `scripts/apply_owner_anchors.py` with
+   `fact_source=owner_browser`. This is the prereg's option-4 gate for entries plain HTTP
+   cannot reach independently. Five entries remain without an anchor (crunchbase, similarweb
+   openai.com, vercel dashboard, telegram web, and the old GNU Arabic accessibility page,
+   the last because the browser resolved it to the GNU homepage rather than the sampled URL).
+2. **Hard strata became scorable**: S2 n=8, S3 n=8, S4 n=10. Aggregate over 57 graded pages:
+   ransack 19 success / 11 honest failures / 1 dishonest shell against the control's
+   12 / 0 / 3. S2 tls-gated is the largest ladder win (5 against 1). Bot-walled retailers are
+   a tie (2 against 2).
+3. **First ransack dishonest shell recorded** (amazon.com, roughly 400 characters of challenge
+   page returned as content with no label). Reported as a product defect, not smoothed over.
+4. **Known anchor defect from the owner pass**: four facts were promotional banner lines that
+   rotate, so those entries score MISS while full content was returned. They measure promo
+   rotation rather than retrieval and need replacing with stable body text.
+
 ## 2.0.4 - 2026-09-21 (Eval A background lane, S6 re-scored, anchor hygiene)
 
 1. **Background lane added to the runner**: `--lane background --poll-cap N` calls
