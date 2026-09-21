@@ -58,6 +58,55 @@ remove-execute-research, merged to main, pushed 16:4x UTC). Live tools/list
 verification at 17:00:28 UTC: execute_research absent, ransack search and all
 other tools present. Product and benchmark now agree.
 
+## 2026-09-21: EVAL A on the full-ladder lane (background=true) plus a lane-variance finding
+
+Runs: `results/fetch_eval_bg_20260921-002146` and `results/fetch_eval_bg_20260921-003236`.
+Same sample and the same 44-to-47 graded entries as the sync run, but the ransack lane
+calls mode=fetch with `background=true`, which runs the SAME ladder on a 600s budget
+(`RANSACK_FETCH_TASK_WALL_S`) instead of the 40s sync tool wall. Runner support:
+`--lane background --poll-cap N` (polling is capped so one pathological host cannot stall
+the run, and a cap hit is recorded as a timeout, never a success).
+
+| stratum | n | bg run 1 ransack | bg run 1 baseline |
+|---|---|---|---|
+| S1 plain static | 10 | 7/0/0/3 | 5/0/0/5 |
+| S2 tls gated | 5 | 1/1/0/0 | 1/0/0/4 |
+| S3 js rendered | 6 | 5/0/0/1 | 4/0/0/2 |
+| S4 bot walled retailer | 6 | 3/0/0/3 | 2/0/1/3 |
+| S5 dead or 404 | 10 | 0/9/0/1 | 0/0/2/8 |
+| S6 paywalled | 6 | 2/0/0/4 | 1/0/0/5 |
+| S7 archive only | 1 | 0/1/0/0 | 0/0/0/1 |
+| **total** | **44** | **18/11/0/12** | **13/0/3/28** |
+
+Run 2 moved the S6 anchors out (see below) and re-scored the same way: total ransack
+16/12/0/19 against baseline 12/0/2/33.
+
+**Why background is the fair lane for hard pages.** The sync lane budgets the ladder
+inside a 40s tool wall, and a stealth-tier render needs 30-55s, so hard pages came back as
+a labeled timeout with no content (F-012 g2.com, F-031 bol.com, F-037 target.com). Product
+fix shipped the same day: the sync path now passes `wall_s=_FETCH_TOOL_WALL_S`, so the
+ladder's internal budget equals the wall that actually kills the call (commit 6908814),
+and callers who need the page regardless of which tier can reach it ask for
+`background=true`.
+
+**Lane finding: per-stratum numbers are not stable at this sample size.** S4 bot-walled
+retailers scored 3 successes in run 1 and 1 in run 2; S2 tls-gated scored 1 then 3. Same
+sample, same code, same day, different live web and different tier winners. Any single
+per-stratum percentage here is a coin flip, and the honest reading is the aggregate plus
+the dead-page result, which reproduced in every run (9 of 10 labeled, control 0 of 10).
+
+**S6 re-scored on honesty, not retrieval.** News section homepages (ft.com/markets,
+wsj.com/tech) reshuffle by the hour, so the anchors captured there described articles that
+had already rotated out: the anchor measured timing, not the product. S6 is now scored on
+label honesty like S5, matching what the prereg says it expects there. Removed anchors are
+kept in `anchor_prev` for audit. F-018's anchor was capture garbage (non-printable bytes)
+and was removed; the anchor pass now rejects non-printable captures.
+
+**Cloudflare 502s under load.** Run 1 recorded 3 of 44 ransack calls failing with HTTP 502
+from Cloudflare in front of ransack.tools while background fetches were in flight. Sync
+runs recorded none. Worth watching: one replica plus a 600s background task is a load shape
+that can push a request past Cloudflare's edge timeout.
+
 ## 2026-09-20: EVAL A complete run (44 of 62 graded, 18 excluded)
 
 Run: `results/fetch_eval_20260920-233546`. Sample, strata and question set are

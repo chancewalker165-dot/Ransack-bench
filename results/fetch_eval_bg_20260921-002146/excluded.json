@@ -1,0 +1,110 @@
+[
+ {
+  "id": "F-013",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.crunchbase.com/organization/openai",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=777; wayback:20180317202711 chars=255388"
+ },
+ {
+  "id": "F-014",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.trustpilot.com/review/github.com",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=191; wayback:20240212134030 chars=31219"
+ },
+ {
+  "id": "F-015",
+  "stratum": "S2_tls_gated",
+  "url": "https://craft.co/openai",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=16; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-017",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.indeed.com/cmp/Openai",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=27; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-020",
+  "stratum": "S2_tls_gated",
+  "url": "https://www.similarweb.com/website/openai.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=202; plain_urllib chars=0; wayback:20240201032442 chars=20"
+ },
+ {
+  "id": "F-021",
+  "stratum": "S3_js_rendered",
+  "url": "https://vercel.com/dashboard",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=404; plain_urllib chars=271; wayback:20200514180423 chars=700"
+ },
+ {
+  "id": "F-022",
+  "stratum": "S3_js_rendered",
+  "url": "https://web.telegram.org/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=12; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-024",
+  "stratum": "S3_js_rendered",
+  "url": "https://www.figma.com/community",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=556; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-030",
+  "stratum": "S3_js_rendered",
+  "url": "https://www.canva.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=350; wayback:20110129000652 chars=44"
+ },
+ {
+  "id": "F-033",
+  "stratum": "S4_bot_walled_retailer",
+  "url": "https://www.aliexpress.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=0; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-038",
+  "stratum": "S4_bot_walled_retailer",
+  "url": "https://www.bestbuy.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=-1; plain_urllib chars=42; wayback:19970507211156 chars=546"
+ },
+ {
+  "id": "F-039",
+  "stratum": "S4_bot_walled_retailer",
+  "url": "https://www.wayfair.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=205065; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-040",
+  "stratum": "S4_bot_walled_retailer",
+  "url": "https://www.amazon.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=162; wayback:20001017185554 chars=557"
+ },
+ {
+  "id": "F-042",
+  "stratum": "S6_paywalled",
+  "url": "https://www.zeit.de/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=3242; wayback:19990125104745 chars=306"
+ },
+ {
+  "id": "F-045",
+  "stratum": "S6_paywalled",
+  "url": "https://www.ft.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=403; plain_urllib chars=599; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-046",
+  "stratum": "S6_paywalled",
+  "url": "https://www.theatlantic.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=9494; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-047",
+  "stratum": "S6_paywalled",
+  "url": "https://www.newyorker.com/",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=3900; wayback: no statuscode:200 snapshot"
+ },
+ {
+  "id": "F-061",
+  "stratum": "S7_archive_only",
+  "url": "http://www.gnu.org/accessibility/accessibility.ar.html",
+  "reason": "no real content capturable independently; needs owner browser pass. live status=200; plain_urllib chars=6402; wayback: no statuscode:200 snapshot"
+ }
+]

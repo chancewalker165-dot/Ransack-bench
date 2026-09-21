@@ -66,12 +66,16 @@ _NON_PROSE_RE = re.compile(r"[{};=<>]|\bconst\b|\bfunction\b|\bvar\b|\bwindow\.[
 
 def valid_anchor(anchor: str | None, confidence: str) -> bool:
     """An anchor must survive normalize() (containment is on normalized tokens)
-    and must look like the page's own content, not code or a wall notice."""
+    and must look like the page's own content, not code, a wall notice, or capture
+    garbage."""
     if not anchor:
         return False
     a = " ".join(anchor.split())
     if len(a) < 12 or _NON_PROSE_RE.search(a):
         return False
+    printable = sum(1 for c in a if c.isprintable())
+    if printable < len(a) * 0.95 or "\ufffd" in a:
+        return False  # encoding artifact, not ground truth
     if re.match(r"^https?://", a) or re.match(r"^[\w.-]+\.(com|net|org|de|uk|nl)(\b|$)", a, re.I):
         return False  # a bare URL/domain is not page content
     norm = normalize(a)
@@ -264,7 +268,7 @@ def main() -> int:
         prev = e.get("fact_anchor")
         fields = capture(e)
         ok = bool(fields["fact_anchor"])
-        if args.redo_stratum and not ok and prev:
+        if args.redo_stratum and not ok and prev and valid_anchor(prev, e.get("anchor_confidence") or "body_text"):
             # never erase existing ground truth because one live capture failed
             fields.update({"fact_anchor": prev, "fact_source": e.get("fact_source"),
                            "anchor_confidence": e.get("anchor_confidence") or "legacy_title",

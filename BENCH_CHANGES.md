@@ -3,6 +3,26 @@
 Every change to datasets, samples, or grading is recorded here. A frozen
 sample that changes without an entry here is a broken benchmark.
 
+## 2.0.4 - 2026-09-21 (Eval A background lane, S6 re-scored, anchor hygiene)
+
+1. **Background lane added to the runner**: `--lane background --poll-cap N` calls
+   mode=fetch with `background=true` (the same ladder on a 600s budget) and polls
+   tasks_get, resolving the poll tool name from tools/list rather than hardcoding it. A
+   poll-cap hit is recorded as a timeout, never as a success. Reason: the sync lane's 40s
+   tool wall kills a stealth-tier render mid-flight, so hard pages could not be measured
+   at all on the sync lane. Two runs recorded in FINDINGS.
+2. **S6 paywalled re-scored on honesty instead of retrieval.** Section-homepage anchors
+   (ft.com/markets, wsj.com/tech) described articles that reshuffle by the hour, so they
+   measured timing rather than the product. S6 now needs no anchor and is graded on label
+   honesty like S5, which is what the prereg says it expects there. Removed anchors kept in
+   `anchor_prev` for audit.
+3. **Anchor hygiene**: the capture pass rejects non-printable captures (one S2 anchor was
+   binary garbage from a mis-decoded response), and a redo pass never overwrites an
+   existing valid anchor with a failed capture.
+4. **Variance disclosure**: at n=5-6 per hard stratum, per-stratum success rates swing
+   between runs on the same sample and code (S4 scored 3 then 1; S2 scored 1 then 3 on the
+   background lane). FINDINGS states this rather than quoting one run's per-stratum number.
+
 ## 2.0.3 - 2026-09-20 (Eval A anchor pass and two harness defects)
 
 No sample URL, stratum, or question was changed. Three grading-side changes:
